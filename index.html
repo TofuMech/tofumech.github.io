@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<!--initalize the webpage-->
+
+<head>
+  <!--Webpage Title-->
+  <title>TofuMech</title>
+  <!--CSS Hook-->
+  <link rel="stylesheet" href="style.css">
+  <!--Javascript Hook-->
+  <script src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="description" content="Artist and Tech Guy">
+  <meta name="viewport" content="width=device-width, intial-scale=1">
+</head>
+<body>
+  <header>
+        <!-- Menu DropDown for Mobile -->
+          <label for="light">
+            <input type="radio" name="theme" id="light" checked>
+              <img src="images/moon.png" id="sun" />
+          </label>
+          <label for="dark">
+            <input type="radio" id="dark" name="theme">
+              <img src="images/sun.png" id="moon"/>
+          </label>
+        <section class="p-menu1">
+          <nav id="navbar" class="navigation" role="navigation">
+            <input id="toggle1" type="checkbox" />
+            <label class="hamburger1" for="toggle1">
+              <div class="top"></div>
+              <div class="meat"></div>
+            </label>
+            <!--Dropdown menu properties-->
+            <nav class="menu1">
+              <a class="link1" href="">PORTFOLIO</a>
+              <a class="link1" href="">ABOUT</a>
+              <a class="link1" href="">CONTACT</a>
+            </nav>
+          </nav>
+        </section>
+        </div>
+  </header>
+  <main>
+<div class="cube">
+  <div class="face top"></div>
+  <div class="face bottom"></div>
+  <div class="face left"></div>
+  <div class="face right"></div>
+  <div class="face front"></div>
+  <div class="face back"></div>
+</div>
+</main>
+  </main>
+      <footer>  
+        <body onload="displayRandomText()">
+        <div id="randomText"></div>
+    </footer>
+  </body>
+</html>
