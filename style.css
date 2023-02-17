@@ -1,0 +1,239 @@
+ *,
+ body {
+     margin: 0;
+     padding: 0;
+    -webkit-transition: .8s;
+        transition: .8s;
+ }
+:root {
+    --div-cube-color: hsl(209, 78%, 39%);
+    --div-btm-txt: hsl(0 0% 15%);
+    --div-txt: hsl(162, 100%, 50%);
+    --div-menu-color:hsl(91, 59%, 41%);  
+    -webkit-transition: .8s;
+        transition: .8s;
+}
+body {
+    
+    background: var(--div-body-bg);
+    -webkit-transition: .8s;
+        transition: .8s;
+}
+
+
+
+
+/* style the font within the dropdown menu */
+a {
+    color: var(--div-txt);
+    text-decoration: none;
+}
+/* Hamburger Position */
+.hamburger1 {
+    position: absolute;
+    margin: 20px;
+    left: 15px;
+    top: 3px;
+}
+/* Hamburger Style */
+.hamburger1 div {
+    background-color: rgb(95, 77, 48);
+    position: static;
+    width: 40px;
+    height: 4px;
+    margin-top: 6px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+/*makes the checkbox invisable*/
+#toggle1 {
+    display: none;
+}
+#toggle1:checked+.hamburger1 .top {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    margin-top: 22.5px;
+}
+#toggle1:checked+.hamburger1 .meat {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-top: -5px;
+}
+/*sets the height of the dropdown menu, more pixels = lower to the bottom
+   of the viewport*/
+#toggle1:checked~.menu1 {
+    height: 200px;
+}
+.menu1 {
+    position: static;
+    width: 100%;
+    background-color: var(--div-menu-color);
+    display: grid;
+    grid-row-gap: 25px;
+    padding-top: 0px;
+    text-align: center;
+    height: 0px;
+    overflow: hidden;
+    transition: height .4s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.menu1 a:first-child {
+    margin-top: 70px;
+}
+.menu1 a:last-child {
+    margin-bottom: 80px;
+}
+.link1 {
+    width: 100%;
+    margin: 0;
+    padding: 0px 0;
+    font: 700 20px 'Oswald', sans-serif;
+}
+.link1:hover {
+    background-color: #fff9ef;
+    color: rgb(0, 0, 0);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+
+
+
+#dark {
+    position: absolute;
+    opacity: 0;
+    top: -999px;
+}
+#light {
+    position: absolute;
+    opacity: 0;
+    top: -999px;
+}
+#moon {
+    position: absolute;
+    right: 50px;
+    top: 20px;
+    cursor: pointer;
+    -webkit-transition: .8s;
+        transition: .8s;
+}
+#sun {
+    position: absolute;
+    right: 50px;
+    top: 20px;
+    cursor: pointer;
+    -webkit-transition: .8s;
+    transition: .8s;
+}
+:root:has(#dark:checked) {
+    background-image: url(images/darkback.png);
+    --div-cube-color:   #8489D9;
+    --div-menu-color: #8489D9;
+    --div-btm-txt: hsl(0, 14%, 80%);
+    --div-txt: hsl(0, 0%, 0%);
+    -webkit-transition: .8s;
+        transition: .8s;
+}
+:root:has(#light:checked) {
+    background-image:url(images/lightback.png) ;
+    --div-cube-color: #9ED5F0;
+    --div-txt: hsl(163, 61%, 11%);
+    --div-menu-color:hsl(187, 17%, 61%);
+    --div-btm-txt: hsl(0, 28%, 16%);
+    -webkit-transition: .8s;
+        transition: .8s;
+
+
+}
+input:checked+#moon {
+    width: 50px;
+    right: 50px;
+    top: -50px;
+    -webkit-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    transform: translateY(2px);
+    -webkit-transition: .8s;
+    transition: .8s;
+}
+input:checked+#sun {
+    width: 50px;
+    right: 50px;
+    top: -50px;
+    -webkit-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    transform: translateY(2px);
+    -webkit-transition: .8s;
+        transition: .8s;
+}
+
+
+
+@keyframes turn {
+    from {
+        transform: rotateX(1deg) rotateY(1deg);
+    }
+
+    to {
+        transform: rotateX(359deg) rotateY(359deg);
+    }
+}
+.cube {
+    position: absolute;
+    width: 60px;
+    height: 50px;
+    transform-style: preserve-3d;
+    animation: turn 10s infinite linear;
+    /*keeping top at zero makes the dropmenu appear in front of the cube*/
+    top: 50%;
+    right: 50%;
+}
+.cube:hover .face {
+    --div-cube-color: #ffffff;
+    transition: all .2s ease-in;
+    
+}
+.face {
+    width: 100px;
+    height: 100px;
+    background: var(--div-cube-color);
+    position: absolute;
+    transform: translateZ(50px);
+    border-radius: 0px;
+    transition: all .2s ease-in;
+    
+
+}
+.front {
+    transform: translateZ(50px);
+}
+.back {
+    transform: translateZ(-50px) rotateY(180deg);
+}
+.left {
+    transform: translateX(-50px) rotateY(-90deg);
+}
+.right {
+    transform: translateX(50px) rotateY(90deg);
+}
+.top {
+    transform: translateY(-50px) rotateX(90deg);
+}
+.bottom {
+    transform: translateY(50px) rotateX(-90deg);
+}
+
+
+
+
+/* Random text when the page loads */
+#randomText {
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    text-align: center;
+    color: var(--div-btm-txt);
+    font-size: medium;
+    font-family: 'Trebuchet MS';
+    font-weight: bolder;
+}
