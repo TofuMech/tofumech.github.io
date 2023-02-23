@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <!--initalize the webpage-->
-
 <head>
   <!--Webpage Title-->
   <title>TofuMech</title>
@@ -33,9 +32,36 @@
             </label>
             <!--Dropdown menu properties-->
             <nav class="menu1">
-              <a class="link1" href="">PORTFOLIO</a>
-              <a class="link1" href="">ABOUT</a>
-              <a class="link1" href="">CONTACT</a>
+              
+              <button class="button">HOME</button>
+<style>
+              .button {
+                margin-top: 70px;
+                padding: 5px 25px;
+                font-size: 24px;
+                text-align: center;
+                cursor: pointer;
+                outline: none;
+                color: #fff;
+                background-color: #04AA6D;
+                border: none;
+                }
+                .button:hover {background-color: #3e8e41}
+
+                .button:active {
+                  background-color: #3e8e41;
+                  box-shadow: 0 5px #d61515;
+                  transform: translateY(4px);
+                }
+                .button:checked+.cube {
+                  scale: 500px;
+                }
+</style>
+              
+              <a class="link1" href="">HOME</a>
+
+              <a class="link1" href="portfolio.html">PORTFOLIO</a>
+              
             </nav>
           </nav>
         </section>
