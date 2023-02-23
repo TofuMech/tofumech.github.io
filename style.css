@@ -10,8 +10,13 @@
     --div-btm-txt: hsl(0 0% 15%);
     --div-txt: hsl(162, 100%, 50%);
     --div-menu-color:hsl(91, 59%, 41%);  
+
+
+    --div-cube-location: 40px;
+
+
     -webkit-transition: .8s;
-        transition: .8s;
+    transition: .8s;
 }
 body {
     
@@ -39,7 +44,7 @@ a {
 .hamburger1 div {
     background-color: rgb(95, 77, 48);
     position: static;
-    width: 40px;
+    width: var(--div-cube-location);
     height: 4px;
     margin-top: 6px;
     -webkit-transition: all 0.2s ease-in-out;
@@ -84,6 +89,17 @@ a {
 .menu1 a:last-child {
     margin-bottom: 80px;
 }
+
+
+#HomeButton {
+    position: relative;
+    top: 50px;
+    left: 45%;
+    width: 50px;
+    height: 25px;
+    text-align: center;
+}
+
 .link1 {
     width: 100%;
     margin: 0;
@@ -166,9 +182,6 @@ input:checked+#sun {
     -webkit-transition: .8s;
         transition: .8s;
 }
-
-
-
 @keyframes turn {
     from {
         transform: rotateX(1deg) rotateY(1deg);
