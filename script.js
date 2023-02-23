@@ -11,11 +11,20 @@ function displayRandomText() {
         var randomIndex = Math.floor(Math.random() * quotes.length);
         document.getElementById("randomText").innerHTML = quotes[randomIndex];
       }
+
+
+
 const colorThemes = document.querySelectorAll('[name="theme"]');
+
+
+
 // store theme
 const storeTheme = function (theme) {
   localStorage.setItem("theme", theme);
 };
+
+
+
 // set theme when visitor returns
 const setTheme = function () {
   const activeTheme = localStorage.getItem("theme");
@@ -27,6 +36,9 @@ const setTheme = function () {
   // fallback for no :has() support
   document.documentElement.className = activeTheme;
 };
+
+
+
 colorThemes.forEach((themeOption) => {
   themeOption.addEventListener("click", () => {
     storeTheme(themeOption.id);
