@@ -1,86 +1,52 @@
 <!DOCTYPE html>
 <html>
-<!--initalize the webpage-->
 <head>
   <!--Webpage Title-->
   <title>TofuMech</title>
   <!--CSS Hook-->
   <link rel="stylesheet" href="style.css">
-  <!--Javascript Hook-->
-  <script src="script.js"></script>
   <meta charset="UTF-8">
   <meta name="description" content="Artist and Tech Guy">
   <meta name="viewport" content="width=device-width, intial-scale=1">
 </head>
+<header>
+  <img id="moon" src="images/moon.png">
+  <img id="sun" src="images/sun.png">
+  <script src="script.js"></script>
+<!DOCTYPE html>
+<html>
 <body>
   <header>
-        <!-- Menu DropDown for Mobile -->
-          <label for="light">
-            <input type="radio" name="theme" id="light" checked>
-              <img src="images/moon.png" id="sun" />
-          </label>
-          <label for="dark">
-            <input type="radio" id="dark" name="theme">
-              <img src="images/sun.png" id="moon"/>
-          </label>
-        <section class="p-menu1">
-          <nav id="navbar" class="navigation" role="navigation">
-            <input id="toggle1" type="checkbox" />
-            <label class="hamburger1" for="toggle1">
-              <div class="top"></div>
-              <div class="meat"></div>
-            </label>
-            <!--Dropdown menu properties-->
-            <nav class="menu1">
-              
-              <button class="button">HOME</button>
-<style>
-              .button {
-                margin-top: 70px;
-                padding: 5px 25px;
-                font-size: 24px;
-                text-align: center;
-                cursor: pointer;
-                outline: none;
-                color: #fff;
-                background-color: #04AA6D;
-                border: none;
-                }
-                .button:hover {background-color: #3e8e41}
-
-                .button:active {
-                  background-color: #3e8e41;
-                  box-shadow: 0 5px #d61515;
-                  transform: translateY(4px);
-                }
-                .button:checked+.cube {
-                  scale: 500px;
-                }
-</style>
-              
-              <a class="link1" href="">HOME</a>
-
-              <a class="link1" href="portfolio.html">PORTFOLIO</a>
-              
-            </nav>
-          </nav>
-        </section>
-        </div>
+    <section class="p-menu1">
+      <nav id="navbar" class="navigation" role="navigation">
+        <input id="toggle1" type="checkbox" />
+        <label class="hamburger1" for="toggle1">
+          <div class="top"></div>
+          <div class="meat"></div>
+        </label>
+        <nav class="menu1">
+          <a class="link1" href="">HOME</a>
+          <a class="link1" href="portfolio.html">PORTFOLIO</a>
+        </nav>
+      </nav>
+    </section>
+    </div>
   </header>
   <main>
-<div class="cube">
-  <div class="face top"></div>
-  <div class="face bottom"></div>
-  <div class="face left"></div>
-  <div class="face right"></div>
-  <div class="face front"></div>
-  <div class="face back"></div>
-</div>
-</main>
+    <div class="cube">
+      <div class="face top"></div>
+      <div class="face bottom"></div>
+      <div class="face left"></div>
+      <div class="face right"></div>
+      <div class="face front"></div>
+      <div class="face back"></div>
+    </div>
   </main>
-      <footer>  
-        <body onload="displayRandomText()">
-        <div id="randomText"></div>
-    </footer>
-  </body>
+  </main>
+  <footer>
+<script src="script.js"></script>
+    <body onload="displayRandomText()">
+      <div id="randomText"></div>
+  </footer>
+</body>
 </html>
