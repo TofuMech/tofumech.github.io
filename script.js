@@ -11,14 +11,9 @@ function displayRandomText() {
         var randomIndex = Math.floor(Math.random() * quotes.length);
         document.getElementById("randomText").innerHTML = quotes[randomIndex];
       }
-
-
-
-
 // get the moon and sun icons
 const moonIcon = document.querySelector('#moon');
 const sunIcon = document.querySelector('#sun');
-
 // check if a theme preference has already been set
 if (localStorage.getItem('theme')) {
   // set the active icon and apply the stored theme preference
@@ -30,7 +25,6 @@ if (localStorage.getItem('theme')) {
     applyTheme('dark');
   }
 }
-
 // add event listeners to the moon and sun icons
 moonIcon.addEventListener('click', () => {
   // store the selected theme preference in local storage
@@ -42,7 +36,6 @@ moonIcon.addEventListener('click', () => {
     applyTheme('dark');
   }, 500);
 });
-
 sunIcon.addEventListener('click', () => {
   // store the selected theme preference in local storage
   localStorage.setItem('theme', 'light');
@@ -73,6 +66,5 @@ function applyTheme(theme) {
     document.documentElement.style.setProperty('--div-cube-color', '#476A58');
     document.documentElement.style.setProperty('--div-txt', '72AB8E');
     document.documentElement.style.setProperty('--div-btm-txt', '#6B554F');
-    
   }
 }
