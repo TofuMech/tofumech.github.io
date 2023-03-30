@@ -1,0 +1,115 @@
+@import url('https://fonts.cdnfonts.com/css/ibm-plex-sans');
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    -webkit-transition: .8s;
+    transition: .8s;
+}
+:root {
+    /*These are defaults, javascript overrides the colors. These are a failsave if JS is disabled on browser*/
+    --cube-color: #6c79a8;
+    --text-color: #1c3253;
+    --button-text:#261523;
+    --button-colorOne: #FF9D00;
+    --button-colorTwo: #131736;
+    --navbar-color:#648BB0;
+    --background-color: #211d25;
+    transition: .8s;
+}
+.navBar {
+    position: relative;
+    background-color: var(--navbar-color);
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+ .homeButton {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(to left, var(--button-colorOne) 75%, var(--button-colorTwo) 100%);    
+    position: absolute;
+    left: -30px;
+    top: -50px;
+    transform: rotateZ(30deg);
+    cursor: pointer;
+  }
+  .portfolioButton {
+      width: 150px;
+      height: 180px;
+    background: linear-gradient(to left, var(--button-colorOne) 65%, var(--button-colorTwo) 100%);
+      position: absolute;
+      left: 90px;
+      top: -50px;
+      transform: rotateZ(30deg);
+      cursor: pointer;
+  }
+.aboutButton {
+    width: 150px;
+    height: 200px;
+    background: linear-gradient(to left, var(--button-colorOne) 55%, var(--button-colorTwo) 100%);
+    position: absolute;
+    left: 220px;
+    top: -90px;
+    transform: rotateZ(30deg);
+    cursor: pointer;
+}
+.homeText {
+    color: var(--button-text);
+    position: absolute;
+    top: 90px;
+    left: 90px;
+    display: block;
+    transform: rotateZ(-30deg);
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    font-size: larger;
+}
+.artText {
+    color: var(--button-text);
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    display: block;
+    transform: rotateZ(-30deg);
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    font-size: larger;
+}
+.aboutText {
+    color: var(--button-text);
+    position: absolute;
+    top: 135px;
+    left: 80px;
+    display: block;
+    font-family: 'IBM Plex Sans', sans-serif;
+    transform: rotateZ(-30deg);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        font-size: larger;
+}
+#moon,
+#sun {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    z-index: 500;
+}
+#moon.active {
+    transform: translateY(-80px);
+}
+#sun.active {
+    transform: translateY(-80px);
+}
+#homeText {
+    position: absolute;
+    bottom: 1px;
+    width: 100%;
+    text-align: center;
+    font-size: medium;
+    font-family: 'Trebuchet MS';
+    font-weight: bolder;
+    color: var(--text-color);
+}

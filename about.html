@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Webpage Title-->
+        <title>TofuMech</title>
+        <!--CSS Hook-->
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="description" content="Artist and Tech Guy">
+        <meta name="viewport" content="width=device-width, intial-scale=1">   
+    </head>
+    <header>
+        <img id="moon" src="images/icons/moon.png">
+        <img id="sun" src="images/icons/sun.png">
+        <script src="script.js"></script> 
+    </header>
+    <nav>
+        <div class="navBar">
+            <div class="aboutButton" onclick="location.href='about.html'">
+            <div class="aboutText">ABOUT</div>
+        </div>
+            <div class="portfolioButton" onclick="location.href='portfolio.html'">
+            <div class="artText">ARTWORK</div>
+        </div>
+            <div class="homeButton" onclick="location.href='index.html'">
+            <div class="homeText">HOME</div>
+        </div>
+    </nav>
+    <main> 
+        <img class="photo"
+            src="images/icons/me.jpg">
+        <div class="aboutmeBox">
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100;1,400&display=swap');
+                .aboutmeBox {
+                    position: absolute;
+                    width: 65vw;
+                    height: 600px;
+                    border-radius: 20px;
+                    left: 100px;
+                    top: 230px;
+                    background-color: rgb(107, 128, 129);
+                    text-align: center;
+                    font-family: 'IBM Plex Sans', sans-serif;
+                    overflow: hidden;
+                }
+            </style>
+        <h2>TOFUMECH</h2>
+        <p>I am a self-taught 2d and 3d artist and animator based out of Cincinnati Ohio. I've been working for 10+ years,
+        created artwork for <a href='https://www.kickstarter.com/projects/continueshow/smart-guys'>promotional campaigns</a>, freelanced for content creators, and work independently as a game creator.
+        I am also well-versed in a variety of software programs, including Adobe Creative Suite, and Figma, which allows
+        me to create designs quickly and efficiently. I love creating.
+        </p>
+        <h3 class="tools"><ul>TOOLS</ul><br>
+            <ul>Adobe Suite</ul>
+            <ul>Clip Studio Paint</ul>
+            <ul>TV Paint</ul>
+            <ul>Blender</ul>
+            <ul>Sony Vegas</ul>
+            <ul>VS Code</ul>
+        </h3>
+        <h3 class="code_lang"><ul>SKILLS</ul><br>
+            <ul>Python</ul>
+            <ul>Javascript</ul>
+            <ul>HTML</ul>
+            <ul>CSS</ul>
+            <ul>C/++/#</ul>
+        </h3>
+    </div>
+        
+        <style>
+             @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100;1,400&display=swap');
+            .tools {
+                position: absolute;
+                left: 35%;
+                color: rgb(228, 198, 198);
+                font-family: 'IBM Plex Sans', sans-serif;
+            }
+            .code_lang {
+                position: absolute;
+                right: 40%;
+                color: rgb(228, 198, 198);
+                font-family: 'IBM Plex Sans', sans-serif;
+            }
+            p {
+                font-weight: bolder;
+                font-family: 'IBM Plex Sans', sans-serif;
+            }
+            .findme {
+                position: absolute;
+                right: 260px;
+                top: 510px;
+                font-weight: bold;
+                font-family: 'IBM Plex Sans', sans-serif;
+                color: var(--text-color);
+            }
+            .photo {
+                display: block;
+                margin: 0 auto;
+                scale: 50%;
+                margin-right: 30px;
+                width: 30%;
+                border-radius: 50px;
+            }
+        </style>
+    <div class="findme">
+        <p>Social Links</p>
+    </div>
+        <div class="Social Links">
+            
+            <a href="https://twitter.com/TofuMech" target="_blank">
+                <img class="twitter"src="images/icons/twitter.png" />
+            </a>
+            <a href="https://www.artstation.com/tofumech" target="_blank">
+                <img class="artstation" src="images/icons/art.png" />
+            </a>
+            <a href="https://github.com/TofuMech" target="_blank">
+                <img class="github" src="images/icons/github.png" />
+            </a>
+            
+             
+            <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100;1,400&display=swap');
+
+              
+
+                .twitter {
+                    position: absolute;
+                    top: 350px;
+                    scale: 10%;
+                    right: 170px;
+                    cursor: pointer;
+                    background-color: rgba(179, 233, 162, 0.486);
+                    border-radius: 30px;
+                }
+                .artstation {
+                    position: absolute;
+                    top: 350px;
+                    scale: 10%;
+                    right: 60px;
+                    cursor: pointer;
+                    background-color: rgba(179, 233, 162, 0.397);
+                    border-radius: 30px;
+                }
+                .github {
+                    position: absolute;
+                    top: 350px;
+                    scale: 10%;
+                    right: -50px;
+                    cursor: pointer;
+                    background-color: rgba(179, 233, 162, 0.397);
+                    border-radius: 30px;
+            }
+        </style>
+    </div>
+</main>
+<footer>
+    <div id="homeText">
+        <script>
+            function displayRandomText() {
+                var quotes = [
+                    "[TAKE YOUR TIME]",
+                    "[LOADING..]",
+                    "[DRINK WATER]",
+                    "[TEAM MILK]",
+                    "[CLEAN YOUR SCREEN]",
+                    "[BOTTOM TEXT]"
+                ];
+                var randomIndex = Math.floor(Math.random() * quotes.length);
+                document.getElementById("homeText").innerHTML = quotes[randomIndex];
+            }
+        </script>
+
+        <body onload="displayRandomText()"></body>
+    </div>
+</footer>
+</body>
+</html>
