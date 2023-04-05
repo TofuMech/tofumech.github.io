@@ -1,8 +1,26 @@
+var button = document.getElementById('DropDownMenu');
+var box = document.getElementById('box');
+var isMoved = false;
+var moonIcon = document.querySelector('#moon')
+var sunIcon = document.querySelector('#sun')
+var menuBar3 = document.querySelector('#bar3')
+var menuBar2 = document.querySelector('#bar2')
 
 
-// get the moon and sun icons
-const moonIcon = document.querySelector('#moon');
-const sunIcon = document.querySelector('#sun');
+button.addEventListener('click', function () {
+  if (!isMoved) {
+    box.style.transform = 'translateY(550px)';
+    menuBar3.style.transform = 'translateY(-17px)';
+    menuBar2.style.transform = 'translateY(-10px)';
+    isMoved = true;
+  } else {
+    box.style.transform = 'translateX(0)';
+    menuBar3.style.transform = 'translateY(0px)';
+    menuBar2.style.transform = 'translateY(0px)';    
+    isMoved = false;
+  }
+});
+
 // check if a theme preference has already been set
 if (localStorage.getItem('theme')) {
   // set the active icon and apply the stored theme preference
@@ -65,12 +83,5 @@ function applyTheme(theme) {
   document.documentElement.style.setProperty('--button-colorOne', '#3a5f7c');
   document.documentElement.style.setProperty('--button-colorTwo', '#524d3b'); //This should be the darker color
   document.documentElement.style.setProperty('--navbar-color', '#284059');  
- 
-    
   }
 }
-
-
-
-
-

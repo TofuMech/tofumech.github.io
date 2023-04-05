@@ -15,6 +15,7 @@ body {
     --button-colorTwo: #131736;
     --navbar-color:#648BB0;
     --background-color: #211d25;
+    --drop-menu-color: #2a2e6d73;
     transition: .8s;
 }
 .navBar {
@@ -25,7 +26,13 @@ body {
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
- .homeButton {
+#box {
+    background-color: red;
+    position: absolute;
+    top: -999px;
+    z-index: -1;
+}
+.homeButton {
     width: 150px;
     height: 150px;
     background: linear-gradient(to left, var(--button-colorOne) 75%, var(--button-colorTwo) 100%);    
@@ -34,8 +41,8 @@ body {
     top: -50px;
     transform: rotateZ(30deg);
     cursor: pointer;
-  }
-  .portfolioButton {
+}
+.portfolioButton {
       width: 150px;
       height: 180px;
     background: linear-gradient(to left, var(--button-colorOne) 65%, var(--button-colorTwo) 100%);
@@ -44,7 +51,7 @@ body {
       top: -50px;
       transform: rotateZ(30deg);
       cursor: pointer;
-  }
+}
 .aboutButton {
     width: 150px;
     height: 200px;
@@ -63,7 +70,6 @@ body {
     display: block;
     transform: rotateZ(-30deg);
     font-family: 'IBM Plex Sans', sans-serif;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
     font-size: larger;
 }
 .artText {
@@ -74,7 +80,6 @@ body {
     display: block;
     transform: rotateZ(-30deg);
     font-family: 'IBM Plex Sans', sans-serif;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
     font-size: larger;
 }
 .aboutText {
@@ -85,7 +90,6 @@ body {
     display: block;
     font-family: 'IBM Plex Sans', sans-serif;
     transform: rotateZ(-30deg);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
         font-size: larger;
 }
 #moon,
@@ -112,4 +116,133 @@ body {
     font-family: 'Trebuchet MS';
     font-weight: bolder;
     color: var(--text-color);
+}
+#home-button{
+    display: none;
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+    .navBar {
+        position: relative;
+        background-color: var(--navbar-color);
+        width: 100%;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        height: 50px;
+        z-index: 10;
+        }
+
+    #box {
+        position:absolute;
+        width: 100%;
+        height: 200px;
+        top: -500px;
+        transition: transform 0.5s ease-in-out;
+        z-index: 0;
+    }
+
+    /*These are the hrefs attributes*/
+    #DropHomeButton {
+        background-color: rgb(181, 219, 255);
+        color: rgb(0, 0, 0);
+        border: none;
+        height: 80px;
+        width: 100%;
+        cursor: pointer;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-size: larger;
+        z-index: -4;
+    }
+
+    .bar1 {
+        position: absolute;
+        background-color: var(--drop-menu-color);
+        width: 5px;
+        height: 40px;
+        top: 20px;
+        left: 130px;
+        border-radius: 10px;
+    }
+    .bar2 {
+        position: absolute;
+        background-color: var(--drop-menu-color);
+        width: 5px;
+        height: 30px;
+        top: 35px;
+        left: 120px;
+        border-radius: 10px;
+        transition: transform 0.8s ease-in-out;
+    }
+    .bar3 {
+        position: absolute;
+        background-color: var(--drop-menu-color);
+        width: 5px;
+        height: 20px;
+        top: 50px;
+        left: 110px;
+        border-radius: 10px;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    
+
+    #DropHomeButton:hover {
+        background-color: #FF9D00;
+    }
+    #DropDownMenu {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(to left, var(--button-colorOne) 75%, var(--button-colorTwo) 100%);
+            position: absolute;
+            left: -100px;
+            top: -50px;
+            transform: rotateZ(30deg);
+            cursor: pointer;
+            border-color: rgb(101, 186, 255);
+            
+    }
+    
+    .homeButton {
+        display: none;
+        
+    }
+    .portfolioButton {
+        
+        display: none;
+    }
+    .aboutButton {
+       
+        display: none;
+    }
+    #moon,
+    #sun {
+        position: absolute;
+        scale: 70%;
+        top: 0px;
+        right: 10px;
+        cursor: pointer;
+        transition: transform 0.5s ease;
+        z-index: 500;
+    }
+    #moon.active {
+        transform: translateY(-80px);
+    }
+    #sun.active {
+        transform: translateY(-80px);
+    }
+    #homeText {
+        position: absolute;
+        bottom: 1px;
+        width: 100%;
+        text-align: center;
+        font-size: medium;
+        font-family: 'Trebuchet MS';
+        font-weight: bolder;
+        color: var(--text-color);
+    }
+   
+
 }

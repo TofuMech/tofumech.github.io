@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <!--Webpage Title-->
     <title>TofuMech</title>
@@ -11,23 +10,37 @@
     <meta name="viewport" content="width=device-width, intial-scale=1">
 </head>
 <header>
+    <script src="script.js"></script>
     <img id="moon" src="moon.png">
     <img id="sun" src="sun.png">
-    <script src="script.js"></script>
+    <nav>
+        <div class="navBar">
+            <button id="DropDownMenu"> 
+                <div class="bar1"></div>
+                <div class="bar2" id="bar2"></div>
+                <div class="bar3" id="bar3"></div>
+            </button>
+            <div class="aboutButton" onclick="location.href='about.html'">
+                <div class="aboutText">ABOUT</div>
+            </div>
+            <div class="portfolioButton" onclick="location.href='portfolio.html'">
+                <div class="artText">ARTWORK</div>
+            </div>
+            <div class="homeButton" onclick="location.href='index.html'">
+                <div class="homeText">HOME</div>
+            </div>
+        </div>
+    </nav>
 </header>
-<nav>
-    <div class="navBar">
-        <div class="aboutButton" onclick="location.href='about.html'">
-            <div class="aboutText">ABOUT</div>
-        </div>
-        <div class="portfolioButton" onclick="location.href='portfolio.html'">
-            <div class="artText">ARTWORK</div>
-        </div>
-        <div class="homeButton" onclick="location.href='index.html'">
-            <div class="homeText">HOME</div>
-        </div>
-</nav>
 <main>
+    <nav>
+    <div class="box" id="box"> <!--The Container for the Drop Down Menu on Mobile-->
+        <button id="DropHomeButton"onclick="location.href='index.html'">HOME</button><br>
+        <button id="DropHomeButton"onclick="location.href='portfolio.html'">PORTFOLIO</button><br>
+        <button id="DropHomeButton"onclick="location.href='about.html'">ABOUT</button><br>
+        <script src="script.js"></script>
+    </div>
+    </nav>
     <div class="cube">
         <div class="face top"></div>
         <div class="face bottom"></div>
@@ -41,18 +54,16 @@
             from {
                 transform: rotateX(1deg) rotateY(1deg);
             }
-
             to {
                 transform: rotateX(359deg) rotateY(359deg);
             }
         }
-
         .cube {
             position: absolute;
             width: 100px;
             height: 100px;
-            ;
             margin: auto;
+            z-index: -3;
             top: 0;
             bottom: 0;
             left: 0;
@@ -60,12 +71,10 @@
             transform-style: preserve-3d;
             animation: turn 10s infinite linear;
         }
-
         .cube:hover .face {
             --cube-color: #e9e9da;
             transition: all .2s ease-in;
         }
-
         .face {
             position: absolute;
             width: 100px;
@@ -75,27 +84,21 @@
             border-radius: 0px;
             transition: all .2s ease-in;
         }
-
         .front {
             transform: translateZ(50px);
         }
-
         .back {
             transform: translateZ(-50px) rotateY(180deg);
         }
-
         .left {
             transform: translateX(-50px) rotateY(-90deg);
         }
-
         .right {
             transform: translateX(50px) rotateY(90deg);
         }
-
         .top {
             transform: translateY(-50px) rotateX(90deg);
         }
-
         .bottom {
             transform: translateY(50px) rotateX(-90deg);
         }
@@ -117,10 +120,8 @@
                 document.getElementById("homeText").innerHTML = quotes[randomIndex];
             }
         </script>
-
         <body onload="displayRandomText()"></body>
     </div>
 </footer>
 </body>
-
 </html>

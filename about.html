@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
         <!--Webpage Title-->
         <title>TofuMech</title>
         <!--CSS Hook-->
@@ -8,171 +8,142 @@
         <meta charset="UTF-8">
         <meta name="description" content="Artist and Tech Guy">
         <meta name="viewport" content="width=device-width, intial-scale=1">   
-    </head>
-    <header>
+</head>
+<header>
+    <script src="script.js"></script>
         <img id="moon" src="moon.png">
         <img id="sun" src="sun.png">
-        <script src="script.js"></script> 
-    </header>
-    <nav>
-        <div class="navBar">
-            <div class="aboutButton" onclick="location.href='about.html'">
-            <div class="aboutText">ABOUT</div>
-        </div>
-            <div class="portfolioButton" onclick="location.href='portfolio.html'">
-            <div class="artText">ARTWORK</div>
-        </div>
-            <div class="homeButton" onclick="location.href='index.html'">
-            <div class="homeText">HOME</div>
-        </div>
-    </nav>
-    <main> 
-        <img class="photo"
-            src="Me.jpg">
-        <div class="aboutmeBox">
-            <style>
-                @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100;1,400&display=swap');
-                .aboutmeBox {
-                    position: absolute;
-                    width: 65vw;
-                    height: 600px;
-                    border-radius: 20px;
-                    left: 100px;
-                    top: 230px;
-                    background-color: rgb(107, 128, 129);
-                    text-align: center;
-                    font-family: 'IBM Plex Sans', sans-serif;
-                    overflow: hidden;
-                }
-            </style>
-        <h2>TOFUMECH</h2>
-        <p>I am a self-taught 2d and 3d artist and animator based out of Cincinnati Ohio. I've been working for 10+ years,
-        created artwork for <a href='https://www.kickstarter.com/projects/continueshow/smart-guys'>promotional campaigns</a>, freelanced for content creators, and work independently as a game creator.
-        I am also well-versed in a variety of software programs, including Adobe Creative Suite, and Figma, which allows
-        me to create designs quickly and efficiently. I love creating.
-        </p>
-        <h3 class="tools"><ul>TOOLS</ul><br>
-            <ul>Adobe Suite</ul>
-            <ul>Clip Studio Paint</ul>
-            <ul>TV Paint</ul>
-            <ul>Blender</ul>
-            <ul>Sony Vegas</ul>
-            <ul>VS Code</ul>
-        </h3>
-        <h3 class="code_lang"><ul>SKILLS</ul><br>
-            <ul>Python</ul>
-            <ul>Javascript</ul>
-            <ul>HTML</ul>
-            <ul>CSS</ul>
-            <ul>C/++/#</ul>
-        </h3>
+        <nav>
+            <div class="navBar">
+                <button id="DropDownMenu">
+                    <div class="bar1"></div>
+                    <div class="bar2" id="bar2"></div>
+                    <div class="bar3" id="bar3"></div>
+                </button>
+                <div class="aboutButton" onclick="location.href='about.html'">
+                    <div class="aboutText">ABOUT</div>
+                </div>
+                <div class="portfolioButton" onclick="location.href='portfolio.html'">
+                    <div class="artText">ARTWORK</div>
+                </div>
+                <div class="homeButton" onclick="location.href='index.html'">
+                    <div class="homeText">HOME</div>
+                </div>
+            </div>
+        </nav>
+        <!--Start Of Mobile DropDown-->
+        <nav>
+            <div class="box" id="box"> <!--The Container for the Drop Down Menu on Mobile-->
+                <button id="DropHomeButton" onclick="location.href='index.html'">HOME</button><br>
+                <button id="DropHomeButton" onclick="location.href='portfolio.html'">PORTFOLIO</button><br>
+                <button id="DropHomeButton" onclick="location.href='about.html'">ABOUT</button><br>
+                <script src="script.js"></script>
+            </div>
+        </nav>
+        <!--End Of Mobile DropDown-->
+</header>
+<main> 
+<body> 
+    
+    
+    
+
+    <main>
+        <style>        
+            .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+    background: linear-gradient(#ceffff00, #ceffffc5, #cbcee900);  border-radius: 10px;
+  padding: 20px;
+  z-index: -1;
+}
+
+h1 {
+  font-size: 32px;
+  text-align: center;
+  margin-top: 0;
+      font-family: 'IBM Plex Sans', sans-serif;
+
+  
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-top: 20px;
+      font-family: 'IBM Plex Sans', sans-serif;
+
+}
+
+    #sLcontainer {
+        scale: 10%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 380px;
+}
+
+#sLcontainer a {
+  margin: 0 25px;
+}
+
+#image1, #image2, #image3, #image4 {
+  margin: 0 25px;
+  background-color: rgba(0, 255, 255, 0.322);
+  border-radius: 100px;
+}
+@media screen and (max-width: 800px) {
+    .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: -1;
+}
+}
+      
+</style>
+    <div class="container">
+        <h1>TOFUMECH</h1>
+        <p>I am a self-taught 2d/3d artist, animator and programmer based out of Cincinnati. I've been creating for 10+ years,
+        including artwork for <a href='https://www.kickstarter.com/projects/continueshow/smart-guys'>promotional campaigns</a>,
+        content creators, and always working on personal projects. <br>
+         I love creating.</p>
     </div>
+<div class="Social Links"></div>
+
+<div class="socialLink-container" id="sLcontainer">
+
+    <a href="https://twitter.com/TofuMech" target="_blank">
+        <img class="twitter" id="image1" src="twitter.png" />
+    </a>
+    <a href="https://www.artstation.com/tofumech" target="_blank">
+        <img class="artstation" id="image2" src="art.png" />
+    </a>
+    <a href="https://github.com/TofuMech" target="_blank">
+        <img class="github" id="image3" src="github.png" />
+    </a>
+    <a href="https://www.linkedin.com/in/anthony-wiles/" target="_blank">
+        <img class="Linkedin" id="image4" src="linkedin.png" />
+    </a>
+
+
+
+</div>
         
-        <style>
-             @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100;1,400&display=swap');
-            .tools {
-                position: absolute;
-                left: 35%;
-                color: rgb(228, 198, 198);
-                font-family: 'IBM Plex Sans', sans-serif;
-            }
-            .code_lang {
-                position: absolute;
-                right: 40%;
-                color: rgb(228, 198, 198);
-                font-family: 'IBM Plex Sans', sans-serif;
-            }
-            p {
-                font-weight: bolder;
-                font-family: 'IBM Plex Sans', sans-serif;
-            }
-            .findme {
-                position: absolute;
-                right: 260px;
-                top: 510px;
-                font-weight: bold;
-                font-family: 'IBM Plex Sans', sans-serif;
-                color: var(--text-color);
-            }
-            .photo {
-                display: block;
-                margin: 0 auto;
-                scale: 50%;
-                margin-right: 30px;
-                width: 30%;
-                border-radius: 50px;
-            }
-        </style>
-    <div class="findme">
-        <p>Social Links</p>
-    </div>
-        <div class="Social Links">
-            
-            <a href="https://twitter.com/TofuMech" target="_blank">
-                <img class="twitter"src="twitter.png" />
-            </a>
-            <a href="https://www.artstation.com/tofumech" target="_blank">
-                <img class="artstation" src="art.png" />
-            </a>
-            <a href="https://github.com/TofuMech" target="_blank">
-                <img class="github" src="github.png" />
-            </a>
-            
-             
-            <style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100;1,400&display=swap');
-
-              
-
-                .twitter {
-                    position: absolute;
-                    top: 350px;
-                    scale: 10%;
-                    right: 170px;
-                    cursor: pointer;
-                    background-color: rgba(179, 233, 162, 0.486);
-                    border-radius: 30px;
-                }
-                .artstation {
-                    position: absolute;
-                    top: 350px;
-                    scale: 10%;
-                    right: 60px;
-                    cursor: pointer;
-                    background-color: rgba(179, 233, 162, 0.397);
-                    border-radius: 30px;
-                }
-                .github {
-                    position: absolute;
-                    top: 350px;
-                    scale: 10%;
-                    right: -50px;
-                    cursor: pointer;
-                    background-color: rgba(179, 233, 162, 0.397);
-                    border-radius: 30px;
-            }
-        </style>
-    </div>
+    </main>
+   
+</body>
 </main>
-<footer>
-    <div id="homeText">
-        <script>
-            function displayRandomText() {
-                var quotes = [
-                    "[TAKE YOUR TIME]",
-                    "[LOADING..]",
-                    "[DRINK WATER]",
-                    "[TEAM MILK]",
-                    "[CLEAN YOUR SCREEN]",
-                    "[BOTTOM TEXT]"
-                ];
-                var randomIndex = Math.floor(Math.random() * quotes.length);
-                document.getElementById("homeText").innerHTML = quotes[randomIndex];
-            }
-        </script>
 
-        <body onload="displayRandomText()"></body>
-    </div>
-</footer>
 </body>
 </html>

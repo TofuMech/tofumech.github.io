@@ -1,119 +1,145 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <!--Webpage Title-->
     <title>TofuMech</title>
-    <!--CSS Hook-->
+    <!--CSS Link-->
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="description" content="Artist and Tech Guy">
     <meta name="viewport" content="width=device-width, intial-scale=1">
 </head>
 <header>
+    <script src="script.js"></script>
     <img id="moon" src="moon.png">
     <img id="sun" src="sun.png">
-    <script src="script.js"></script>         
+    <nav>
+        <div class="navBar">
+            <button id="DropDownMenu">
+                <div class="bar1"></div>
+                <div class="bar2" id="bar2"></div>
+                <div class="bar3" id="bar3"></div>
+            </button>
+            <div class="aboutButton" onclick="location.href='about.html'">
+                <div class="aboutText">ABOUT</div>
+            </div>
+            <div class="portfolioButton" onclick="location.href='portfolio.html'">
+                <div class="artText">ARTWORK</div>
+            </div>
+            <div class="homeButton" onclick="location.href='index.html'">
+                <div class="homeText">HOME</div>
+            </div>
+        </div>
+    </nav>
+    <!--Start Of Mobile DropDown-->
+    <nav>
+        <div class="box" id="box"> <!--The Container for the Drop Down Menu on Mobile-->
+            <button id="DropHomeButton" onclick="location.href='index.html'">HOME</button><br>
+            <button id="DropHomeButton" onclick="location.href='portfolio.html'">PORTFOLIO</button><br>
+            <button id="DropHomeButton" onclick="location.href='about.html'">ABOUT</button><br>
+            <script src="script.js"></script>
+        </div>
+    </nav>
+    <!--End Of Mobile DropDown-->
 </header>
-<nav>
-    <div class="navBar">
-        <div class="aboutButton" onclick="location.href='about.html'">
-            <div class="aboutText">ABOUT</div>
-        </div>
-        <div class="portfolioButton" onclick="location.href='portfolio.html'">
-            <div class="artText">ARTWORK</div>
-        </div>
-        <div class="homeButton" onclick="location.href='index.html'">
-            <div class="homeText">HOME</div>
-        </div>
-</nav>
-        <main>
-            <div class="grid-container"> <!--This contains all the images-->
-                <img src="1.jpg" onclick="openImage(this)">
-                <img src="2.jpg" onclick="openImage(this)">
-                <img src="3.jpg" onclick="openImage(this)">
-                <img src="4.png" onclick="openImage(this)">
-                <img src="5.jpg" onclick="openImage(this)">
-                <img src="6.jpg" onclick="openImage(this)">
-                <img src="7.jpg" onclick="openImage(this)">
-                <img src="8.jpg" onclick="openImage(this)">
-                <img src="9.png" onclick="openImage(this)">
-                <img src="10.jpg" onclick="openImage(this)">
-                <img src="11.jpg" onclick="openImage(this)">
-                <img src="12.jpg" onclick="openImage(this)">
-                <img src="13.jpg" onclick="openImage(this)">
-                <img src="14.png" onclick="openImage(this)">
-                <img src="15.jpg" onclick="openImage(this)">
-                <img src="16.png" onclick="openImage(this)">
-                <img src="17.png" onclick="openImage(this)">
-                <img src="18.jpg" onclick="openImage(this)">
-                <img src="19.jpg" onclick="openImage(this)">
-                <img src="20.png" onclick="openImage(this)">
-                <img src="21.jpg" onclick="openImage(this)">
-                <img src="22.png" onclick="openImage(this)">
-                <img src="23.jpg" onclick="openImage(this)">
-                <img src="24.jpg" onclick="openImage(this)">
-                <img src="25.png" onclick="openImage(this)">
-                <img src="26.png" onclick="openImage(this)">
-                <img src="27.png" onclick="openImage(this)">
-                <img src="28.jpg" onclick="openImage(this)">
-                <img src="29.png" onclick="openImage(this)">
-                <img src="30.jpg" onclick="openImage(this)">
-                <img src="31.jpg" onclick="openImage(this)">
-                <img src="32.jpg" onclick="openImage(this)">
-                <img src="33.jpg" onclick="openImage(this)">
-                <img src="35.png" onclick="openImage(this)">
-                <img src="36.png" onclick="openImage(this)">
-                <img src="37.jpg" onclick="openImage(this)">
-                <img src="38.png" onclick="openImage(this)">
-                <img src="40.jpg" onclick="openImage(this)">
-                <img src="41.jpg" onclick="openImage(this)">
-                <img src="42.jpg" onclick="openImage(this)">
-          
-            </div>
-            <div id="overlay" onclick="closeImage()">
-                <img src="" alt="Enlarged Image">
-            </div>
-            <style>
-                .grid-container {
-                    display: grid;
-                    grid-template-columns: repeat(6, 2fr);
-                    grid-column-gap: 10px;            
-            }
-                .grid-container img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    justify-items: center;
-            }
-                #overlay {
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: rgba(0, 0, 0, 0.7);
-                    display: none;
-                    justify-content: center;
-                    align-items: center;
-                }
-                #overlay img {
-                    max-width: 90%;
-                    max-height: 90%;
-                    object-fit: contain;
-                }           
-            </style>
-            <script>
-                function openImage(img) {
-                    var overlay = document.getElementById("overlay");
-                    var overlayImg = overlay.getElementsByTagName("img")[0];
-                    overlayImg.src = img.src;
-                    overlay.style.display = "flex";
-                }
-                function closeImage() {
-                    var overlay = document.getElementById("overlay");
-                    overlay.style.display = "none";
-                }
-            </script>
-        </main>
-    </body>
+<main>
+<div class="grid-container"> <!--This contains all the images-->
+    <img src="1.jpg" onclick="openImage(this)">
+    <img src="2.jpg" onclick="openImage(this)">
+    <img src="3.jpg" onclick="openImage(this)">
+    <img src="4.png" onclick="openImage(this)">
+    <img src="5.jpg" onclick="openImage(this)">
+    <img src="6.jpg" onclick="openImage(this)">
+    <img src="7.jpg" onclick="openImage(this)">
+    <img src="8.jpg" onclick="openImage(this)">
+    <img src="9.png" onclick="openImage(this)">
+    <img src="10.jpg" onclick="openImage(this)">
+    <img src="11.jpg" onclick="openImage(this)">
+    <img src="12.jpg" onclick="openImage(this)">
+    <img src="13.jpg" onclick="openImage(this)">
+    <img src="14.png" onclick="openImage(this)">
+    <img src="15.jpg" onclick="openImage(this)">
+    <img src="16.png" onclick="openImage(this)">
+    <img src="17.png" onclick="openImage(this)">
+    <img src="18.jpg" onclick="openImage(this)">
+    <img src="19.jpg" onclick="openImage(this)">
+    <img src="20.png" onclick="openImage(this)">
+    <img src="21.jpg" onclick="openImage(this)">
+    <img src="22.png" onclick="openImage(this)">
+    <img src="23.jpg" onclick="openImage(this)">
+    <img src="24.jpg" onclick="openImage(this)">
+    <img src="25.png" onclick="openImage(this)">
+    <img src="26.png" onclick="openImage(this)">
+    <img src="27.png" onclick="openImage(this)">
+    <img src="28.jpg" onclick="openImage(this)">
+    <img src="29.png" onclick="openImage(this)">
+    <img src="30.jpg" onclick="openImage(this)">
+    <img src="31.jpg" onclick="openImage(this)">
+    <img src="32.jpg" onclick="openImage(this)">
+    <img src="33.jpg" onclick="openImage(this)">
+    <img src="35.png" onclick="openImage(this)">
+    <img src="36.png" onclick="openImage(this)">
+    <img src="37.jpg" onclick="openImage(this)">
+    <img src="38.png" onclick="openImage(this)">
+    <img src="40.jpg" onclick="openImage(this)">
+    <img src="41.jpg" onclick="openImage(this)">
+</div>
+<div id="overlay" onclick="closeImage()">
+    <img src="" alt="Enlarged Image">
+</div>
+<style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(6, 2fr);
+        grid-column-gap: 10px;
+    }
+
+    .grid-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        justify-items: center;
+    }
+
+    #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #overlay img {
+        max-width: 90%;
+        max-height: 90%;
+        object-fit: contain;
+    }
+@media screen and (max-width: 800px) {
+
+    .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-column-gap: 10px;
+}
+}
+</style>
+<script>
+    function openImage(img) {
+        var overlay = document.getElementById("overlay");
+        var overlayImg = overlay.getElementsByTagName("img")[0];
+        overlayImg.src = img.src;
+        overlay.style.display = "flex";
+    }
+    function closeImage() {
+        var overlay = document.getElementById("overlay");
+        overlay.style.display = "none";
+    }
+</script>
+</main>
+</body>
 </html>
