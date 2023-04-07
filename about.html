@@ -1,117 +1,133 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-        <!--Webpage Title-->
-        <title>TofuMech</title>
-        <!--CSS Hook-->
-        <link rel="stylesheet" href="style.css">
-        <meta charset="UTF-8">
-        <meta name="description" content="Artist and Tech Guy">
-        <meta name="viewport" content="width=device-width, intial-scale=1">   
+    <!--Webpage Title-->
+    <title>TofuMech</title>
+    <!--CSS Link-->
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="Artist and Tech Guy">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
 </head>
 <header>
     <script src="script.js"></script>
-        <img id="moon" src="moon.png">
-        <img id="sun" src="sun.png">
-        <nav>
-            <div class="navBar">
-                <button id="DropDownMenu">
-                    <div class="bar1"></div>
-                    <div class="bar2" id="bar2"></div>
-                    <div class="bar3" id="bar3"></div>
-                </button>
-                <div class="aboutButton" onclick="location.href='about.html'">
-                    <div class="aboutText">ABOUT</div>
-                </div>
-                <div class="portfolioButton" onclick="location.href='portfolio.html'">
-                    <div class="artText">ARTWORK</div>
-                </div>
-                <div class="homeButton" onclick="location.href='index.html'">
-                    <div class="homeText">HOME</div>
-                </div>
+    <img id="moon" src="moon.png">
+    <img id="sun" src="sun.png">
+    <nav>
+        <div class="navBar">
+            <button id="DropDownMenu">
+                <div class="bar1"></div>
+                <div class="bar2" id="bar2"></div>
+                <div class="bar3" id="bar3"></div>
+            </button>
+            <div class="aboutButton" onclick="location.href='about.html'">
+                <div class="aboutText">ABOUT</div>
             </div>
-        </nav>
-        <!--Start Of Mobile DropDown-->
-        <nav>
-            <div class="box" id="box"> <!--The Container for the Drop Down Menu on Mobile-->
-                <button id="DropHomeButton" onclick="location.href='index.html'">HOME</button><br>
-                <button id="DropHomeButton" onclick="location.href='portfolio.html'">PORTFOLIO</button><br>
-                <button id="DropHomeButton" onclick="location.href='about.html'">ABOUT</button><br>
-                <script src="script.js"></script>
+            <div class="portfolioButton" onclick="location.href='portfolio.html'">
+                <div class="artText">ARTWORK</div>
             </div>
-        </nav>
-        <!--End Of Mobile DropDown-->
+            <div class="homeButton" onclick="location.href='index.html'">
+                <div class="homeText">HOME</div>
+            </div>
+        </div>
+    </nav>
 </header>
-<main> 
-<body> 
+<main>
+    <nav>
+        <div class="box" id="box"> <!--The Container for the Drop Down Menu on Mobile-->
+            <button id="DropHomeButton" onclick="location.href='index.html'">HOME</button><br>
+            <button id="DropHomeButton" onclick="location.href='portfolio.html'">PORTFOLIO</button><br>
+            <button id="DropHomeButton" onclick="location.href='about.html'">ABOUT</button><br>
+            <script src="script.js"></script>
+        </div>
+    </nav>
+    <div class="cube">
+        <div class="face top"></div>
+        <div class="face bottom"></div>
+        <div class="face left"></div>
+        <div class="face right"></div>
+        <div class="face front"></div>
+        <div class="face back"></div>
+    </div>
+    
+</main>
+<body>
+    <style>
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: auto;
+            height: auto;
+            background-color: rgba(0, 255, 255, 0.37);
+            border-radius: 10px;
+            padding: 30px;
+            z-index: -1;
+        }
+    
+        h1 {
+            font-size: 32px;
+            text-align: center;
+            margin-top: 0;
+            font-family: 'IBM Plex Sans', sans-serif;
     
     
+        }
     
-
-    <main>
-        <style>        
+        p {
+            font-size: 1em;
+            line-height: 1.5;
+            margin-top: 20px;
+            font-family: 'IBM Plex Sans', sans-serif;
+    
+        }
+    
+        #sLcontainer {
+            scale: 10%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 380px;
+        }
+    
+        #sLcontainer a {
+            margin: 0 25px;
+        }
+    
+        #image1,
+        #image2,
+        #image3,
+        #image4 {
+            margin: 0 25px;
+            background-color: rgba(0, 255, 255, 0.322);
+            border-radius: 100px;
+        }
+    
+        @media screen and (max-width: 800px) {
             .container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: auto;
-  height: auto;
-    background: linear-gradient(#ceffff00, #ceffffc5, #cbcee900);  border-radius: 10px;
-  padding: 20px;
-  z-index: -1;
-}
-
-h1 {
-  font-size: 32px;
-  text-align: center;
-  margin-top: 0;
-      font-family: 'IBM Plex Sans', sans-serif;
-
-  
-}
-
-p {
-  font-size: 18px;
-  line-height: 1.5;
-  margin-top: 20px;
-      font-family: 'IBM Plex Sans', sans-serif;
-
-}
-
-    #sLcontainer {
-        scale: 10%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 380px;
-}
-
-#sLcontainer a {
-  margin: 0 25px;
-}
-
-#image1, #image2, #image3, #image4 {
-  margin: 0 25px;
-  background-color: rgba(0, 255, 255, 0.322);
-  border-radius: 100px;
-}
-@media screen and (max-width: 800px) {
-    .container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 400px;
-  height: auto;
-  border-radius: 10px;
-  padding: 20px;
-  z-index: -1;
-}
-}
-      
-</style>
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 350px;
+                height: auto;
+                border-radius: 10px;
+                padding: 0px;
+                z-index: -1;
+            }
+            #image1,
+        #image2,
+        #image3,
+        #image4 {
+            margin-top: -300px;
+            background-color: rgba(0, 255, 255, 0.322);
+            border-radius: 100px;
+        }
+        }
+    </style>
     <div class="container">
         <h1>TOFUMECH</h1>
         <p>I am a self-taught 2d/3d artist, animator and programmer based out of Cincinnati. I've been creating for 10+ years,
@@ -139,11 +155,29 @@ p {
 
 
 </div>
-        
-    </main>
-   
-</body>
-</main>
 
+</div>
 </body>
+<footer>
+    <div id="homeText">
+        <script>
+            function displayRandomText() {
+                var quotes = [
+                    "[TAKE YOUR TIME]",
+                    "[LOADING..]",
+                    "[DRINK WATER]",
+                    "[TEAM MILK]",
+                    "[CLEAN YOUR SCREEN]",
+                    "[BOTTOM TEXT]"
+                ];
+                var randomIndex = Math.floor(Math.random() * quotes.length);
+                document.getElementById("homeText").innerHTML = quotes[randomIndex];
+            }
+        </script>
+
+        <body onload="displayRandomText()"></body>
+    </div>
+</footer>
+</body>
+
 </html>

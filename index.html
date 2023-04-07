@@ -63,7 +63,7 @@
             width: 100px;
             height: 100px;
             margin: auto;
-            z-index: -3;
+            z-index: 0;
             top: 0;
             bottom: 0;
             left: 0;
@@ -102,6 +102,76 @@
         .bottom {
             transform: translateY(50px) rotateX(-90deg);
         }
+
+        @media screen and (max-width: 800px) {
+
+            
+        @keyframes turn {
+            from {
+                transform: rotateX(1deg) rotateY(1deg);
+            }
+            to {
+                transform: rotateX(359deg) rotateY(359deg);
+            }
+        }
+        .cube {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            z-index: -5;
+           margin-top: 300px;
+            transform-style: preserve-3d;
+            animation: turn 10s infinite linear;
+        }
+        .cube:active .face {
+            --cube-color: #e9e9da;
+            transition: all .2s ease-in;
+        }
+        .face {
+            position: absolute;
+            top: 10px;
+            width: 100px;
+            height: 100px;
+            background: var(--cube-color);
+            transform: translateZ(50px);
+            border-radius: 0px;
+            transition: all .2s ease-in;
+            z-index: -5;
+        }
+        .front {
+            transform: translateZ(50px);
+                        z-index: -5;
+
+        }
+        .back {
+            transform: translateZ(-50px) rotateY(180deg);
+                        z-index: -5;
+
+        }
+        .left {
+            transform: translateX(-50px) rotateY(-90deg);
+                        z-index: -5;
+
+        }
+        .right {
+            transform: translateX(50px) rotateY(90deg);
+                        z-index: -5;
+
+        }
+        .top {
+            transform: translateY(-50px) rotateX(90deg);
+                        z-index: -5;
+
+        }
+        .bottom {
+            transform: translateY(50px) rotateX(-90deg);
+                        z-index: -5;
+
+        }
+    
+    }
+        
     </style>
 </main>
 <footer>
