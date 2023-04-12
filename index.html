@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <!--Webpage Title-->
     <title>TofuMech</title>
@@ -16,32 +17,49 @@
     <img id="sun" src="sun.png">
     <nav>
         <div class="navBar">
-            <button id="DropDownMenu"> 
+            <button id="DropDownMenu">
                 <div class="bar1"></div>
                 <div class="bar2" id="bar2"></div>
                 <div class="bar3" id="bar3"></div>
+
             </button>
             <div class="aboutButton" onclick="location.href='about.html'">
                 <div class="aboutText">ABOUT</div>
             </div>
+            <div class="shopButton" onclick="location.href=''">
+                <div class="shopText">SHOP</div>
+            </div>
+            <div class="wordButton" onclick="location.href='words.html'">
+                <div class="wordText">WORDS</div>
+            </div>
+
             <div class="portfolioButton" onclick="location.href='portfolio.html'">
                 <div class="artText">ARTWORK</div>
             </div>
             <div class="homeButton" onclick="location.href='index.html'">
                 <div class="homeText">HOME</div>
             </div>
+
         </div>
     </nav>
 </header>
 <main>
     <nav>
-    <div class="box" id="box"> <!--The Container for the Drop Down Menu on Mobile-->
-        <button id="DropHomeButton"onclick="location.href='index.html'">HOME</button><br>
-        <button id="DropHomeButton"onclick="location.href='portfolio.html'">PORTFOLIO</button><br>
-        <button id="DropHomeButton"onclick="location.href='about.html'">ABOUT</button><br>
-        <script src="script.js"></script>
-    </div>
+        <div class="box" id="box"> <!--The Container for the Drop Down Menu on Mobile-->
+            <button id="DropHomeButton" onclick="location.href='index.html'">HOME</button><br>
+            <button id="DropHomeButton" onclick="location.href='portfolio.html'">PORTFOLIO</button><br>
+            <button id="DropHomeButton" onclick="location.href='words.html'">WORDS</button><br>
+            <button id="DropHomeButton"
+                onclick="location.href='https://www.redbubble.com/people/TofuMech/shop?asc=u'">SHOP</button><br>
+            <button id="DropHomeButton" onclick="location.href='about.html'">ABOUT</button><br>
+
+            <script src="script.js"></script>
+        </div>
     </nav>
+
+    
+
+
     <div class="cube">
         <div class="face top"></div>
         <div class="face bottom"></div>
@@ -121,58 +139,56 @@
             height: 100px;
             margin: auto;
             z-index: -5;
-           margin-top: 300px;
+           margin-top: 500px;
             transform-style: preserve-3d;
             animation: turn 10s infinite linear;
         }
-        .cube:active .face {
-            --cube-color: #e9e9da;
-            transition: all .2s ease-in;
-        }
+       
         .face {
             position: absolute;
             top: 10px;
-            width: 100px;
-            height: 100px;
+            width: 50px;
+            height: 50px;
             background: var(--cube-color);
-            transform: translateZ(50px);
+            transform: translateZ(25px);
             border-radius: 0px;
             transition: all .2s ease-in;
             z-index: -5;
         }
         .front {
-            transform: translateZ(50px);
+            transform: translateZ(-25px);
                         z-index: -5;
 
         }
         .back {
-            transform: translateZ(-50px) rotateY(180deg);
+            transform: translateZ(-25px) rotateY(180deg);
                         z-index: -5;
 
         }
         .left {
-            transform: translateX(-50px) rotateY(-90deg);
+            transform: translateX(-25px) rotateY(-90deg);
                         z-index: -5;
-
         }
+        
         .right {
-            transform: translateX(50px) rotateY(90deg);
+            transform: translateX(25px) rotateY(90deg);
                         z-index: -5;
 
         }
         .top {
-            transform: translateY(-50px) rotateX(90deg);
+            transform: translateY(-25px) rotateX(90deg);
                         z-index: -5;
 
         }
         .bottom {
-            transform: translateY(50px) rotateX(-90deg);
+            transform: translateY(25px) rotateX(-90deg);
                         z-index: -5;
 
         }
+        
     
     }
-        
+       
     </style>
 </main>
 <footer>

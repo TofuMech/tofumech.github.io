@@ -9,8 +9,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="Artist and Tech Guy">
     <meta name="viewport" content="width=device-width, intial-scale=1">
-        <link rel="icon" href="tofuicon.png">
-
+    <link rel="icon" href="tofuicon.png">
 </head>
 <header>
     <script src="script.js"></script>
@@ -22,29 +21,42 @@
                 <div class="bar1"></div>
                 <div class="bar2" id="bar2"></div>
                 <div class="bar3" id="bar3"></div>
+
             </button>
             <div class="aboutButton" onclick="location.href='about.html'">
                 <div class="aboutText">ABOUT</div>
             </div>
+            <div class="shopButton" onclick="location.href=''">
+                <div class="shopText">SHOP</div>
+            </div>
+            <div class="wordButton" onclick="location.href='words.html'">
+                <div class="wordText">WORDS</div>
+            </div>
+
             <div class="portfolioButton" onclick="location.href='portfolio.html'">
                 <div class="artText">ARTWORK</div>
             </div>
             <div class="homeButton" onclick="location.href='index.html'">
                 <div class="homeText">HOME</div>
             </div>
+
         </div>
     </nav>
-    <!--Start Of Mobile DropDown-->
+</header>
+<main>
     <nav>
         <div class="box" id="box"> <!--The Container for the Drop Down Menu on Mobile-->
             <button id="DropHomeButton" onclick="location.href='index.html'">HOME</button><br>
             <button id="DropHomeButton" onclick="location.href='portfolio.html'">PORTFOLIO</button><br>
+            <button id="DropHomeButton" onclick="location.href='words.html'">WORDS</button><br>
+            <button id="DropHomeButton"
+                onclick="location.href='https://www.redbubble.com/people/TofuMech/shop?asc=u'">SHOP</button><br>
             <button id="DropHomeButton" onclick="location.href='about.html'">ABOUT</button><br>
+
             <script src="script.js"></script>
         </div>
     </nav>
-    <!--End Of Mobile DropDown-->
-</header>
+
 <main>
 <div class="grid-container"> <!--This contains all the images-->
     <img src="1.jpg" onclick="openImage(this)">

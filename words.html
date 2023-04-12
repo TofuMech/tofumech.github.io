@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Webpage Title-->
+    <title>TofuMech</title>
+    <!--CSS Link-->
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="Artist and Tech Guy">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <link rel="icon" href="tofuicon.png">
+</head>
+<header>
+    <script src="script.js"></script>
+    <img id="moon" src="moon.png">
+    <img id="sun" src="sun.png">
+    <nav>
+        <div class="navBar">
+            <button id="DropDownMenu">
+                <div class="bar1"></div>
+                <div class="bar2" id="bar2"></div>
+                <div class="bar3" id="bar3"></div>
+
+            </button>
+            <div class="aboutButton" onclick="location.href='about.html'">
+                <div class="aboutText">ABOUT</div>
+            </div>
+            <div class="shopButton" onclick="location.href=''">
+                <div class="shopText">SHOP</div>
+            </div>
+            <div class="wordButton" onclick="location.href='words.html'">
+                <div class="wordText">WORDS</div>
+            </div>
+
+            <div class="portfolioButton" onclick="location.href='portfolio.html'">
+                <div class="artText">ARTWORK</div>
+            </div>
+            <div class="homeButton" onclick="location.href='index.html'">
+                <div class="homeText">HOME</div>
+            </div>
+
+        </div>
+    </nav>
+</header>
+<main>
+    <nav>
+        <div class="box" id="box"> <!--The Container for the Drop Down Menu on Mobile-->
+            <button id="DropHomeButton" onclick="location.href='index.html'">HOME</button><br>
+            <button id="DropHomeButton" onclick="location.href='portfolio.html'">PORTFOLIO</button><br>
+            <button id="DropHomeButton" onclick="location.href='words.html'">WORDS</button><br>
+            <button id="DropHomeButton"
+                onclick="location.href='https://www.redbubble.com/people/TofuMech/shop?asc=u'">SHOP</button><br>
+            <button id="DropHomeButton" onclick="location.href='about.html'">ABOUT</button><br>
+
+            <script src="script.js"></script>
+        </div>
+    </nav>
+
+
+
+</main>
+<footer>
+    <div id="homeText">
+        <script>
+            function displayRandomText() {
+                var quotes = [
+                    "[TAKE YOUR TIME]",
+                    "[LOADING..]",
+                    "[DRINK WATER]",
+                    "[CLEAN YOUR SCREEN]",
+                    "[BOTTOM TEXT]"
+                ];
+                var randomIndex = Math.floor(Math.random() * quotes.length);
+                document.getElementById("homeText").innerHTML = quotes[randomIndex];
+            }
+        </script>
+
+        <body onload="displayRandomText()"></body>
+    </div>
+</footer>
+</body>
+
+</html>

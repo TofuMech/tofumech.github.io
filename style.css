@@ -11,7 +11,7 @@ body {
     --cube-color: #6c79a8;
     --text-color: #1c3253;
     --button-text:#261523;
-    --button-colorOne: #FF9D00;
+    --button-colorOne: #886429;
     --button-colorTwo: #131736;
     --navbar-color:#648BB0;
     --background-color: #211d25;
@@ -37,68 +37,111 @@ body {
 .homeButton {
     width: 150px;
     height: 150px;
-    background: linear-gradient(to left, var(--button-colorOne) 75%, var(--button-colorTwo) 100%);    
+    background: linear-gradient(to left, var(--button-colorOne) 60%, var(--button-colorTwo) 100%);
     position: absolute;
-    left: -30px;
-    top: -50px;
-    transform: rotateZ(30deg);
+    left: -70px;
+    top: 0px;
     cursor: pointer;
     z-index: 1;
+    transform: skew(-40deg);
 }
 
 
 .portfolioButton {
-      width: 150px;
-      height: 180px;
-    background: linear-gradient(to left, var(--button-colorOne) 65%, var(--button-colorTwo) 100%);
-      position: absolute;
-      left: 90px;
-      top: -50px;
-      transform: rotateZ(30deg);
-      cursor: pointer;
-      z-index: 1;
+     width: 150px;
+    height: 150px;
+    background: linear-gradient(to left, var(--button-colorOne) 55%, var(--button-colorTwo) 100%);
+    position: absolute;
+    left: 50px;
+    top: 0px;
+    cursor: pointer;
+    z-index: 1;
+    transform: skew(-40deg);
 }
 .aboutButton {
     width: 150px;
-    height: 200px;
+    height: 150px;
     background: linear-gradient(to left, var(--button-colorOne) 55%, var(--button-colorTwo) 100%);
     position: absolute;
-    left: 220px;
-    top: -90px;
-    transform: rotateZ(30deg);
+    left: 380px;
+    top: 0px;
     cursor: pointer;
     z-index: 1;
+    transform: skew(-40deg);
+    box-shadow: 1px -5px 4px 1px rgb(36, 28, 28);
 }
 
+.wordButton {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(to left, var(--button-colorOne) 55%, var(--button-colorTwo) 100%);
+    position: absolute;
+    left: 160px;
+    top: 0px;
+    cursor: pointer;
+    z-index: 1;
+    transform: skew(-40deg);
+}
+.shopButton {
+    width: 150px;
+        height: 150px;
+        background: linear-gradient(to left, var(--button-colorOne) 55%, var(--button-colorTwo) 100%);
+        position: absolute;
+        left: 270px;
+        top: 0px;
+        cursor: pointer;
+        z-index: 1;
+        transform: skew(-40deg);
+}
 .homeText {
     color: var(--button-text);
     position: absolute;
-    top: 90px;
-    left: 90px;
+    top: 55px;
+    left: 80px;
     display: block;
-    transform: rotateZ(-30deg);
     font-family: 'IBM Plex Sans', sans-serif;
+    transform: skew(40deg);
     font-size: larger;
 }
 .artText {
     color: var(--button-text);
     position: absolute;
-    top: 100px;
+    top: 55px;
     left: 50px;
     display: block;
-    transform: rotateZ(-30deg);
     font-family: 'IBM Plex Sans', sans-serif;
+    transform: skew(40deg);
     font-size: larger;
 }
 .aboutText {
     color: var(--button-text);
     position: absolute;
-    top: 135px;
-    left: 80px;
+    top: 55px;
+    left: 70px;
     display: block;
     font-family: 'IBM Plex Sans', sans-serif;
-    transform: rotateZ(-30deg);
-        font-size: larger;
+    transform: skew(40deg);
+    font-size: larger;
+}
+.wordText {
+    color: var(--button-text);
+    position: absolute;
+    top: 55px;
+    left: 70px;
+    display: block;
+    font-family: 'IBM Plex Sans', sans-serif;
+    transform: skew(40deg);
+    font-size: larger;
+}
+.shopText {
+    color: var(--button-text);
+    position: absolute;
+    top: 55px;
+    left: 90px;
+    display: block;
+    font-family: 'IBM Plex Sans', sans-serif;
+    transform: skew(40deg);
+    font-size: larger;
 }
 #moon,
 #sun {
@@ -138,6 +181,7 @@ body {
 
 @media screen and (max-width: 800px) {
 
+    
 
     .navBar {
         position: relative;
@@ -201,6 +245,16 @@ body {
         transition: transform 0.5s ease-in-out;
     }
 
+    .bar4 {
+        position: absolute;
+        background-color: var(--drop-menu-color);
+        width: 5px;
+        height: 20px;
+        top: 70px;
+        left: 110px;
+        border-radius: 10px;
+        transition: transform 0.5s ease-in-out;
+    }
     
 
     #DropHomeButton:hover {
@@ -231,6 +285,15 @@ body {
     .aboutButton {
        
         display: none;
+    }
+    .wordButton {
+        display:none
+    }
+    .shopButton {
+        display: none;
+    }
+    .wordText {
+        display: none
     }
     #moon,
     #sun {

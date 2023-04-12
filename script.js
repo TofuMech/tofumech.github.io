@@ -69,7 +69,7 @@ function applyTheme(theme) {
    document.documentElement.style.setProperty('--cube-color', '#6c79a8');
    document.documentElement.style.setProperty('--text-color', '#1c3253');
    document.documentElement.style.setProperty('--button-text', '#261523');
-   document.documentElement.style.setProperty('--button-colorOne','#FF9D00');
+    document.documentElement.style.setProperty('--button-colorOne','#FF6859');
    document.documentElement.style.setProperty('--button-colorTwo','#131736');
    document.documentElement.style.setProperty('--navbar-color', '#648BB0');
    
