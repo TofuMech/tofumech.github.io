@@ -1,22 +1,24 @@
 var button = document.getElementById('DropDownMenu');
 var box = document.getElementById('box');
 var isMoved = false;
-var moonIcon = document.querySelector('#moon')
-var sunIcon = document.querySelector('#sun')
-var menuBar3 = document.querySelector('#bar3')
-var menuBar2 = document.querySelector('#bar2')
+var moonIcon = document.querySelector('#moon');
+var sunIcon = document.querySelector('#sun');
+var menuBar3 = document.querySelector('#bar3');
+var menuBar2 = document.querySelector('#bar2');
 
 
 button.addEventListener('click', function () {
   if (!isMoved) {
-    box.style.transform = 'translateY(550px)';
+    box.style.transform = 'translateX(1000px)';
     menuBar3.style.transform = 'translateY(-17px)';
-    menuBar2.style.transform = 'translateY(-10px)';
+    menuBar2.style.transform = 'translateY(-9px)';
+    
     isMoved = true;
   } else {
     box.style.transform = 'translateX(0)';
     menuBar3.style.transform = 'translateY(0px)';
-    menuBar2.style.transform = 'translateY(0px)';    
+    menuBar2.style.transform = 'translateY(0px)';
+
     isMoved = false;
   }
 });
@@ -62,26 +64,24 @@ sunIcon.addEventListener('click', () => {
 // function to apply the selected theme
 function applyTheme(theme) {
   if (theme === 'light') {
-    // apply dark theme
-    document.body.style.transition = 'all .1s';
-    document.body.style.backgroundColor = '#6c97a8 ';
     
-   document.documentElement.style.setProperty('--cube-color', '#6c79a8');
-   document.documentElement.style.setProperty('--text-color', '#1c3253');
-   document.documentElement.style.setProperty('--button-text', '#261523');
-    document.documentElement.style.setProperty('--button-colorOne','#FF6859');
-   document.documentElement.style.setProperty('--button-colorTwo','#131736');
-   document.documentElement.style.setProperty('--navbar-color', '#648BB0');
-   
+    //light theme color attributes
+    document.body.style.transition = 'all .1s';
+    document.body.style.backgroundColor = '#c4c8cf'; 
+    document.documentElement.style.setProperty('--text-color', '#8BAAAD');
+    document.documentElement.style.setProperty('--button-text', '#F4FFF8');
+    document.documentElement.style.setProperty('--button-colorOne', '#D7263D');
+    document.documentElement.style.setProperty('--button-colorTwo', '#4D4847');
+    document.documentElement.style.setProperty('--navbar-color', '#37A1A1 ');
+
   } else if (theme === 'dark') {
-    //apply light theme
-   document.body.style.transition = 'all .1s';
-   document.body.style.backgroundColor = '#333';
-   document.documentElement.style.setProperty('--cube-color', '#9FF0CE');
+    //dark theme color attributes
+    document.body.style.transition = 'all .1s';
+    document.body.style.backgroundColor = '#363747';
     document.documentElement.style.setProperty('--text-color', '#b6895a ');
     document.documentElement.style.setProperty('--button-text', '#FFC07D');
-  document.documentElement.style.setProperty('--button-colorOne', '#3a5f7c');
-  document.documentElement.style.setProperty('--button-colorTwo', '#524d3b'); //This should be the darker color
-  document.documentElement.style.setProperty('--navbar-color', '#284059');  
+    document.documentElement.style.setProperty('--button-colorOne', '#3a5f7c');
+    document.documentElement.style.setProperty('--button-colorTwo', '#524d3b'); //This should be the darker color
+    document.documentElement.style.setProperty('--navbar-color', '#284059');
   }
 }

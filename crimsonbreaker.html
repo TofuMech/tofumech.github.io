@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TofuMech</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="Artist and Tech Guy">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <link rel="icon" href="tofuicon.png">
+</head>
+<header>
+    <nav>
+        <script src="script.js"></script>
+        <img id="moon" src="images/NavImages/moon.png">
+        <img id="sun" src="images/navImages/sun.png">
+        <div class="navBar">
+            <!--For Mobile, the three lines on the top that animate when interacted with-->
+            <button id="DropDownMenu">
+                <div class="bar1"></div>
+                <div class="bar2" id="bar2"></div>
+                <div class="bar3" id="bar3"></div>
+            </button>
+            <!--Desktop button navigation-->
+            <div class="aboutButton" tabindex="4" onclick="location.href='about.html'">
+                <div class="aboutText">ABOUT</div>
+            </div>
+            <div class="crimsonbreakersButton" tabindex="3" onclick="location.href='crimsonbreaker.html'">
+                <div class="crimsonbreakersText">CRIMSON &nbsp;BREAKER</div>
+            </div>
+            <div class="artworkButton" tabindex="2" onclick="location.href='portfolio.html'">
+                <div class="artText">ARTWORK</div>
+            </div>
+            <div class="homeButton" tabindex="1" onclick="location.href='index.html'">
+                <div class="homeText">HOME</div>
+            </div>
+        </div>
+        <!--The Container for the Drop Down Menu on Mobile-->
+        <div class="box" id="box">
+            <button id="DropHomeButton" onclick="location.href='index.html'">HOME</button><br>
+            <button id="DropHomeButton" onclick="location.href='portfolio.html'">ARTWORK</button><br>
+            <button id="DropHomeButton" onclick="location.href='words.html'">CRIMSON BREAKERS</button><br>
+            <button id="DropHomeButton" onclick="location.href='about.html'">ABOUT</button><br>
+            <script src="script.js"></script>
+        </div>
+        <div class="colormodeHolder"></div>
+    </nav>
+    <div class="homeTitle">
+        <h1>TOFUMECH</h1>
+    </div>
+    <div class="hometitleTagline" id="hometitleTagline">
+        <script>
+            function displayRandomText() {
+                var quotes = [
+                    "[TAKE YOUR TIME]",
+                    "[LOADING..]",
+                    "[DRINK WATER]",
+                    "[CLEAN YOUR SCREEN]",
+                    "[FUCK UNITY]",
+                    "[]",
+                    "[C]",
+                    "[C]"
+                ];
+                var randomIndex = Math.floor(Math.random() * quotes.length);
+                document.getElementById("hometitleTagline").innerHTML = quotes[randomIndex];
+            }
+        </script>
+
+        <body onload="displayRandomText()"></body>
+    </div>
+
+    <div class="socialmediaLinks">
+        <p>
+            <a href="https://twitter.com/TofuMech">TWITTER</a>
+            <a href="https://github.com/TofuMech">GITHUB</a>
+            <a href="https://www.artstation.com/tofumech">ARTSTATION</a>
+            <style>
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+            </style>
+        </p>
+</header>
+
+<body>
+    <main>
+
+        <div class="artCard">
+            <div class="art-card-content">
+                <h2 class="art-card-title"></h2>
+                <p class="art-card-body"></p>
+            </div>
+        </div>
+        <div class="musicCard">
+            <div class="music-card-content">
+                <p>Nothing here. Yet.
+                   </p>
+            </div>
+        </div>
+        
+
+        
+            <style>
+                a {
+                    text-decoration: none;
+
+
+                }
+
+                a,
+                a :visited {
+                    color: inherit;
+                }
+
+                a:hover {
+                    color: rgb(255, 253, 106);
+                }
+
+                .artCard {
+                    position: absolute;
+                    background-image: url(images/crimsonbreakerbanner.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    padding: 30rem 0 0;
+                    top: 250px;
+                    width: 50%;
+                    right: 25%;
+                    font-family: 'Big Shoulders Display', cursive;
+                    font-family: 'Lilita One', cursive;
+                    font-size: medium;
+                    text-align: center;
+                    z-index: -3;
+                    border-radius: 5px;
+
+
+                }
+            
+
+                
+
+                .musicCard {
+                    position: absolute;
+                    background-size: cover;
+                    padding: 2rem 0 0;
+                    top: 750px;
+                    width: 50%;
+                    right: 25%;
+                    border-radius: 5px;
+                    color: rgb(0, 0, 0);
+                    font-family: 'Big Shoulders Display', cursive;
+                    font-family: 'Lilita One', cursive;
+                    font-size: medium;
+                    text-align: center;
+                    z-index: 3;
+                    filter: drop-shadow(0 20px 10px #131736d3);
+                    background-color: rgb(155, 155, 155);
+                    display: block;
+                }
+
+                
+            </style>
+        </div>
+
+    </main>
+</body>
+
+</html>

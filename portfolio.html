@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <!--Webpage Title-->
     <title>TofuMech</title>
-    <!--CSS Link-->
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="description" content="Artist and Tech Guy">
@@ -12,102 +9,140 @@
     <link rel="icon" href="tofuicon.png">
 </head>
 <header>
-    <script src="script.js"></script>
-    <img id="moon" src="moon.png">
-    <img id="sun" src="sun.png">
     <nav>
+        <script src="script.js"></script>
+        <img id="moon" src="images/NavImages/moon.png">
+        <img id="sun" src="images/navImages/sun.png">
         <div class="navBar">
+            <!--For Mobile, the three lines on the top that animate when interacted with-->
             <button id="DropDownMenu">
                 <div class="bar1"></div>
                 <div class="bar2" id="bar2"></div>
                 <div class="bar3" id="bar3"></div>
-
             </button>
-            <div class="aboutButton" onclick="location.href='about.html'">
+            <!--Desktop button navigation-->
+            <div class="aboutButton" tabindex="4" onclick="location.href='about.html'">
                 <div class="aboutText">ABOUT</div>
             </div>
-            <div class="shopButton" onclick="location.href='https://www.redbubble.com/people/TofuMech/shop?asc=u'">
-                <div class="shopText">SHOP</div>
+            <div class="crimsonbreakersButton" tabindex="3" onclick="location.href='crimsonbreaker.html'">
+                <div class="crimsonbreakersText">CRIMSON &nbsp;BREAKER</div>
             </div>
-            <div class="wordButton" onclick="location.href='words.html'">
-                <div class="wordText">WORDS</div>
-            </div>
-
-            <div class="portfolioButton" onclick="location.href='portfolio.html'">
+            <div class="artworkButton" tabindex="2" onclick="location.href='portfolio.html'">
                 <div class="artText">ARTWORK</div>
             </div>
-            <div class="homeButton" onclick="location.href='index.html'">
+            <div class="homeButton" tabindex="1" onclick="location.href='index.html'">
                 <div class="homeText">HOME</div>
             </div>
-
         </div>
-    </nav>
-</header>
-<main>
-    <nav>
-        <div class="box" id="box"> <!--The Container for the Drop Down Menu on Mobile-->
+        <!--The Container for the Drop Down Menu on Mobile-->
+        <div class="box" id="box">
             <button id="DropHomeButton" onclick="location.href='index.html'">HOME</button><br>
-            <button id="DropHomeButton" onclick="location.href='portfolio.html'">PORTFOLIO</button><br>
-            <button id="DropHomeButton" onclick="location.href='words.html'">WORDS</button><br>
-            <button id="DropHomeButton"
-                onclick="location.href='https://www.redbubble.com/people/TofuMech/shop?asc=u'">SHOP</button><br>
+            <button id="DropHomeButton" onclick="location.href='portfolio.html'">ARTWORK</button><br>
+            <button id="DropHomeButton" onclick="location.href='crimsonbreaker.html'">CRIMSON BREAKERS</button><br>
             <button id="DropHomeButton" onclick="location.href='about.html'">ABOUT</button><br>
-
             <script src="script.js"></script>
         </div>
+        <div class="colormodeHolder"></div>
     </nav>
+    <div class="homeTitle">
+        <h1>TOFUMECH</h1>
+    </div>
+    <div class="hometitleTagline" id="hometitleTagline">
+        <script>
+            function displayRandomText() {
+                var quotes = [
+                    "[TAKE YOUR TIME]",
+                    "[LOADING..]",
+                    "[DRINK WATER]",
+                    "[CLEAN YOUR SCREEN]",
+                    "[FUCK UNITY]",
+                    "[]",
+                    "[C]",
+                    "[C]"
+                ];
+                var randomIndex = Math.floor(Math.random() * quotes.length);
+                document.getElementById("hometitleTagline").innerHTML = quotes[randomIndex];
+            }
+        </script>
 
-<main>
+        <body onload="displayRandomText()"></body>
+    </div>
+
+    <div class="socialmediaLinks" >
+        <p>
+            <a href="https://twitter.com/TofuMech">TWITTER</a>
+            <a href="https://github.com/TofuMech">GITHUB</a>
+            <a href="https://www.artstation.com/tofumech" >ARTSTATION</a>
+            <style>
+                a {
+                    text-decoration:none;
+                    color: inherit;
+                }
+            </style>
+        </p>
+</header>
+
+<body>
+    <main>
+
 <div class="grid-container"> <!--This contains all the images-->
-    <img src="1.jpg" onclick="openImage(this)">
-    <img src="2.jpg" onclick="openImage(this)">
-    <img src="3.jpg" onclick="openImage(this)">
-    <img src="4.png" onclick="openImage(this)">
-    <img src="5.jpg" onclick="openImage(this)">
-    <img src="6.jpg" onclick="openImage(this)">
-    <img src="7.jpg" onclick="openImage(this)">
-    <img src="8.jpg" onclick="openImage(this)">
-    <img src="9.png" onclick="openImage(this)">
-    <img src="10.jpg" onclick="openImage(this)">
-    <img src="11.jpg" onclick="openImage(this)">
-    <img src="12.jpg" onclick="openImage(this)">
-    <img src="13.jpg" onclick="openImage(this)">
-    <img src="14.png" onclick="openImage(this)">
-    <img src="15.jpg" onclick="openImage(this)">
-    <img src="16.png" onclick="openImage(this)">
-    <img src="17.png" onclick="openImage(this)">
-    <img src="18.jpg" onclick="openImage(this)">
-    <img src="19.jpg" onclick="openImage(this)">
-    <img src="20.png" onclick="openImage(this)">
-    <img src="21.jpg" onclick="openImage(this)">
-    <img src="22.png" onclick="openImage(this)">
-    <img src="23.jpg" onclick="openImage(this)">
-    <img src="24.jpg" onclick="openImage(this)">
-    <img src="25.png" onclick="openImage(this)">
-    <img src="26.png" onclick="openImage(this)">
-    <img src="27.png" onclick="openImage(this)">
-    <img src="28.jpg" onclick="openImage(this)">
-    <img src="29.png" onclick="openImage(this)">
-    <img src="30.jpg" onclick="openImage(this)">
-    <img src="31.jpg" onclick="openImage(this)">
-    <img src="32.jpg" onclick="openImage(this)">
-    <img src="33.jpg" onclick="openImage(this)">
-    <img src="35.png" onclick="openImage(this)">
-    <img src="36.png" onclick="openImage(this)">
-    <img src="37.jpg" onclick="openImage(this)">
-    <img src="38.png" onclick="openImage(this)">
-    <img src="40.jpg" onclick="openImage(this)">
-    <img src="41.jpg" onclick="openImage(this)">
+    <img src="images/1.jpg" onclick="openImage(this)">
+    <img src="images/2.jpg" onclick="openImage(this)">
+    <img src="images/3.jpg" onclick="openImage(this)">
+    <img src="images/4.png" onclick="openImage(this)">
+    <img src="images/5.jpg" onclick="openImage(this)">
+    <img src="images/6.jpg" onclick="openImage(this)">
+    <img src="images/7.jpg" onclick="openImage(this)">
+    <img src="images/8.jpg" onclick="openImage(this)">
+    <img src="images/9.png" onclick="openImage(this)">
+    <img src="images/10.jpg" onclick="openImage(this)">
+    <img src="images/11.jpg" onclick="openImage(this)">
+    <img src="images/12.jpg" onclick="openImage(this)">
+    <img src="images/13.jpg" onclick="openImage(this)">
+    <img src="images/14.png" onclick="openImage(this)">
+    <img src="images/15.jpg" onclick="openImage(this)">
+    <img src="images/16.png" onclick="openImage(this)">
+    <img src="images/17.png" onclick="openImage(this)">
+    <img src="images/18.jpg" onclick="openImage(this)">
+    <img src="images/19.jpg" onclick="openImage(this)">
+    <img src="images/20.png" onclick="openImage(this)">
+    <img src="images/21.jpg" onclick="openImage(this)">
+    <img src="images/22.png" onclick="openImage(this)">
+    <img src="images/23.jpg" onclick="openImage(this)">
+    <img src="images/24.jpg" onclick="openImage(this)">
+    <img src="images/25.png" onclick="openImage(this)">
+    <img src="images/26.png" onclick="openImage(this)">
+    <img src="images/27.png" onclick="openImage(this)">
+    <img src="images/28.jpg" onclick="openImage(this)">
+    <img src="images/29.png" onclick="openImage(this)">
+    <img src="images/30.jpg" onclick="openImage(this)">
+    <img src="images/31.jpg" onclick="openImage(this)">
+    <img src="images/32.jpg" onclick="openImage(this)">
+    <img src="images/33.jpg" onclick="openImage(this)">
+    <img src="images/35.png" onclick="openImage(this)">
+    <img src="images/36.png" onclick="openImage(this)">
+    <img src="images/37.jpg" onclick="openImage(this)">
+    <img src="images/38.png" onclick="openImage(this)">
+    <img src="images/40.jpg" onclick="openImage(this)">
+    <img src="images/41.jpg" onclick="openImage(this)">
+    <img src="images/42.png" onclick="openImage(this)">
+    <img src="images/43.png" onclick="openImage(this)">
+
+
 </div>
 <div id="overlay" onclick="closeImage()">
     <img src="" alt="Enlarged Image">
 </div>
+
 <style>
     .grid-container {
+        position: absolute;
+        padding-left: 120px;
+        padding-right: 130px;
         display: grid;
-        grid-template-columns: repeat(6, 2fr);
-        grid-column-gap: 10px;
-            cursor: pointer;
+        grid-template-columns: repeat(5, 30fr);
+        cursor: pointer;
+        z-index: -1;
 
     }
 
@@ -116,6 +151,7 @@
         height: 100%;
         object-fit: cover;
         justify-items: center;
+
     }
 
     #overlay {
@@ -135,14 +171,16 @@
         max-height: 90%;
         object-fit: contain;
     }
-@media screen and (max-width: 800px) {
 
-    .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 2fr);
-    grid-column-gap: 10px;
-}
-}
+    @media screen and (max-width: 1200px) {
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 8fr);
+            grid-column-gap: 10px;
+            padding-left: 100px;
+        }
+    }
 </style>
 <script>
     function openImage(img) {
@@ -153,9 +191,62 @@
     }
     function closeImage() {
         var overlay = document.getElementById("overlay");
+
         overlay.style.display = "none";
     }
 </script>
 </main>
+<footer>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">🠝</button>
+    <style>
+        #myBtn {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: rgba(165, 61, 61, 0.336);
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 42px;
+        }
+
+        #myBtn:hover {
+            background-color: #555;
+        }
+    </style>
+    <script>
+
+        let mybutton = document.getElementById("myBtn");
+
+
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+
+        function topFunction() {
+            document.body.scrollTop = 0; // safari
+            document.documentElement.scrollTop = 0; // everything else
+        }
+    </script>
+</footer>
+
+
+
+    </main>
 </body>
+
 </html>
+
+

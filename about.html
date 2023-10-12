@@ -2,9 +2,7 @@
 <html>
 
 <head>
-    <!--Webpage Title-->
     <title>TofuMech</title>
-    <!--CSS Link-->
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="description" content="Artist and Tech Guy">
@@ -12,177 +10,151 @@
     <link rel="icon" href="tofuicon.png">
 </head>
 <header>
-    <script src="script.js"></script>
-    <img id="moon" src="moon.png">
-    <img id="sun" src="sun.png">
     <nav>
+        <script src="script.js"></script>
+        <img id="moon" src="images/NavImages/moon.png">
+        <img id="sun" src="images/navImages/sun.png">
         <div class="navBar">
+            <!--For Mobile, the three lines on the top that animate when interacted with-->
             <button id="DropDownMenu">
                 <div class="bar1"></div>
                 <div class="bar2" id="bar2"></div>
                 <div class="bar3" id="bar3"></div>
-
             </button>
-            <div class="aboutButton" onclick="location.href='about.html'">
+            <!--Desktop button navigation-->
+            <div class="aboutButton" tabindex="4" onclick="location.href='about.html'">
                 <div class="aboutText">ABOUT</div>
             </div>
-            <div class="shopButton" onclick="location.href='https://www.redbubble.com/people/TofuMech/shop?asc=u'">
-                <div class="shopText">SHOP</div>
+            <div class="crimsonbreakersButton" tabindex="3" onclick="location.href='crimsonbreaker.html'">
+                <div class="crimsonbreakersText">CRIMSON &nbsp;BREAKER</div>
             </div>
-            <div class="wordButton" onclick="location.href='words.html'">
-                <div class="wordText">WORDS</div>
-            </div>
-
-            <div class="portfolioButton" onclick="location.href='portfolio.html'">
+            <div class="artworkButton" tabindex="2" onclick="location.href='portfolio.html'">
                 <div class="artText">ARTWORK</div>
             </div>
-            <div class="homeButton" onclick="location.href='index.html'">
+            <div class="homeButton" tabindex="1" onclick="location.href='index.html'">
                 <div class="homeText">HOME</div>
             </div>
-
         </div>
-    </nav>
-</header>
-<main>
-    <nav>
-        <div class="box" id="box"> <!--The Container for the Drop Down Menu on Mobile-->
+        <!--The Container for the Drop Down Menu on Mobile-->
+        <div class="box" id="box">
             <button id="DropHomeButton" onclick="location.href='index.html'">HOME</button><br>
-            <button id="DropHomeButton" onclick="location.href='portfolio.html'">PORTFOLIO</button><br>
-            <button id="DropHomeButton" onclick="location.href='words.html'">WORDS</button><br>
-            <button id="DropHomeButton" onclick="location.href='https://www.redbubble.com/people/TofuMech/shop?asc=u'">SHOP</button><br>            
+            <button id="DropHomeButton" onclick="location.href='portfolio.html'">ARTWORK</button><br>
+            <button id="DropHomeButton" onclick="location.href='crimsonbreaker.html'">CRIMSON BREAKERS</button><br>
             <button id="DropHomeButton" onclick="location.href='about.html'">ABOUT</button><br>
-
             <script src="script.js"></script>
         </div>
+        <div class="colormodeHolder"></div>
     </nav>
-  
-    
-</main>
-<body>
-    <style>
-        .container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: auto;
-            height: auto;
-            background-color: rgba(0, 255, 255, 0.37);
-            border-radius: 10px;
-            padding: 30px;
-        }
-    
-        h1 {
-            font-size: 32px;
-            text-align: center;
-            margin-top: 0;
-            font-family: 'IBM Plex Sans', sans-serif;
-    
-    
-        }
-    
-        p {
-            font-size: 1em;
-            line-height: 1.5;
-            margin-top: 20px;
-            font-family: 'IBM Plex Sans', sans-serif;
-    
-        }
-    
-        #sLcontainer {
-            scale: 10%;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 380px;
-        }
-    
-        #sLcontainer a {
-            margin: 0 25px;
-        }
-    
-        #image1,
-        #image2,
-        #image3,
-        #image4 {
-            margin: 0 25px;
-            background-color: rgba(0, 255, 255, 0.322);
-            border-radius: 100px;
-        }
-    
-        @media screen and (max-width: 800px) {
-            .container {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 300px;
-                height: auto;
-                border-radius: 10px;
-                padding: 0px;
-                z-index: -1;
-            }
-            #image1,
-        #image2,
-        #image3,
-        #image4 {
-            margin-top: -100px;
-            background-color: rgba(0, 255, 255, 0.322);
-            border-radius: 100px;
-        }
-        }
-    </style>
-    <div class="container">
+    <div class="homeTitle">
         <h1>TOFUMECH</h1>
-        <p>I am a self-taught 2d/3d artist, animator and programmer based out of Cincinnati. I've been creating for 10+ years,
-        including artwork for <a href="https://www.kickstarter.com/projects/continueshow/smart-guys">promotional campaigns</a>,
-        content creators, and always working on personal projects. <br>
-         I love creating.</p>
     </div>
-<div class="Social Links"></div>
-
-<div class="socialLink-container" id="sLcontainer">
-
-    <a href="https://twitter.com/TofuMech" target="_blank">
-        <img class="twitter" id="image1" src="twitter.png" />
-    </a>
-    <a href="https://www.artstation.com/tofumech" target="_blank">
-        <img class="artstation" id="image2" src="art.png" />
-    </a>
-    <a href="https://github.com/TofuMech" target="_blank">
-        <img class="github" id="image3" src="github.png" />
-    </a>
-    <a href="https://www.linkedin.com/in/anthony-wiles/" target="_blank">
-        <img class="Linkedin" id="image4" src="linkedin.png" />
-    </a>
-
-
-
-</div>
-
-</div>
-</body>
-<footer>
-    <div id="homeText">
+    <div class="hometitleTagline" id="hometitleTagline">
         <script>
             function displayRandomText() {
                 var quotes = [
                     "[TAKE YOUR TIME]",
                     "[LOADING..]",
                     "[DRINK WATER]",
-                    "[TEAM MILK]",
                     "[CLEAN YOUR SCREEN]",
-                    "[BOTTOM TEXT]"
+                    "[FUCK UNITY]",
+                    "[]",
+                    "[C]",
+                    "[C]"
                 ];
                 var randomIndex = Math.floor(Math.random() * quotes.length);
-                document.getElementById("homeText").innerHTML = quotes[randomIndex];
+                document.getElementById("hometitleTagline").innerHTML = quotes[randomIndex];
             }
         </script>
 
         <body onload="displayRandomText()"></body>
     </div>
-</footer>
+
+    <div class="socialmediaLinks">
+        <p>
+            <a href="https://twitter.com/TofuMech">TWITTER</a>
+            <a href="https://github.com/TofuMech">GITHUB</a>
+            <a href="https://www.artstation.com/tofumech">ARTSTATION</a>
+            <style>
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+            </style>
+        </p>
+</header>
+
+<body>
+    <main>
+
+      
+        </div>
+        <div class="blogCard">
+            <div class="blog-card-content">
+                <p class="blog-card-body"> Based out of Ohio, I’m primarily a 2d and 3d artist specializing in dynamic landscapes and character portraits. I work
+                with Youtube, Twitch, and Kickstarter creators to design and make art assets for multiple use-cases. While specializing
+                in art, I also program. I’m currently working on my game Crimson Breaker, a 3D action-RPG that I’m very excited to show
+                more of in the future. If you’d like to connect, feel free to reach out to my business e-mail at tony.w.wiles@gmail.com,
+                or find me on any of the sites above.</p>
+            </div>
+
+            <style>
+                .blogCard {
+                    position: absolute;
+                    padding: 10rem 0 0;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-image: url(images/banner.jpg);
+                    top: 300px;
+                    width: 75%;
+                    right: 10%;
+                    border-radius: 5px;
+                    color: rgb(255, 255, 255);
+                    font-family: 'Big Shoulders Display', cursive;
+                    font-family: 'Lilita One', cursive;
+                    font-size: medium;
+                    text-align: center;
+                    z-index: 3;
+                    filter: drop-shadow(0 20px 10px #131736d3);
+                    background-color: rgb(211, 162, 162);
+                    display: block;
+                }
+
+
+                .blog-card-content {
+                    --padding: 2.5em;
+                    padding: var(--padding);
+                    background: linear-gradient(hsla(0, 0%, 0%, 0),
+                            hsla(0, 0%, 0%, 0.637) 10%,
+                            hsl(0, 0%, 0%));
+
+                }
+
+                
+
+                
+            </style>
+        </div>
+        <style>
+            a {
+                text-decoration: none;
+
+
+            }
+
+            a,
+            a :visited {
+                color: inherit;
+            }
+
+            a:hover {
+                color: rgb(255, 253, 106);
+            }
+        </style>
+
+
+        </div>
+
+    </main>
 </body>
 
 </html>

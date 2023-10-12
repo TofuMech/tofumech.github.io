@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <!--Webpage Title-->
     <title>TofuMech</title>
-    <!--CSS Link-->
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="description" content="Artist and Tech Guy">
@@ -12,187 +9,45 @@
     <link rel="icon" href="tofuicon.png">
 </head>
 <header>
-    <script src="script.js"></script>
-    <img id="moon" src="moon.png">
-    <img id="sun" src="sun.png">
     <nav>
+        <script src="script.js"></script>
+        <img id="moon" src="images/NavImages/moon.png">
+        <img id="sun" src="images/navImages/sun.png">
         <div class="navBar">
+            <!--For Mobile, the three lines on the top that animate when interacted with-->
             <button id="DropDownMenu">
                 <div class="bar1"></div>
                 <div class="bar2" id="bar2"></div>
                 <div class="bar3" id="bar3"></div>
-
             </button>
-            <div class="aboutButton" onclick="location.href='about.html'">
+            <!--Desktop button navigation-->
+            <div class="aboutButton" tabindex="4" onclick="location.href='about.html'">
                 <div class="aboutText">ABOUT</div>
             </div>
-            <div class="shopButton" onclick="location.href='https://www.redbubble.com/people/TofuMech/shop?asc=u'">
-                <div class="shopText">SHOP</div>
+            <div class="crimsonbreakersButton" tabindex="3" onclick="location.href='crimsonbreaker.html'">
+                <div class="crimsonbreakersText">CRIMSON &nbsp;BREAKER</div>
             </div>
-            <div class="wordButton" onclick="location.href='words.html'">
-                <div class="wordText">WORDS</div>
-            </div>
-
-            <div class="portfolioButton" onclick="location.href='portfolio.html'">
+            <div class="artworkButton" tabindex="2"  onclick="location.href='portfolio.html'">
                 <div class="artText">ARTWORK</div>
             </div>
-            <div class="homeButton" onclick="location.href='index.html'">
+            <div class="homeButton" tabindex="1" onclick="location.href='index.html'">
                 <div class="homeText">HOME</div>
             </div>
-
         </div>
-    </nav>
-</header>
-<main>
-    <nav>
-        <div class="box" id="box"> <!--The Container for the Drop Down Menu on Mobile-->
+            <!--The Container for the Drop Down Menu on Mobile-->
+             <div class="box" id="box"> 
             <button id="DropHomeButton" onclick="location.href='index.html'">HOME</button><br>
-            <button id="DropHomeButton" onclick="location.href='portfolio.html'">PORTFOLIO</button><br>
-            <button id="DropHomeButton" onclick="location.href='words.html'">WORDS</button><br>
-            <button id="DropHomeButton"
-                onclick="location.href='https://www.redbubble.com/people/TofuMech/shop?asc=u'">SHOP</button><br>
+            <button id="DropHomeButton" onclick="location.href='portfolio.html'">ARTWORK</button><br>
+            <button id="DropHomeButton" onclick="location.href='crimsonbreaker.html'">CRIMSON BREAKERS</button><br>
             <button id="DropHomeButton" onclick="location.href='about.html'">ABOUT</button><br>
-
             <script src="script.js"></script>
         </div>
+        <div class="colormodeHolder"></div>
     </nav>
-
-    
-
-
-    <div class="cube">
-        <div class="face top"></div>
-        <div class="face bottom"></div>
-        <div class="face left"></div>
-        <div class="face right"></div>
-        <div class="face front"></div>
-        <div class="face back"></div>
+    <div class="homeTitle">
+        <h1>TOFUMECH</h1>
     </div>
-    <style>
-        @keyframes turn {
-            from {
-                transform: rotateX(1deg) rotateY(1deg);
-            }
-            to {
-                transform: rotateX(359deg) rotateY(359deg);
-            }
-        }
-        .cube {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            margin: auto;
-            z-index: 0;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            transform-style: preserve-3d;
-            animation: turn 10s infinite linear;
-        }
-        .cube:hover .face {
-            --cube-color: #e9e9da;
-            transition: all .2s ease-in;
-        }
-        .face {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            background: var(--cube-color);
-            transform: translateZ(50px);
-            border-radius: 0px;
-            transition: all .2s ease-in;
-        }
-        .front {
-            transform: translateZ(50px);
-        }
-        .back {
-            transform: translateZ(-50px) rotateY(180deg);
-        }
-        .left {
-            transform: translateX(-50px) rotateY(-90deg);
-        }
-        .right {
-            transform: translateX(50px) rotateY(90deg);
-        }
-        .top {
-            transform: translateY(-50px) rotateX(90deg);
-        }
-        .bottom {
-            transform: translateY(50px) rotateX(-90deg);
-        }
-
-        @media screen and (max-width: 800px) {
-
-            
-        @keyframes turn {
-            from {
-                transform: rotateX(1deg) rotateY(1deg);
-            }
-            to {
-                transform: rotateX(359deg) rotateY(359deg);
-            }
-        }
-        .cube {
-            position: relative;
-            width: 100px;
-            height: 100px;
-            margin: auto;
-            z-index: -5;
-           margin-top: 500px;
-            transform-style: preserve-3d;
-            animation: turn 10s infinite linear;
-        }
-       
-        .face {
-            position: absolute;
-            top: 10px;
-            width: 50px;
-            height: 50px;
-            background: var(--cube-color);
-            transform: translateZ(25px);
-            border-radius: 0px;
-            transition: all .2s ease-in;
-            z-index: -5;
-        }
-        .front {
-            transform: translateZ(-25px);
-                        z-index: -5;
-
-        }
-        .back {
-            transform: translateZ(-25px) rotateY(180deg);
-                        z-index: -5;
-
-        }
-        .left {
-            transform: translateX(-25px) rotateY(-90deg);
-                        z-index: -5;
-        }
-        
-        .right {
-            transform: translateX(25px) rotateY(90deg);
-                        z-index: -5;
-
-        }
-        .top {
-            transform: translateY(-25px) rotateX(90deg);
-                        z-index: -5;
-
-        }
-        .bottom {
-            transform: translateY(25px) rotateX(-90deg);
-                        z-index: -5;
-
-        }
-        
-    
-    }
-       
-    </style>
-</main>
-<footer>
-    <div id="homeText">
+    <div class="hometitleTagline" id="hometitleTagline">
         <script>
             function displayRandomText() {
                 var quotes = [
@@ -200,14 +55,218 @@
                     "[LOADING..]",
                     "[DRINK WATER]",
                     "[CLEAN YOUR SCREEN]",
-                    "[BOTTOM TEXT]"
+                    "[FUCK UNITY]",
+                    "[]",
+                    "[C]",
+                    "[C]"
                 ];
                 var randomIndex = Math.floor(Math.random() * quotes.length);
-                document.getElementById("homeText").innerHTML = quotes[randomIndex];
+                document.getElementById("hometitleTagline").innerHTML = quotes[randomIndex];
             }
         </script>
+    
         <body onload="displayRandomText()"></body>
     </div>
-</footer>
+
+    <div class="socialmediaLinks">
+        <p>
+            <a href="https://twitter.com/TofuMech">TWITTER</a>
+            <a href="https://github.com/TofuMech">GITHUB</a>
+            <a href="https://www.artstation.com/tofumech">ARTSTATION</a>
+            <style>
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+            </style>
+        </p>
+</header>
+<body>
+    <main>
+       
+        <div class="artCard" >
+            <div class="art-card-content">
+                <h2 class="art-card-title">New Art</h2>
+                <p class="art-card-body">Featuring my newest art.</p>
+                <a href="#" onclick="location.href='https://www.artstation.com/artwork/1xbZvZ'" class="button">View On Artstation! </a>
+
+                <style>
+                        .artCard {
+                position: absolute;
+                background-image: url(images/7.jpg);
+                background-size: cover;
+                padding: 5rem 0 0;
+                top: 200px;
+                width: 70%;
+                right: 15%;
+                color: rgb(245, 245, 245);
+                font-family: 'Big Shoulders Display', cursive;
+                font-family: 'Lilita One', cursive;
+                font-size: medium;
+                text-align: center;
+                z-index: -3;
+                border-radius: 5px;
+                filter: drop-shadow(0 20px 10px #131736d3);
+        
+        
+            }
+        
+            .art-card-content {
+                --padding: 2.5em;
+                padding: var(--padding);
+                background: linear-gradient(hsla(0, 0%, 0%, 0),
+                        hsla(0, 0%, 0%, 0) 1%,
+                        hsl(0 0% 0% / 1));
+            }
+        
+            .art-card-title {
+                position: relative;
+            }
+        
+            .art-card-title::after {
+                content: "";
+                position: absolute;
+                height: 6px;
+                left: 0px;
+                top: 28px;
+                width: 100%;
+                background: linear-gradient(to left, #33333300, var(--button-colorOne) 50%);
+            }
+
+
+                </style>
+            </div>
+        </div>
+        <div class="musicCard">
+            <div class="music-card-content">
+                <h2 class="music-card-title">New Music</h2>
+                <p class="music-card-body">While not much of a musician, here is a hub of some beats I've created.</p>
+                <a href="#" onclick="location.href='https://tofumech.bandcamp.com/'" class="button">Listen on Bandcamp!</a>
+            </div>
+            <style>
+                .musicCard {
+                position: absolute;
+                background-image: url(images/navImages/piano.jpg);
+                background-size: cover;
+                padding: 5rem 0 0;                
+                top: 510px;
+                width: 70%;
+                right: 15%;
+                border-radius: 5px;
+                color: rgb(245, 245, 245);
+                font-family: 'Big Shoulders Display', cursive;
+                font-family: 'Lilita One', cursive;
+                font-size: medium;
+                text-align: center;
+                z-index: 3;
+                filter: drop-shadow(0 20px 10px #131736d3);
+                background-color: white;
+                display: block;
+            }
+        
+            .music-card-content {
+                --padding: 2.5em;
+                padding: var(--padding);
+                background: linear-gradient(hsla(0, 0%, 0%, 0),
+                        hsla(0, 0%, 0%, 0) 1%,
+                        hsl(0 0% 0% / 1));
+        
+            }
+        
+            .music-card-title {
+                position: relative;
+        
+            }
+        
+            .music-card-title::after {
+                content: "";
+                position: absolute;
+                height: 6px;
+                left: 0px;
+                top: 28px;
+                width: 100%;
+                background: linear-gradient(to left, #33333300, var(--button-colorOne) 50%);
+        
+            }
+            </style>
+        </div>
+        <div class="blogCard">
+            <div class="blog-card-content">
+                <h2 class="blog-card-title"> New Words</h2>
+                <p class="blog-card-body">Documentation on projects I'm working on, as well as scripting pointers that I've found useful enough to share.</p>
+                <a href="#" class="button">View New Posts!</a>
+            </div>
+
+            <style>.blogCard {
+                position: absolute;
+                background-image: url(images/navImages/words.jpg);
+                background-size: cover;
+                padding: 5rem 0 0;                                
+                top: 860px;
+                width: 70%;
+                right: 15%;
+                border-radius: 5px;
+                color: rgb(245, 245, 245);
+                font-family: 'Big Shoulders Display', cursive;
+                font-family: 'Lilita One', cursive;
+                font-size: medium;
+                text-align: center;
+                z-index: 3;
+                filter: drop-shadow(0 20px 10px #131736d3);
+                background-color: white;
+                display: block;
+            }
+        
+        
+            .blog-card-content {
+                --padding: 2.5em;
+                padding: var(--padding);
+                background: linear-gradient(hsla(0, 0%, 0%, 0),
+                        hsla(0, 0%, 0%, 0) 1%,
+                        hsl(0 0% 0% / 1));
+        
+            }
+        
+            .blog-card-title {
+                position: relative;
+            }
+        
+            .blog-card-title::after {
+                content: "";
+                position: absolute;
+                height: 6px;
+                left: 0px;
+                top: 28px;
+                width: 100%;
+                background: linear-gradient(to left, #33333300, var(--button-colorOne) 50%);
+            }</style>
+        </div>
+        <style>
+            a {
+                text-decoration: none;
+        
+        
+            }
+        
+            a,
+            a :visited {
+                color: inherit;
+            }
+        
+            a:hover {
+                color: rgb(255, 253, 106);
+            }
+        
+            
+        
+            
+        
+            
+        </style>
+        
+                
+        </div>
+
+    </main>
 </body>
 </html>

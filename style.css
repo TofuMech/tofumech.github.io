@@ -1,218 +1,273 @@
-@import url('https://fonts.cdnfonts.com/css/ibm-plex-sans');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300&family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&display=swap');
+
 body {
     margin: 0;
     padding: 0;
     background-color: var(--background-color);
-    -webkit-transition: .8s;
-    transition: .8s;
+    --dotSize: 0.09rem;
+        }
+
+body::after {
+    content: '';
+        position: absolute;
+        inset: 0;
+    
+        /* Dotted background */
+        background-image: radial-gradient(circle at center,
+                rgb(255, 255, 255) var(--dotSize),
+                transparent 2px);
+        background-size: 5rem 5rem;
+        background-position: 0 0, 0.5rem 0.5rem;
+        z-index: -5;
 }
+
+body::after {
+    mask-image:linear-gradient(rgb(0 0 0), rgba(0, 0, 0, 0.192));
+}
+
 :root {
     /*These are defaults, javascript overrides the colors. These are a failsave if JS is disabled on browser*/
-    --cube-color: #6c79a8;
     --text-color: #1c3253;
-    --button-text:#261523;
-    --button-colorOne: #886429;
+    --button-text: #5a5a5a;
+    --button-colorOne: #abcad1;
     --button-colorTwo: #131736;
-    --navbar-color:#648BB0;
-    --background-color: #211d25;
-    --drop-menu-color: #2a2e6d73;
+    --navbar-color: #81a0bd;
+    --background-color: #636363;
+    --drop-menu-color: #ffffff;
     transition: .8s;
 }
+
+/*navigation elements*/
 .navBar {
-    position: relative;
-    background-color: var(--navbar-color);
-    width: 100%;
-    height: 80px;
+    position: fixed;
+    /*background-color: var(--navbar-color);*/
+    background: linear-gradient(rgba(255, 255, 255, 0), var(--navbar-color),var(--navbar-color),rgba(255, 255, 255, 0));
+    width: 120px;
+    height: 100%;
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     z-index: 0;
 }
 #box {
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0);
     position: absolute;
     top: -999px;
     z-index: -1;
 }
 
 .homeButton {
-    width: 150px;
-    height: 150px;
-    background: linear-gradient(to left, var(--button-colorOne) 60%, var(--button-colorTwo) 100%);
+    width: 120px;
+    height: 100px;
+    background: var(--button-colorOne);
     position: absolute;
-    left: -70px;
-    top: 0px;
+    left: 0px;
+    top: 295px;
     cursor: pointer;
     z-index: 1;
-    transform: skew(-40deg);
-}
-
-
-.portfolioButton {
-     width: 150px;
-    height: 150px;
-    background: linear-gradient(to left, var(--button-colorOne) 55%, var(--button-colorTwo) 100%);
-    position: absolute;
-    left: 50px;
-    top: 0px;
-    cursor: pointer;
-    z-index: 1;
-    transform: skew(-40deg);
-}
-.aboutButton {
-    width: 150px;
-    height: 150px;
-    background: linear-gradient(to left, var(--button-colorOne) 55%, var(--button-colorTwo) 100%);
-    position: absolute;
-    left: 380px;
-    top: 0px;
-    cursor: pointer;
-    z-index: 1;
-    transform: skew(-40deg);
-    box-shadow: 1px -5px 4px 1px rgb(36, 28, 28);
-}
-
-.wordButton {
-    width: 150px;
-    height: 150px;
-    background: linear-gradient(to left, var(--button-colorOne) 55%, var(--button-colorTwo) 100%);
-    position: absolute;
-    left: 160px;
-    top: 0px;
-    cursor: pointer;
-    z-index: 1;
-    transform: skew(-40deg);
-}
-.shopButton {
-    width: 150px;
-        height: 150px;
-        background: linear-gradient(to left, var(--button-colorOne) 55%, var(--button-colorTwo) 100%);
-        position: absolute;
-        left: 270px;
-        top: 0px;
-        cursor: pointer;
-        z-index: 1;
-        transform: skew(-40deg);
 }
 .homeText {
     color: var(--button-text);
     position: absolute;
-    top: 55px;
-    left: 80px;
+    left: 30px;
+    top: 35px;
     display: block;
-    font-family: 'IBM Plex Sans', sans-serif;
-    transform: skew(40deg);
+    font-family: 'Big Shoulders Display', cursive;
+        font-family: 'Lilita One', cursive;
     font-size: larger;
+    
+}
+
+.artworkButton {
+    width: 120px;
+    height: 100px;
+    background: linear-gradient(to top, var(--button-colorOne) 90%, var(--button-colorTwo) 100%);
+    position: absolute;
+    left: 0px;
+    top: 395px;
+    cursor: pointer;
+    z-index: 1;
 }
 .artText {
     color: var(--button-text);
     position: absolute;
-    top: 55px;
-    left: 50px;
+    top: 45px;
+    left: 15px;
     display: block;
-    font-family: 'IBM Plex Sans', sans-serif;
-    transform: skew(40deg);
+    font-family: 'Big Shoulders Display', cursive;
+        font-family: 'Lilita One', cursive;
     font-size: larger;
+}
+.crimsonbreakersButton {
+    width: 120px;
+    height: 100px;
+    background: linear-gradient(to top, var(--button-colorOne) 85%, var(--button-colorTwo) 100%);    position: absolute;
+    left: 0px;
+    top: 490px;
+    cursor: pointer;
+    z-index: 1;
+}
+.crimsonbreakersText {
+    color: var(--button-text);
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    display: block;
+    font-family: 'Big Shoulders Display', cursive;
+        font-family: 'Lilita One', cursive;
+    font-size: larger;
+}
+
+.aboutButton {
+    width: 120px;
+    height: 100px;
+    background: linear-gradient(to top, var(--button-colorOne) 85%, var(--button-colorTwo) 100%);    position: absolute;
+    left: 0px;
+    top: 585px;
+    cursor: pointer;
+    z-index: 1;
+    filter: drop-shadow(0 2px 10px  #131736d3);
 }
 .aboutText {
     color: var(--button-text);
     position: absolute;
-    top: 55px;
-    left: 70px;
+    top: 45px;
+    left: 30px;
     display: block;
-    font-family: 'IBM Plex Sans', sans-serif;
-    transform: skew(40deg);
+    font-family: 'Big Shoulders Display', cursive;
+        font-family: 'Lilita One', cursive;
     font-size: larger;
 }
-.wordText {
-    color: var(--button-text);
-    position: absolute;
-    top: 55px;
-    left: 70px;
-    display: block;
-    font-family: 'IBM Plex Sans', sans-serif;
-    transform: skew(40deg);
-    font-size: larger;
+
+
+#home-button {
+    display: none;
 }
-.shopText {
-    color: var(--button-text);
-    position: absolute;
-    top: 55px;
-    left: 90px;
-    display: block;
-    font-family: 'IBM Plex Sans', sans-serif;
-    transform: skew(40deg);
-    font-size: larger;
+.colormodeHolder {
+    position: fixed;
+    background-color: var(--navbar-color);
+    width: 130px;
+    height: 60px;
+    left: -50px;
+    border-radius: 30px;
+    top: 10px;
+    z-index: 1;
+        filter: drop-shadow(0 3px 2px #272c4e7a);
 }
-#moon,
+
 #sun {
-    position: absolute;
+    position: fixed;
     top: 15px;
-    right: 20px;
+    left: 20px;
     cursor: pointer;
     transition: transform 0.5s ease;
     z-index: 2;
 }
+
+#moon {
+    position: fixed;
+        top: 15px;
+        left: 20px;
+        cursor: pointer;
+        transition: transform 0.5s ease;
+        z-index: 2;
+}
+
 #moon.active {
-    transform: translateY(-50px);
+    transform: translateX(-50px);
     opacity: 0;
     transition: .5s;
 
 }
 
 #sun.active {
-    transform: translateY(-50px);
+    transform: translateX(-50px);
     opacity: 0;
     transition: .5s;
 }
-#homeText {
-    position: absolute;
-    bottom: 1px;
-    width: 100%;
+
+.homeTitle {
+    position: relative;
+    color: rgb(241, 59, 89);
+    height: auto;
     text-align: center;
-    font-size: medium;
-    font-family: 'Trebuchet MS';
-    font-weight: bolder;
-    color: var(--text-color);
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Lilita One', cursive;
+    font-size: x-large;
+    filter: drop-shadow(0 2px 1px #131736d3);
 }
-#home-button{
-    display: none;
+#hometitleTagline {
+    position: relative;
+    color: rgb(241, 59, 89);
+    height: auto;
+    bottom: 40px;
+    text-align: center;
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Lilita One', cursive;
+    font-size:medium;
+    filter: drop-shadow(0 2px 1px #131736d3);
 }
 
 
-@media screen and (max-width: 800px) {
 
+
+.socialmediaLinks {
+    position: relative;
+        color: rgb(241, 59, 89);
+        height: auto;
+        bottom: 30px;
+        left: 5px;
+        text-align: center;
+        font-family: 'Big Shoulders Display', cursive;
+        font-family: 'Lilita One', cursive;
+        font-size: large;
+        filter: drop-shadow(0 2px 1px #1317362a);
+        word-spacing: 800%;
     
+
+}
+
+
+@media screen and (max-width: 1200px) {
+
+
 
     .navBar {
         position: relative;
-        background-color: var(--navbar-color);
+        /*background: linear-gradient(rgba(255, 255, 255, 0), var(--navbar-color), var(--navbar-color), rgba(255, 255, 255, 0));*/
+        background: linear-gradient(to right, var(--navbar-color), #33333300 50%, #eeeeee00 75%);
         width: 100%;
         overflow: hidden;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         height: 50px;
-        z-index: 10;
-        }
+        width: 100%;
+        z-index: 3;
+
+        
+        
+        
+    }
 
     #box {
-        position:absolute;
+        position: absolute;
         width: 100%;
-        height: 200px;
-        top: -500px;
+        height: 150px;
+        top: 50px;
+        left: -1000px;
         transition: transform 0.5s ease-in-out;
-        z-index: 0;
+        z-index: 5;
     }
 
     /*These are the hrefs attributes*/
     #DropHomeButton {
-        background-color: rgb(181, 219, 255);
-        color: rgb(0, 0, 0);
+        background: linear-gradient(to right, var(--navbar-color), #33333300 50%, #eeeeee00 75%);
+        color: rgb(255, 255, 255);
         border: none;
         height: 80px;
         width: 100%;
         cursor: pointer;
-        font-family: 'IBM Plex Sans', sans-serif;
+        font-family: 'Barlow Condensed', sans-serif;
         font-size: larger;
-        z-index: -2;
+        text-align:start;
+        
     }
 
     .bar1 {
@@ -224,6 +279,7 @@ body {
         left: 130px;
         border-radius: 10px;
     }
+
     .bar2 {
         position: absolute;
         background-color: var(--drop-menu-color);
@@ -234,6 +290,7 @@ body {
         border-radius: 10px;
         transition: transform 0.8s ease-in-out;
     }
+
     .bar3 {
         position: absolute;
         background-color: var(--drop-menu-color);
@@ -245,87 +302,78 @@ body {
         transition: transform 0.5s ease-in-out;
     }
 
-    .bar4 {
-        position: absolute;
-        background-color: var(--drop-menu-color);
-        width: 5px;
-        height: 20px;
-        top: 70px;
-        left: 110px;
-        border-radius: 10px;
-        transition: transform 0.5s ease-in-out;
-    }
-    
-
     #DropHomeButton:hover {
-        background-color: #FF9D00;
+        background: linear-gradient(to right, var(--button-colorOne), #33333300 50%, #eeeeee00 75%);
     }
+
     #DropDownMenu {
-            width: 150px;
-            height: 150px;
-            background: linear-gradient(to left, var(--button-colorOne) 75%, var(--button-colorTwo) 100%);
-            position: absolute;
-            left: -100px;
-            top: -50px;
-            transform: rotateZ(30deg);
-            cursor: pointer;
-            border-color: rgb(101, 186, 255);
-            z-index: -3;
-            
+        width: 150px;
+        height: 150px;
+        background: linear-gradient(to left, var(--button-colorOne) 75%, var(--button-colorTwo) 100%);
+        position: absolute;
+        left: -100px;
+        top: -50px;
+        transform: rotateZ(30deg);
+        cursor: pointer;
+        border-color: rgb(101, 186, 255);
+        z-index: -3;
+
     }
-    
+
     .homeButton {
         display: none;
-        
+
     }
-    .portfolioButton {
-        
+        .colormodeHolder {
+            display: none;
+        }
+
+    .artworkButton {
+
         display: none;
     }
+
     .aboutButton {
-       
+
         display: none;
     }
-    .wordButton {
-        display:none
+
+    .crimsonbreakersButton {
+        display: none
     }
+
     .shopButton {
         display: none;
     }
-    .wordText {
+
+    .crimsonbreakersText {
         display: none
     }
-    #moon,
-    #sun {
-        position: absolute;
-        scale: 70%;
-        top: 0px;
-        right: 10px;
-        cursor: pointer;
-        transition: transform 0.5s ease;
-        z-index: 500;
-    }
-    #moon.active {
-        transform: translateY(-30px);
-        opacity: 0;
-        transition: .5s;
-        
-    }
-    #sun.active {
-        transform: translateY(-30px);
-        opacity: 0;
-        transition: .5s;
-    }
-    #homeText {
-        position: absolute;
-        bottom: 1px;
-        width: 100%;
-        text-align: center;
-        font-size: medium;
-        font-family: 'Trebuchet MS';
-        font-weight: bolder;
-        color: var(--text-color);
-    }
-   
+
+        #moon,
+        #sun {
+            position: absolute;
+            top: 0;
+            left: 100px;
+            cursor: pointer;
+            transition: transform 0.5s ease;
+            z-index: 9;
+        }
+    
+        #moon.active {
+            transform: translateY(-50px);
+            opacity: 0;
+            transition: .5s;
+    
+        }
+    
+        #sun.active {
+            transform: translateY(-50px);
+            opacity: 0;
+            transition: .5s;
+        }
+
+  
+
 
 }
