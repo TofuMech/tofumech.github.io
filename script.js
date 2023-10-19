@@ -85,3 +85,14 @@ function applyTheme(theme) {
     document.documentElement.style.setProperty('--navbar-color', '#284059');
   }
 }
+function displayRandomText() {
+  var quotes = [
+    "[TAKE YOUR TIME]",
+    "[LOADING..]",
+    "[DRINK WATER]",
+    "[CLEAN YOUR SCREEN]",
+    "[C]"
+  ];
+  var randomIndex = Math.floor(Math.random() * quotes.length);
+  document.getElementById("hometitleTagline").innerHTML = quotes[randomIndex];
+}

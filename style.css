@@ -61,7 +61,7 @@ body::after {
     background: var(--button-colorOne);
     position: absolute;
     left: 0px;
-    top: 295px;
+    top: 280px;
     cursor: pointer;
     z-index: 1;
 }
@@ -83,7 +83,7 @@ body::after {
     background: linear-gradient(to top, var(--button-colorOne) 90%, var(--button-colorTwo) 100%);
     position: absolute;
     left: 0px;
-    top: 395px;
+    top: 380px;
     cursor: pointer;
     z-index: 1;
 }
@@ -100,9 +100,10 @@ body::after {
 .crimsonbreakersButton {
     width: 120px;
     height: 100px;
-    background: linear-gradient(to top, var(--button-colorOne) 85%, var(--button-colorTwo) 100%);    position: absolute;
+    background: linear-gradient(to top, var(--button-colorOne) 90%, var(--button-colorTwo) 100%);
+    position: absolute;
     left: 0px;
-    top: 490px;
+    top: 480px;
     cursor: pointer;
     z-index: 1;
 }
@@ -117,12 +118,36 @@ body::after {
     font-size: larger;
 }
 
+
+.wordButton {
+    width: 120px;
+    height: 100px;
+    background: linear-gradient(to top, var(--button-colorOne) 90%, var(--button-colorTwo) 100%);
+    position: absolute;
+    left: 0px;
+    top: 580px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.wordText {
+    color: var(--button-text);
+    position: absolute;
+    top: 45px;
+    left: 25px;
+    display: block;
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Lilita One', cursive;
+    font-size: larger;
+}
+
+
 .aboutButton {
     width: 120px;
     height: 100px;
-    background: linear-gradient(to top, var(--button-colorOne) 85%, var(--button-colorTwo) 100%);    position: absolute;
+    background: linear-gradient(to top, var(--button-colorOne) 90%, var(--button-colorTwo) 100%);    position: absolute;
     left: 0px;
-    top: 585px;
+    top: 680px;
     cursor: pointer;
     z-index: 1;
     filter: drop-shadow(0 2px 10px  #131736d3);
@@ -173,14 +198,14 @@ body::after {
 }
 
 #moon.active {
-    transform: translateX(-50px);
+    display: none;    
     opacity: 0;
     transition: .5s;
 
 }
 
 #sun.active {
-    transform: translateX(-50px);
+    display: none;
     opacity: 0;
     transition: .5s;
 }
@@ -309,7 +334,7 @@ body::after {
     #DropDownMenu {
         width: 150px;
         height: 150px;
-        background: linear-gradient(to left, var(--button-colorOne) 75%, var(--button-colorTwo) 100%);
+        background: linear-gradient(to left, var(--button-colorOne) 95%, var(--button-colorTwo) 100%);
         position: absolute;
         left: -100px;
         top: -50px;

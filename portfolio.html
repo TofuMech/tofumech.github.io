@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>TofuMech</title>
     <link rel="stylesheet" href="style.css">
@@ -14,15 +15,20 @@
         <img id="moon" src="images/navImages/moon.png">
         <img id="sun" src="images/navImages/sun.png">
         <div class="navBar">
+
             <!--For Mobile, the three lines on the top that animate when interacted with-->
             <button id="DropDownMenu">
                 <div class="bar1"></div>
                 <div class="bar2" id="bar2"></div>
                 <div class="bar3" id="bar3"></div>
             </button>
+
             <!--Desktop button navigation-->
-            <div class="aboutButton" tabindex="4" onclick="location.href='about.html'">
+            <div class="aboutButton" tabindex="5" onclick="location.href='about.html'">
                 <div class="aboutText">ABOUT</div>
+            </div>
+            <div class="wordButton" tabindex="4" onclick="location.href='words.html'">
+                <div class="wordText">WORDS</div>
             </div>
             <div class="crimsonbreakersButton" tabindex="3" onclick="location.href='crimsonbreaker.html'">
                 <div class="crimsonbreakersText">CRIMSON &nbsp;BREAKER</div>
@@ -34,11 +40,13 @@
                 <div class="homeText">HOME</div>
             </div>
         </div>
+
         <!--The Container for the Drop Down Menu on Mobile-->
         <div class="box" id="box">
             <button id="DropHomeButton" onclick="location.href='index.html'">HOME</button><br>
             <button id="DropHomeButton" onclick="location.href='portfolio.html'">ARTWORK</button><br>
             <button id="DropHomeButton" onclick="location.href='crimsonbreaker.html'">CRIMSON BREAKERS</button><br>
+            <button id="DropHomeButton" onclick="location.href='words.html'">WORDS</button><br>
             <button id="DropHomeButton" onclick="location.href='about.html'">ABOUT</button><br>
             <script src="script.js"></script>
         </div>
@@ -48,34 +56,19 @@
         <h1>TOFUMECH</h1>
     </div>
     <div class="hometitleTagline" id="hometitleTagline">
-        <script>
-            function displayRandomText() {
-                var quotes = [
-                    "[TAKE YOUR TIME]",
-                    "[LOADING..]",
-                    "[DRINK WATER]",
-                    "[CLEAN YOUR SCREEN]",
-                    "[FUCK UNITY]",
-                    "[]",
-                    "[C]",
-                    "[C]"
-                ];
-                var randomIndex = Math.floor(Math.random() * quotes.length);
-                document.getElementById("hometitleTagline").innerHTML = quotes[randomIndex];
-            }
-        </script>
+
 
         <body onload="displayRandomText()"></body>
     </div>
 
-    <div class="socialmediaLinks" >
+    <div class="socialmediaLinks">
         <p>
             <a href="https://twitter.com/TofuMech">TWITTER</a>
             <a href="https://github.com/TofuMech">GITHUB</a>
-            <a href="https://www.artstation.com/tofumech" >ARTSTATION</a>
+            <a href="https://www.artstation.com/tofumech">ARTSTATION</a>
             <style>
                 a {
-                    text-decoration:none;
+                    text-decoration: none;
                     color: inherit;
                 }
             </style>
@@ -137,7 +130,7 @@
 <style>
     .grid-container {
         position: absolute;
-        padding-left: 120px;
+        padding-left: 170px;
         padding-right: 130px;
         display: grid;
         grid-template-columns: repeat(5, 30fr);
@@ -151,6 +144,8 @@
         height: 100%;
         object-fit: cover;
         justify-items: center;
+        border-radius: 5px;
+
 
     }
 
@@ -178,14 +173,16 @@
             display: grid;
             grid-template-columns: repeat(4, 8fr);
             grid-column-gap: 10px;
-            padding-left: 100px;
+            padding-left: 10px;
+            padding-right: 10px;
+            
         }
     }
 </style>
 <script>
     function openImage(img) {
-        var overlay = document.getElementById("overlay");
-        var overlayImg = overlay.getElementsByTagName("img")[0];
+        var overlay = document.getElementById("overlay"); //finding the html element
+        var overlayImg = overlay.getElementsByTagName("img")[0]; 
         overlayImg.src = img.src;
         overlay.style.display = "flex";
     }
@@ -197,26 +194,26 @@
 </script>
 </main>
 <footer>
-    <button onclick="topFunction()" id="myBtn" title="Go to top">🠝</button>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
     <style>
         #myBtn {
             display: none;
             position: fixed;
             top: 20px;
-            right: 30px;
+            right: 35px;
             z-index: 99;
             border: none;
             outline: none;
-            background-color: rgba(165, 61, 61, 0.336);
+            background-color: rgba(65, 65, 65, 0.336);
             color: white;
             cursor: pointer;
-            padding: 10px;
+            padding: 5px;
             border-radius: 10px;
             font-size: 42px;
         }
 
         #myBtn:hover {
-            background-color: #555;
+            background-color: #707070;
         }
     </style>
     <script>
@@ -227,7 +224,7 @@
         window.onscroll = function () { scrollFunction() };
 
         function scrollFunction() {
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            if (document.body.scrollTop > 750 || document.documentElement.scrollTop > 700) {
                 mybutton.style.display = "block";
             } else {
                 mybutton.style.display = "none";

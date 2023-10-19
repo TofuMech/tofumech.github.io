@@ -15,15 +15,20 @@
         <img id="moon" src="images/navImages/moon.png">
         <img id="sun" src="images/navImages/sun.png">
         <div class="navBar">
+
             <!--For Mobile, the three lines on the top that animate when interacted with-->
             <button id="DropDownMenu">
                 <div class="bar1"></div>
                 <div class="bar2" id="bar2"></div>
                 <div class="bar3" id="bar3"></div>
             </button>
+
             <!--Desktop button navigation-->
-            <div class="aboutButton" tabindex="4" onclick="location.href='about.html'">
+            <div class="aboutButton" tabindex="5" onclick="location.href='about.html'">
                 <div class="aboutText">ABOUT</div>
+            </div>
+            <div class="wordButton" tabindex="4" onclick="location.href='words.html'">
+                <div class="wordText">WORDS</div>
             </div>
             <div class="crimsonbreakersButton" tabindex="3" onclick="location.href='crimsonbreaker.html'">
                 <div class="crimsonbreakersText">CRIMSON &nbsp;BREAKER</div>
@@ -35,11 +40,13 @@
                 <div class="homeText">HOME</div>
             </div>
         </div>
+
         <!--The Container for the Drop Down Menu on Mobile-->
         <div class="box" id="box">
             <button id="DropHomeButton" onclick="location.href='index.html'">HOME</button><br>
             <button id="DropHomeButton" onclick="location.href='portfolio.html'">ARTWORK</button><br>
             <button id="DropHomeButton" onclick="location.href='crimsonbreaker.html'">CRIMSON BREAKERS</button><br>
+            <button id="DropHomeButton" onclick="location.href='words.html'">WORDS</button><br>
             <button id="DropHomeButton" onclick="location.href='about.html'">ABOUT</button><br>
             <script src="script.js"></script>
         </div>
@@ -49,22 +56,7 @@
         <h1>TOFUMECH</h1>
     </div>
     <div class="hometitleTagline" id="hometitleTagline">
-        <script>
-            function displayRandomText() {
-                var quotes = [
-                    "[TAKE YOUR TIME]",
-                    "[LOADING..]",
-                    "[DRINK WATER]",
-                    "[CLEAN YOUR SCREEN]",
-                    "[FUCK UNITY]",
-                    "[]",
-                    "[C]",
-                    "[C]"
-                ];
-                var randomIndex = Math.floor(Math.random() * quotes.length);
-                document.getElementById("hometitleTagline").innerHTML = quotes[randomIndex];
-            }
-        </script>
+
 
         <body onload="displayRandomText()"></body>
     </div>
