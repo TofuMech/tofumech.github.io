@@ -9,12 +9,12 @@
     <link rel="icon" href="tofuicon.png">
 </head>
 <header>
+    
     <nav>
         <script src="script.js"></script>
         <img id="moon" src="images/navImages/moon.png">
         <img id="sun" src="images/navImages/sun.png">
         <div class="navBar">
-
             <!--For Mobile, the three lines on the top that animate when interacted with-->
             <button id="DropDownMenu">
                 <div class="bar1"></div>
@@ -27,11 +27,9 @@
                 <div class="aboutText">ABOUT</div>
             </div>
             <div class="wordButton" tabindex="4" onclick="location.href='words.html'">
-                <div class="wordText">WORDS</div>
+                <div class="wordText"></div>
             </div>
-            <div class="crimsonbreakersButton" tabindex="3" onclick="location.href='crimsonbreaker.html'">
-                <div class="crimsonbreakersText">CRIMSON &nbsp;BREAKER</div>
-            </div>
+           
             <div class="artworkButton" tabindex="2"  onclick="location.href='portfolio.html'">
                 <div class="artText">ARTWORK</div>
             </div>
@@ -44,68 +42,81 @@
              <div class="box" id="box"> 
             <button id="DropHomeButton" onclick="location.href='index.html'">HOME</button><br>
             <button id="DropHomeButton" onclick="location.href='portfolio.html'">ARTWORK</button><br>
-            <button id="DropHomeButton" onclick="location.href='crimsonbreaker.html'">CRIMSON BREAKERS</button><br>
-            <button id="DropHomeButton" onclick="location.href='words.html'">WORDS</button><br>
             <button id="DropHomeButton" onclick="location.href='about.html'">ABOUT</button><br>
+            <!--<button id="DropHomeButton" onclick="location.href='words.html'"></button><br>-->
             <script src="script.js"></script>
         </div>
         <div class="colormodeHolder"></div>
     </nav>
     <div class="homeTitle">
         <h1>TOFUMECH</h1>
-    </div>
-    <div class="hometitleTagline" id="hometitleTagline">
-        
-    
-        <body onload="displayRandomText()"></body>
+        <div class="hometitleTagline" id="hometitleTagline">
+            <body onload="displayRandomText()"></body>
     </div>
 
     <div class="socialmediaLinks">
         <p>
-            <a href="https://twitter.com/TofuMech">TWITTER</a>
-            <a href="https://github.com/TofuMech">GITHUB</a>
+            <a href="https://bsky.app/profile/tofumech.bsky.social">BLUESKY</a>
             <a href="https://www.artstation.com/tofumech">ARTSTATION</a>
+            <a href="https://github.com/TofuMech">GITHUB</a>
             <style>
                 a {
-                    text-decoration: none;
-                    color: inherit;
+                position: relative;
+                padding-right: 10px;
+                text-decoration: none;
+                color: inherit;
                 }
             </style>
         </p>
 </header>
 <body>
+    <div class="halftone"></div>
     <main>
-       
-        <div class="artCard" >
+
+        <div class="artCard" onclick="location.href='https://www.artstation.com/artwork/Ry0BNW'" >
+            <div class="artcardImage"></div>
             <div class="art-card-content">
                 <h2 class="art-card-title">New Art</h2>
-                <p class="art-card-body">Featuring my newest art.</p>
-                <a href="#" onclick="location.href='https://www.artstation.com/artwork/1xbZvZ'" class="button">View On Artstation! </a>
+                <p class="art-card-body"></p>
+                <a id="artlink" href="#" onclick="location.href='https://www.artstation.com/artwork/Ry0BNW'" class="button">View On Artstation </a>
 
                 <style>
+
+                    #artlink {
+                        position: relative;
+                        bottom: 15px;
+                        -webkit-text-stroke: 1px rgb(0, 0, 0);
+
+                    }
                         .artCard {
-                position: absolute;
-                background-image: url(images/7.jpg);
-                background-size: cover;
-                padding: 5rem 0 0;
-                top: 200px;
-                width: 70%;
-                right: 15%;
-                color: rgb(245, 245, 245);
-                font-family: 'Big Shoulders Display', cursive;
-                font-family: 'Lilita One', cursive;
-                font-size: medium;
-                text-align: center;
-                z-index: -3;
-                border-radius: 5px;
-                filter: drop-shadow(0 20px 10px #131736d3);
-        
-        
+                            overflow: hidden;
+                            position: absolute;
+                            top: 250px;
+                            color:var(--text-color);
+                            width: 71%;
+                            padding-top: 15em;
+                            right: 13%;
+                            font-family: 'Big Shoulders Display', cursive;
+                            font-family: 'Lilita One', cursive;
+                            font-size: larger;
+                            text-align: center;
+                            z-index: -3;
+                            border-radius: 5px;
+                            filter: drop-shadow(0 10px 10px #131736d3);
+                            cursor: pointer;
+                            background-image: url(images/44.jpg);
+                            background-repeat: no-repeat;
+                            background-position: 50%;
+                            background-size: cover;
+                            -webkit-text-stroke: 1px rgb(0, 0, 0);
+                            
             }
         
+           
             .art-card-content {
-                --padding: 2.5em;
+                
                 padding: var(--padding);
+                border-radius: 5px;
                 background: linear-gradient(hsla(0, 0%, 0%, 0),
                         hsla(0, 0%, 0%, 0) 1%,
                         hsl(0 0% 0% / 1));
@@ -113,6 +124,8 @@
         
             .art-card-title {
                 position: relative;
+                bottom: 15px;
+                right: 5px;
             }
         
             .art-card-title::after {
@@ -120,45 +133,57 @@
                 position: absolute;
                 height: 6px;
                 left: 0px;
-                top: 28px;
+                top: 30px;
                 width: 100%;
                 background: linear-gradient(to left, #33333300, var(--button-colorOne) 50%);
             }
+            </style>
 
-
-                </style>
             </div>
         </div>
-        <div class="musicCard">
-            <div class="music-card-content">
-                <h2 class="music-card-title">New Music</h2>
-                <p class="music-card-body">A hub of some beats I've created.</p>
-                <a href="#" onclick="location.href='https://tofumech.bandcamp.com/'" class="button">Listen on Bandcamp!</a>
-            </div>
+
+
+            <div class="musicCard">
+                <div class="music-card-content">
+                        <h2 class="music-card-title">LOCKED</h2>
+                        <p class="music-card-body"></p>
+                </div>
             <style>
                 .musicCard {
                 position: absolute;
                 background-image: url(images/navImages/piano.jpg);
                 background-size: cover;
-                padding: 5rem 0 0;                
-                top: 510px;
-                width: 70%;
-                right: 15%;
-                border-radius: 5px;
-                color: rgb(245, 245, 245);
+                top: 1130px;
+                width: 71%;
+                padding-top: 15em;
+                right: 13%;
+                color:var(--text-color);
                 font-family: 'Big Shoulders Display', cursive;
                 font-family: 'Lilita One', cursive;
-                font-size: medium;
+                font-size: large;
                 text-align: center;
-                z-index: 3;
-                filter: drop-shadow(0 20px 10px #131736d3);
-                background-color: white;
-                display: block;
+                z-index: -3;
+                border-radius: 5px;
+                filter: drop-shadow(0 10px 10px #131736d3);
+                -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+
+                
             }
+
+            .musicCard:hover {
+                animation: shake 0.5s;
+                animation-iteration-count: 2s;
+            }
+
+            @keyframes shake {
+                0% { transform: translate(1px, 1px) rotate(0deg); }
+                10% { transform: translate(-1px, -2px) rotate(-1deg); }
+                20% { transform: translate(-3px, 0px) rotate(1deg); }
+                            }
         
             .music-card-content {
-                --padding: 2.5em;
                 padding: var(--padding);
+                border-radius: 5px;
                 background: linear-gradient(hsla(0, 0%, 0%, 0),
                         hsla(0, 0%, 0%, 0) 1%,
                         hsl(0 0% 0% / 1));
@@ -182,31 +207,50 @@
             }
             </style>
         </div>
-        <div class="blogCard">
+
+        
+        <div class="blogCard" onclick="location.href='words.html'">
             <div class="blog-card-content">
-                <h2 class="blog-card-title"> New Words</h2>
-                <p class="blog-card-body">Documentation on projects I'm working on, as well as scripting pointers that I've found useful enough to share.</p>
-                <a href="#" onclick="location.href='###'" class="button">View New Posts!</a>
+                <h2 class="blog-card-title">LOCKED</h2>
+                <p class="blog-card-body"></p>
+                <a href="#" onclick="location.href='words.html'" class="button"><!--Game Engine Workshop/Yappin--></a>
             </div>
 
-            <style>.blogCard {
+            <style>
+            .blogCard {
                 position: absolute;
                 background-image: url(images/navImages/words.jpg);
+                cursor: pointer;
                 background-size: cover;
-                padding: 5rem 0 0;                                
-                top: 860px;
-                width: 70%;
-                right: 15%;
-                border-radius: 5px;
-                color: rgb(245, 245, 245);
+                top: 680px;
+                width: 71%;
+                padding-top: 15em;
+                right: 13%;
+                color:var(--text-color);
                 font-family: 'Big Shoulders Display', cursive;
                 font-family: 'Lilita One', cursive;
                 font-size: medium;
                 text-align: center;
-                z-index: 3;
-                filter: drop-shadow(0 20px 10px #131736d3);
-                background-color: white;
-                display: block;
+                z-index: -3;
+                border-radius: 5px;
+                filter: drop-shadow(0 10px 10px #131736d3);
+                
+
+            }
+            .blogCard:hover {
+                animation: shake 0.5s;
+                animation-iteration-count: 2s;
+            }
+
+            @keyframes shake {
+                0% { transform: translate(1px, 1px) rotate(0deg); }
+                10% { transform: translate(-1px, -2px) rotate(-1deg); }
+                20% { transform: translate(-3px, 0px) rotate(1deg); }
+                            }
+
+            a {
+                -webkit-text-stroke-width: .1px;
+                -webkit-text-stroke-color: black;
             }
         
         
@@ -216,11 +260,13 @@
                 background: linear-gradient(hsla(0, 0%, 0%, 0),
                         hsla(0, 0%, 0%, 0) 1%,
                         hsl(0 0% 0% / 1));
+                        
         
             }
         
             .blog-card-title {
                 position: relative;
+                
             }
         
             .blog-card-title::after {
@@ -231,7 +277,9 @@
                 top: 28px;
                 width: 100%;
                 background: linear-gradient(to left, #33333300, var(--button-colorOne) 50%);
-            }</style>
+                
+            }
+            </style>
         </div>
         <style>
             a {

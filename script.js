@@ -7,6 +7,11 @@ var menuBar3 = document.querySelector('#bar3');
 var menuBar2 = document.querySelector('#bar2');
 
 
+
+
+
+
+
 button.addEventListener('click', function () {
   if (!isMoved) {
     box.style.transform = 'translateX(1000px)';
@@ -78,10 +83,10 @@ function applyTheme(theme) {
     //dark theme color attributes
     document.body.style.transition = 'all .1s';
     document.body.style.backgroundColor = '#363747';
-    document.documentElement.style.setProperty('--text-color', '#b6895a ');
+    document.documentElement.style.setProperty('--text-color', '#4591EE');
     document.documentElement.style.setProperty('--button-text', '#FFC07D');
     document.documentElement.style.setProperty('--button-colorOne', '#3a5f7c');
-    document.documentElement.style.setProperty('--button-colorTwo', '#524d3b'); //This should be the darker color
+    document.documentElement.style.setProperty('--button-colorTwo', '#524d3b'); //This should be the darker color of the button
     document.documentElement.style.setProperty('--navbar-color', '#284059');
   }
 }
@@ -91,8 +96,11 @@ function displayRandomText() {
     "[LOADING..]",
     "[DRINK WATER]",
     "[CLEAN YOUR SCREEN]",
-    "[C]"
+    "[DESTROY THE INTERNET]",
+    "[DRAW EVERY DAY]",
+    "[I GET NO KICK FROM CHAMPAGNE]"
   ];
   var randomIndex = Math.floor(Math.random() * quotes.length);
   document.getElementById("hometitleTagline").innerHTML = quotes[randomIndex];
 }
+

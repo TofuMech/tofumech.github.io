@@ -10,12 +10,12 @@
     <link rel="icon" href="tofuicon.png">
 </head>
 <header>
+
     <nav>
         <script src="script.js"></script>
         <img id="moon" src="images/navImages/moon.png">
         <img id="sun" src="images/navImages/sun.png">
         <div class="navBar">
-
             <!--For Mobile, the three lines on the top that animate when interacted with-->
             <button id="DropDownMenu">
                 <div class="bar1"></div>
@@ -30,9 +30,7 @@
             <div class="wordButton" tabindex="4" onclick="location.href='words.html'">
                 <div class="wordText">WORDS</div>
             </div>
-            <div class="crimsonbreakersButton" tabindex="3" onclick="location.href='crimsonbreaker.html'">
-                <div class="crimsonbreakersText">CRIMSON &nbsp;BREAKER</div>
-            </div>
+
             <div class="artworkButton" tabindex="2" onclick="location.href='portfolio.html'">
                 <div class="artText">ARTWORK</div>
             </div>
@@ -45,7 +43,6 @@
         <div class="box" id="box">
             <button id="DropHomeButton" onclick="location.href='index.html'">HOME</button><br>
             <button id="DropHomeButton" onclick="location.href='portfolio.html'">ARTWORK</button><br>
-            <button id="DropHomeButton" onclick="location.href='crimsonbreaker.html'">CRIMSON BREAKERS</button><br>
             <button id="DropHomeButton" onclick="location.href='words.html'">WORDS</button><br>
             <button id="DropHomeButton" onclick="location.href='about.html'">ABOUT</button><br>
             <script src="script.js"></script>
@@ -54,32 +51,33 @@
     </nav>
     <div class="homeTitle">
         <h1>TOFUMECH</h1>
-    </div>
-    <div class="hometitleTagline" id="hometitleTagline">
+        <div class="hometitleTagline" id="hometitleTagline">
 
+            <body onload="displayRandomText()"></body>
+        </div>
 
-        <body onload="displayRandomText()"></body>
-    </div>
-
-    <div class="socialmediaLinks">
-        <p>
-            <a href="https://twitter.com/TofuMech">TWITTER</a>
-            <a href="https://github.com/TofuMech">GITHUB</a>
-            <a href="https://www.artstation.com/tofumech">ARTSTATION</a>
-            <style>
-                a {
-                    text-decoration: none;
-                    color: inherit;
-                }
-            </style>
-        </p>
+        <div class="socialmediaLinks">
+            <p>
+                <a href="https://bsky.app/profile/tofumech.bsky.social">BLUESKY</a>
+                <a href="https://www.artstation.com/tofumech">ARTSTATION</a>
+                <a href="https://github.com/TofuMech">GITHUB</a>
+                <style>
+                    a {
+                        position: relative;
+                        padding-right: 10px;
+                        text-decoration: none;
+                        color: inherit;
+                    }
+                </style>
+            </p>
 </header>
-
 <body>
+            <div class="halftone"></div>
+
     <main>
 
 <div class="grid-container"> <!--This contains all the images-->
-    <img src="images/1.jpg" onclick="openImage(this)">
+    <img src="images/1.jpg" onclick="openImage(this)" onload="imageLoad(this)">
     <img src="images/2.jpg" onclick="openImage(this)">
     <img src="images/3.jpg" onclick="openImage(this)">
     <img src="images/4.png" onclick="openImage(this)">
@@ -134,17 +132,19 @@
         padding-right: 130px;
         display: grid;
         grid-template-columns: repeat(5, 30fr);
-        cursor: pointer;
         z-index: -1;
 
     }
 
     .grid-container img {
-        width: 100%;
-        height: 100%;
+        width: 90%;
+        height: 90%;
         object-fit: cover;
         justify-items: center;
         border-radius: 5px;
+        background-color: rgb(53, 53, 53);
+        cursor: pointer;
+
 
 
     }
@@ -171,7 +171,7 @@
 
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(4, 8fr);
+            grid-template-columns: repeat(3, 8fr);
             grid-column-gap: 10px;
             padding-left: 10px;
             padding-right: 10px;
@@ -181,8 +181,9 @@
 </style>
 <script>
     function openImage(img) {
-        var overlay = document.getElementById("overlay"); //finding the html element
+        var overlay = document.getElementById("overlay");
         var overlayImg = overlay.getElementsByTagName("img")[0]; 
+        
         overlayImg.src = img.src;
         overlay.style.display = "flex";
     }
@@ -191,6 +192,8 @@
 
         overlay.style.display = "none";
     }
+
+
 </script>
 </main>
 <footer>

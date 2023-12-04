@@ -10,12 +10,12 @@
     <link rel="icon" href="tofuicon.png">
 </head>
 <header>
+
     <nav>
         <script src="script.js"></script>
         <img id="moon" src="images/navImages/moon.png">
         <img id="sun" src="images/navImages/sun.png">
         <div class="navBar">
-
             <!--For Mobile, the three lines on the top that animate when interacted with-->
             <button id="DropDownMenu">
                 <div class="bar1"></div>
@@ -30,9 +30,7 @@
             <div class="wordButton" tabindex="4" onclick="location.href='words.html'">
                 <div class="wordText">WORDS</div>
             </div>
-            <div class="crimsonbreakersButton" tabindex="3" onclick="location.href='crimsonbreaker.html'">
-                <div class="crimsonbreakersText">CRIMSON &nbsp;BREAKER</div>
-            </div>
+
             <div class="artworkButton" tabindex="2" onclick="location.href='portfolio.html'">
                 <div class="artText">ARTWORK</div>
             </div>
@@ -45,7 +43,6 @@
         <div class="box" id="box">
             <button id="DropHomeButton" onclick="location.href='index.html'">HOME</button><br>
             <button id="DropHomeButton" onclick="location.href='portfolio.html'">ARTWORK</button><br>
-            <button id="DropHomeButton" onclick="location.href='crimsonbreaker.html'">CRIMSON BREAKERS</button><br>
             <button id="DropHomeButton" onclick="location.href='words.html'">WORDS</button><br>
             <button id="DropHomeButton" onclick="location.href='about.html'">ABOUT</button><br>
             <script src="script.js"></script>
@@ -54,28 +51,29 @@
     </nav>
     <div class="homeTitle">
         <h1>TOFUMECH</h1>
-    </div>
-    <div class="hometitleTagline" id="hometitleTagline">
+        <div class="hometitleTagline" id="hometitleTagline">
 
+            <body onload="displayRandomText()"></body>
+        </div>
 
-        <body onload="displayRandomText()"></body>
-    </div>
-
-    <div class="socialmediaLinks">
-        <p>
-            <a href="https://twitter.com/TofuMech">TWITTER</a>
-            <a href="https://github.com/TofuMech">GITHUB</a>
-            <a href="https://www.artstation.com/tofumech">ARTSTATION</a>
-            <style>
-                a {
-                    text-decoration: none;
-                    color: inherit;
-                }
-            </style>
-        </p>
+        <div class="socialmediaLinks">
+            <p>
+                <a href="https://bsky.app/profile/tofumech.bsky.social">BLUESKY</a>
+                <a href="https://www.artstation.com/tofumech">ARTSTATION</a>
+                <a href="https://github.com/TofuMech">GITHUB</a>
+                <style>
+                    a {
+                        position: relative;
+                        padding-right: 10px;
+                        text-decoration: none;
+                        color: inherit;
+                    }
+                </style>
+            </p>
 </header>
-
 <body>
+            <div class="halftone"></div>
+
     <main>
 
       

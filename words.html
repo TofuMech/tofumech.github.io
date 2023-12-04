@@ -10,12 +10,12 @@
     <link rel="icon" href="tofuicon.png">
 </head>
 <header>
+
     <nav>
         <script src="script.js"></script>
         <img id="moon" src="images/navImages/moon.png">
         <img id="sun" src="images/navImages/sun.png">
         <div class="navBar">
-
             <!--For Mobile, the three lines on the top that animate when interacted with-->
             <button id="DropDownMenu">
                 <div class="bar1"></div>
@@ -30,9 +30,7 @@
             <div class="wordButton" tabindex="4" onclick="location.href='words.html'">
                 <div class="wordText">WORDS</div>
             </div>
-            <div class="crimsonbreakersButton" tabindex="3" onclick="location.href='crimsonbreaker.html'">
-                <div class="crimsonbreakersText">CRIMSON &nbsp;BREAKER</div>
-            </div>
+
             <div class="artworkButton" tabindex="2" onclick="location.href='portfolio.html'">
                 <div class="artText">ARTWORK</div>
             </div>
@@ -45,7 +43,6 @@
         <div class="box" id="box">
             <button id="DropHomeButton" onclick="location.href='index.html'">HOME</button><br>
             <button id="DropHomeButton" onclick="location.href='portfolio.html'">ARTWORK</button><br>
-            <button id="DropHomeButton" onclick="location.href='crimsonbreaker.html'">CRIMSON BREAKERS</button><br>
             <button id="DropHomeButton" onclick="location.href='words.html'">WORDS</button><br>
             <button id="DropHomeButton" onclick="location.href='about.html'">ABOUT</button><br>
             <script src="script.js"></script>
@@ -54,27 +51,139 @@
     </nav>
     <div class="homeTitle">
         <h1>TOFUMECH</h1>
-    </div>
-    <div class="hometitleTagline" id="hometitleTagline">
+        <div class="hometitleTagline" id="hometitleTagline">
 
+            <body onload="displayRandomText()"></body>
+        </div>
 
-        <body onload="displayRandomText()"></body>
-    </div>
-
-    <div class="socialmediaLinks">
-        <p>
-            <a href="https://twitter.com/TofuMech">TWITTER</a>
-            <a href="https://github.com/TofuMech">GITHUB</a>
-            <a href="https://www.artstation.com/tofumech">ARTSTATION</a>
-            <style>
-                a {
-                    text-decoration: none;
-                    color: inherit;
-                }
-            </style>
-        </p>
+        <div class="socialmediaLinks">
+            <p>
+                <a href="https://bsky.app/profile/tofumech.bsky.social">BLUESKY</a>
+                <a href="https://www.artstation.com/tofumech">ARTSTATION</a>
+                <a href="https://github.com/TofuMech">GITHUB</a>
+                <style>
+                    a {
+                        position: relative;
+                        padding-right: 10px;
+                        text-decoration: none;
+                        color: inherit;
+                    }
+                </style>
+            </p>
 </header>
+<body>
+            <div class="halftone"></div>
 
+    <main class="article-grid">
+        <article class="article" onclick="location.href='Character-Movement-In-Unity.html'">
+            <h class="article-title">Game Engine Workshop:</h>
+            <p id="article-subtext">3D character movement in Godot</p>
+            <style>
+        h {
+            color: white;
+
+        }
+
+        #article-subtext {
+            color: rgb(255, 255, 255);
+            -webkit-text-stroke: 0.8px black;
+        }
+            </style>
+            
+        </article>
+        <!--<article class="article">2</article>
+        <article class="article">3</article>
+       <article class="article">4</article>
+        <article class="article">5</article>-->
+        
+    </main>
+    <style>
+
+        
+
+        .article-grid {
+            display: grid;
+            gap: 1em;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            padding-top: 5rem;
+            padding-left: 10em;
+            width: min(95%, 85rem);
+            margin-inline: auto;
+            border-radius: 2em;
+            
+        }
+
+        .article {
+            background-color: rgb(0, 0, 0);
+            border-radius: 5px;
+            font-family: 'Big Shoulders Display', cursive;
+            font-family: 'Lilita One', cursive;
+            font-size: x-large;
+            padding-left: 10px;
+            padding-right: 10px;
+            cursor: pointer;
+            
+
+      
+            
+        }
+
+        .article:first-child {
+            background-image: url(images/godotmovementbanner.png);
+            background-size: cover;
+        }
+        
+        
+        .article-title {
+                
+                position: relative;
+                
+                }
+        </style>
+        <style>
+        
+        @media screen and (max-width: 1200px) {
+           .article-grid {
+            padding-left: 0.1em;
+
+            display: grid;
+            gap: 5rem;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: auto;
+            margin-inline: auto;
+            
+        }
+
+        .article {
+            background-color: rgb(197, 93, 93);
+            border-radius: 10px;
+            font-family: 'Big Shoulders Display', cursive;
+            font-family: 'Lilita One', cursive;
+            font-size: x-large;
+            height: 12em;
+            cursor: pointer;
+            
+
+      
+            
+        }
+
+        .article:first-child {
+            background-image: url(images/godotmovementbanner.png);
+            background-size: cover;
+        }
+        
+        
+        .article-title {
+                
+                position: relative;
+                
+                }
+        }
+
+    </style>
+</body>
 
 <footer>
 
