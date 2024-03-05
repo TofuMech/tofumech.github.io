@@ -97,8 +97,8 @@ function displayRandomText() {
     "[DRINK WATER]",
     "[CLEAN YOUR SCREEN]",
     "[DESTROY THE INTERNET]",
-    "[DRAW EVERY DAY]",
-    "[I GET NO KICK FROM CHAMPAGNE]"
+    "[I GET NO KICK FROM CHAMPAGNE]",
+    "[E̴̲̼͖͉̅N̸̛̝͛̀̈́͗͑͊̃̓̓̈̂̇̃̚͠J̵͎̪͇̭̘̐̈́̂͋̀̀̈̐̈́͊̈̔̈́͑͘͜Ǫ̷͕̗̱͚̭̲̬͇̱̠͉͔̥̞̗̓͋́́̋̔̊̀́͐̈́́̔͑̕Y̸̧̧̛̙̭̰̞̲̭̪̰͊͆̃̌̅̐͜ ̷̧̼͇̹͙̹̉̐̀̄͠Ÿ̸͔͖̦̱̼́̚̚ͅÓ̸̜̻̊̏̈́̍̓̉̊̔̀̓̽̕͘Ų̵̮͎̙̿̓̽̏̈́̂̊̔͐̓͊̑͂̕͜͜͝Ŗ̵͖͓̳̯͚͇̩̖̙͈̟̙̞̟̥̺́̆ ̷̨̲͖̻̮͇͇͙̜͉͉̥̣͚̹̆̃̎͜͠S̴̝̥̥͚̲͇͓̝͖͓̾͜Ţ̴̥͇̱̮͇̫̳̲̱̙̰̮̯̞̏̊͋̉͐̿̉͐͋͒̇͘À̵̛̛̛̜̇̈́̈́̀̏͌̎͂͘̕̕͝Y̵̡̛͍͓͔̦̦͎͈̳͚̫̥̏̓̑̀̿̆͂̓͛́̐̽͜ͅ]"
   ];
   var randomIndex = Math.floor(Math.random() * quotes.length);
   document.getElementById("hometitleTagline").innerHTML = quotes[randomIndex];

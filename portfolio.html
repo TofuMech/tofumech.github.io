@@ -6,362 +6,345 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="description" content="Artist and Tech Guy">
-    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="tofuicon.png">
-</head>
-<header>
-
-    <nav>
-        <script src="script.js"></script>
-        <img id="moon" src="images/navImages/moon.png">
-        <img id="sun" src="images/navImages/sun.png">
-        <div class="navBar">
-            <!--For Mobile, the three lines on the top that animate when interacted with-->
-            <button id="DropDownMenu">
-                <div class="bar1"></div>
-                <div class="bar2" id="bar2"></div>
-                <div class="bar3" id="bar3"></div>
-            </button>
-
-            <!--Desktop button navigation-->
-            <div class="aboutButton" tabindex="5" onclick="location.href='about.html'">
-                <div class="aboutText">ABOUT</div>
-            </div>
-            <div class="wordButton" tabindex="4" onclick="location.href='words.html'">
-                <div class="wordText"></div>
-            </div>
-
-            <div class="artworkButton" tabindex="2" onclick="location.href='portfolio.html'">
-                <div class="artText">ARTWORK</div>
-            </div>
-            <div class="homeButton" tabindex="1" onclick="location.href='index.html'">
-                <div class="homeText">HOME</div>
-            </div>
-        </div>
-
-        <!--The Container for the Drop Down Menu on Mobile-->
-        <div class="box" id="box">
-            <button id="DropHomeButton" onclick="location.href='index.html'">HOME</button><br>
-            <button id="DropHomeButton" onclick="location.href='portfolio.html'">ARTWORK</button><br>
-            <button id="DropHomeButton" onclick="location.href='about.html'">ABOUT</button><br>
-            <!--<button id="DropHomeButton" onclick="location.href='words.html'"></button><br>-->
-            <script src="script.js"></script>
-        </div>
-        <div class="colormodeHolder"></div>
-    </nav>
-    <div class="homeTitle">
-        <h1>TOFUMECH</h1>
-        <div class="hometitleTagline" id="hometitleTagline">
-
-            <body onload="displayRandomText()"></body>
-        </div>
-
-        <div class="socialmediaLinks">
-            <p>
-                <a href="https://bsky.app/profile/tofumech.bsky.social">BLUESKY</a>
-                <a href="https://www.artstation.com/tofumech">ARTSTATION</a>
-                <a href="https://github.com/TofuMech">GITHUB</a>
-                <style>
-                    a {
-                        position: relative;
-                        padding-right: 10px;
-                        text-decoration: none;
-                        color: inherit;
-                    }
-                </style>
-            </p>
-</header>
-<body>
-            <div class="halftone"></div>
-
-    <main>
-
-<div class="grid-container"> <!--This contains all the images-->
-    <img src="images/1.jpg" onclick="openImage(this)" onload="imageLoad(this)">
-    <img src="images/2.jpg" onclick="openImage(this)">
-    <img src="images/3.jpg" onclick="openImage(this)">
-    <img src="images/4.png" onclick="openImage(this)">
-    <img src="images/5.jpg" onclick="openImage(this)">
-    <img src="images/6.jpg" onclick="openImage(this)">
-    <img src="images/7.jpg" onclick="openImage(this)">
-    <img src="images/8.jpg" onclick="openImage(this)">
-    <img src="images/9.png" onclick="openImage(this)">
-    <img src="images/10.jpg" onclick="openImage(this)">
-    <img src="images/11.jpg" onclick="openImage(this)">
-    <img src="images/12.jpg" onclick="openImage(this)">
-    <img src="images/13.jpg" onclick="openImage(this)">
-    <img src="images/14.png" onclick="openImage(this)">
-    <img src="images/15.jpg" onclick="openImage(this)">
-    <img src="images/16.png" onclick="openImage(this)">
-    <img src="images/17.png" onclick="openImage(this)">
-    <img src="images/18.jpg" onclick="openImage(this)">
-    <img src="images/19.jpg" onclick="openImage(this)">
-    <img src="images/20.png" onclick="openImage(this)">
-    <img src="images/21.jpg" onclick="openImage(this)">
-    <img src="images/22.png" onclick="openImage(this)">
-    <img src="images/23.jpg" onclick="openImage(this)">
-    <img src="images/24.jpg" onclick="openImage(this)">
-    <img src="images/25.png" onclick="openImage(this)">
-    <img src="images/26.png" onclick="openImage(this)">
-    <img src="images/27.png" onclick="openImage(this)">
-    <img src="images/28.jpg" onclick="openImage(this)">
-    <img src="images/29.png" onclick="openImage(this)">
-    <img src="images/30.jpg" onclick="openImage(this)">
-    <img src="images/31.jpg" onclick="openImage(this)">
-    <img src="images/32.jpg" onclick="openImage(this)">
-    <img src="images/33.jpg" onclick="openImage(this)">
-    <img src="images/35.png" onclick="openImage(this)">
-    <img src="images/36.png" onclick="openImage(this)">
-    <img src="images/37.jpg" onclick="openImage(this)">
-    <img src="images/38.png" onclick="openImage(this)">
-    <img src="images/40.jpg" onclick="openImage(this)">
-    <img src="images/41.jpg" onclick="openImage(this)">
-    <img src="images/42.png" onclick="openImage(this)">
-    <img src="images/43.png" onclick="openImage(this)">
-    <img src="images/44.jpg" onclick="openImage(this)">
-    <img src="images/45.jpg" onclick="openImage(this)">
-    
-
-
-
-</div>
-
-<div id="overlay">
-    <img src="" alt="Enlarged Image">
-    <button id="prevButton" onclick="prevImage()"><</button>
-    <button id="nextButton" onclick="nextImage()">></button>
-    <button id="closeButton" onclick="closeImage()">X</button>
-
-</div>
-
-<style>
-    .grid-container {
-        position: absolute;
-        padding-left: 170px;
-        padding-right: 130px;
-        display: grid;
-        grid-template-columns: repeat(5, 30fr);
-        z-index: -1;
-
-    }
-
-    .grid-container img {
-        width: 90%;
-        height: 90%;
-        object-fit: cover;
-        justify-items: center;
-        border-radius: 5px;
-        background-color: rgb(53, 53, 53);
-        cursor: pointer;
-
-
-
-    }
-    /*the opauqe gray to display the image better*/
-    #overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        display: none;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #overlay img {
-        max-width: 90%;
-        max-height: 90%;
-        object-fit: contain;
-    }
-
-    #prevButton,
-    #nextButton {
-        position: fixed;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 18px;
-        cursor: pointer;
-        background-color: rgba(49, 49, 49, 0.822);
-        border-radius: 15px;
-        width: 80px;
-        height: 40px;
-
-
-    }
-    #prevButton {
-        left: 50px;
-    }
-
-    #nextButton {
-        right: 50px;
-    }
-
-    #closeButton {
-        position: fixed;
-        bottom: 20px;
-        left: calc(50% - 40px); /* Adjust the value to position the close button */
-        background-color: rgba(49, 49, 49, 0.822);
-        border: none;
-        color: white;
-        font-size: 18px;
-        cursor: pointer;
-        width: 30px;
-        height: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 3px;
-    }
-            
-
-    @media screen and (max-width: 1200px) {
-
+    <style>
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(3, 8fr);
-            grid-column-gap: 10px;
-            padding-left: 10px;
-            padding-right: 10px;
-            
-        }
-        #prevButton,
-    #nextButton {
-        position: fixed;
-        bottom: 20px;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 18px;
-        cursor: pointer;
-        background-color: rgba(49, 49, 49, 0.822);
-
-    }
-    #prevButton {
-        left: 5px;
-    }
-
-    #nextButton {
-        right: 5px;
-    }
-    }
-</style>
-<script>
-    var images = document.querySelectorAll('.grid-container img');
-    var currentIndex;
-
-    function openImage(img) {
-        var overlay = document.getElementById("overlay");
-        var overlayImg = overlay.getElementsByTagName("img")[0];
-        var prevButton = document.getElementById("prevButton");
-        var nextButton = document.getElementById("nextButton");
-
-        currentIndex = Array.from(images).indexOf(img);
-        overlayImg.src = img.src;
-        overlay.style.display = "flex";
-        prevButton.style.display = "block"; // Display the previous button
-        nextButton.style.display = "block"; // Display the next button
-
-        overlay.addEventListener("touchstart", handleTouchStart, false);
-        overlay.addEventListener("touchmove", handleTouchMove, false);
-    }
-
-    function handleTouchStart(event) {
-            touchStartX = event.touches[0].clientX;
+            grid-template-columns: repeat(5, 30fr);
+            grid-gap: 10px;
+            padding-left: 120px;
         }
 
-    function handleTouchMove(event) {
-                    if (!touchStartX) return;
-                    var touchEndX = event.touches[0].clientX;
-                    var deltaX = touchStartX - touchEndX;
-
-                    if (deltaX > 10) {
-                        nextImage();
-                    } else if (deltaX < -10) {
-                        prevImage();
-                    }
-
-                    touchStartX = null; // Reset touchStartX
-                }
-
-    function closeImage() {
-            var overlay = document.getElementById("overlay");
-            overlay.style.display = "none";
-
-            // Remove touch event listeners when closing the image
-        overlay.removeEventListener("touchstart", handleTouchStart);
-        overlay.removeEventListener("touchmove", handleTouchMove);
+        .grid-container img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            object-fit: cover;
+            cursor: pointer;
         }
 
-    
-
-    function prevImage() {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            var overlayImg = document.querySelector("#overlay img");
-            overlayImg.src = images[currentIndex].src;
+        #enlargedImage {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            display: none;
         }
 
-    function nextImage() {
-        currentIndex = (currentIndex + 1) % images.length;
-        var overlayImg = document.querySelector("#overlay img");
-        overlayImg.src = images[currentIndex].src;
-    }
-
-</script>
-</main>
-<footer>
-    <button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
-    <style>
-        #myBtn {
+        .button-container {
             display: none;
             position: fixed;
-            top: 20px;
-            right: 35px;
-            z-index: 99;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10000;
+        }
+
+        .previousButton,
+        .nextButton {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(63, 63, 63, 0.808);
             border: none;
-            outline: none;
-            background-color: rgba(65, 65, 65, 0.336);
-            color: white;
             cursor: pointer;
-            padding: 5px;
+            margin: 5px;
             border-radius: 10px;
-            font-size: 42px;
+            color: white;
         }
 
-        #myBtn:hover {
-            background-color: #707070;
+        .closeButton {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(63, 63, 63, 0.808);
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            color: white;
+            z-index: 10000;
+            display: none;
+
         }
+
+        @media screen and (max-width: 1200px) {
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 30fr);
+            grid-gap: 10px;
+            padding-left: 0;
+        }
+
+        .grid-container img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        #enlargedImage {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            display: none;
+        }
+
+        .button-container {
+            display: none;
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10000;
+        }
+
+        .previousButton,
+        .nextButton {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(63, 63, 63, 0.808);
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .closeButton {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(63, 63, 63, 0.808);
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            color: white;
+            z-index: 10000;
+            display: none;
+        }
+    }
     </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <script src="script.js"></script>
+            <img id="moon" src="images/navImages/moon.png">
+            <img id="sun" src="images/navImages/sun.png">
+            <div class="navBar">
+                <!--For Mobile, the three lines on the top that animate when interacted with-->
+                <button id="DropDownMenu">
+                    <div class="bar1"></div>
+                    <div class="bar2" id="bar2"></div>
+                    <div class="bar3" id="bar3"></div>
+                </button>
+
+                <!--Desktop button navigation-->
+                <div class="aboutButton" tabindex="5" onclick="location.href='about.html'">
+                    <div class="aboutText">ABOUT</div>
+                </div>
+                <div class="wordButton" tabindex="4" onclick="location.href='words.html'">
+                    <div class="wordText"></div>
+                </div>
+
+                <div class="artworkButton" tabindex="2" onclick="location.href='portfolio.html'">
+                    <div class="artText">ARTWORK</div>
+                </div>
+                <div class="homeButton" tabindex="1" onclick="location.href='index.html'">
+                    <div class="homeText">HOME</div>
+                </div>
+            </div>
+
+            <!--The Container for the Drop Down Menu on Mobile-->
+            <div class="box" id="box">
+                <button id="DropHomeButton" onclick="location.href='index.html'">HOME</button><br>
+                <button id="DropHomeButton" onclick="location.href='portfolio.html'">ARTWORK</button><br>
+                <button id="DropHomeButton" onclick="location.href='about.html'">ABOUT</button><br>
+                <!--<button id="DropHomeButton" onclick="location.href='words.html'"></button><br>-->
+                <script src="script.js"></script>
+            </div>
+            <div class="colormodeHolder"></div>
+        </nav>
+        <div class="homeTitle">
+            <h1>TOFUMECH</h1>
+            <div class="hometitleTagline" id="hometitleTagline">
+
+                <body onload="displayRandomText()"></body>
+            </div>
+
+            <div class="socialmediaLinks">
+                <p>
+                    <a href="https://bsky.app/profile/tofumech.bsky.social">BLUESKY</a>
+                    <a href="https://www.artstation.com/tofumech">ARTSTATION</a>
+                    <a href="https://github.com/TofuMech">GITHUB</a>
+                    <style>
+                        a {
+                            position: relative;
+                            padding-right: 10px;
+                            text-decoration: none;
+                            color: inherit;
+                        }
+                    </style>
+                </p>
+            </div>
+        </div>
+
+        <!-- Close button for mobile -->
+        <button class="closeButton" onclick="closeImage()">X</button>
+    </header>
+
+    <div class="halftone"></div>
+    <main>
+        <section class="portfolio">
+            <div class="grid-container">
+                <img src="images/3.jpg" alt="img" onclick="openImage('images/3.jpg')">
+                <img src="images/4.png" alt="img" onclick="openImage('images/4.png')">
+                <img src="images/5.jpg" alt="img" onclick="openImage('images/5.jpg')">
+                <img src="images/6.jpg" alt="img" onclick="openImage('images/6.jpg')">
+                <img src="images/9.png" alt="img" onclick="openImage('images/9.png')">
+                <img src="images/10.jpg" alt="img" onclick="openImage('images/10.jpg')">
+                <img src="images/11.jpg" alt="img" onclick="openImage('images/11.jpg')">
+                <img src="images/17.png" alt="img" onclick="openImage('images/17.png')">
+                <img src="images/18.jpg" alt="img" onclick="openImage('images/18.jpg')">
+                <img src="images/19.jpg" alt="img" onclick="openImage('images/19.jpg')">
+                <img src="images/23.jpg" alt="img" onclick="openImage('images/23.jpg')">
+                <img src="images/24.jpg" alt="img" onclick="openImage('images/24.jpg')">
+                <img src="images/27.png" alt="img" onclick="openImage('images/27.png')">
+                <img src="images/31.jpg" alt="img" onclick="openImage('images/31.jpg')">
+                <img src="images/38.png" alt="img" onclick="openImage('images/38.png')">
+                <img src="images/40.jpg" alt="img" onclick="openImage('images/40.jpg')">
+                <img src="images/43.png" alt="img" onclick="openImage('images/43.png')">
+                <img src="images/37.jpg" alt="img" onclick="openImage('images/37.jpg')">
+                <img src="images/44.jpg" alt="img" onclick="openImage('images/44.jpg')">
+                <img src="images/45.jpg" alt="img" onclick="openImage('images/45.jpg')">
+            </div>
+            <div class="button-container">
+                <button class="previousButton" onclick="previousImage()">
+                    <</button>
+                        <button class="nextButton" onclick="nextImage()">></button>
+            </div>
+        </section>
+
+        <img id="enlargedImage" onclick="closeImage()" src="" alt="Enlarged Image">
+    </main>
+
     <script>
+        var images = [
+            'images/3.jpg',
+            'images/4.png',
+            'images/5.jpg',
+            'images/6.jpg',
+            'images/9.png',
+            'images/10.jpg',
+            'images/11.jpg',
+            'images/17.png',
+            'images/18.jpg',
+            'images/19.jpg',
+            'images/23.jpg',
+            'images/24.jpg',
+            'images/27.png',
+            'images/31.jpg',
+            'images/38.png',
+            'images/40.jpg',
+            'images/43.png',
+            'images/37.jpg',
+            'images/44.jpg',
+            'images/45.jpg'
+        ];
 
-        let mybutton = document.getElementById("myBtn");
+        var currentIndex = 0;
+        var touchStartX = 0;
+        var touchEndX = 0;
+
+        function openImage(imageSrc) {
+            var enlargedImage = document.getElementById('enlargedImage');
+            var buttons = document.querySelectorAll('.button');
+            var closeButton = document.querySelector('.closeButton');
 
 
-        window.onscroll = function () { scrollFunction() };
+            buttons.forEach(function (button) {
+                button.style.display = 'block';
+            });
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 700) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
+            enlargedImage.src = imageSrc;
+            enlargedImage.style.display = 'block';
+            currentIndex = images.indexOf(imageSrc);
+            document.querySelector('.button-container').style.display = 'block';
+            closeButton.style.display = 'block';
+        }
+
+        function closeImage() {
+            var enlargedImage = document.getElementById('enlargedImage');
+            var buttons = document.querySelectorAll('.button');
+            var closeButton = document.querySelector('.closeButton');
+
+            buttons.forEach(function (button) {
+                button.style.display = 'none';
+            });
+
+            enlargedImage.style.display = 'none';
+            closeButton.style.display ='none';
+            document.querySelector('.button-container').style.display = 'none';
+        }
+
+        function previousImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            var previousImageSrc = images[currentIndex];
+            openImage(previousImageSrc);
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            var nextImageSrc = images[currentIndex];
+            openImage(nextImageSrc);
+        }
+
+        function handleTouchStart(event) {
+            touchStartX = event.changedTouches[0].screenX;
+            event.preventDefault(); // Prevent default touch behavior
+        }
+
+        function handleTouchEnd(event) {
+            touchEndX = event.changedTouches[0].screenX;
+            handleSwipe();
+            event.preventDefault(); // Prevent default touch behavior
+        }
+
+        function handleSwipe() {
+            var swipeThreshold = 50; // Adjust this value according to sensitivity
+
+            if (touchStartX - touchEndX > swipeThreshold) {
+                // Swiped left, go to next image
+                nextImage();
+            } else if (touchEndX - touchStartX > swipeThreshold) {
+                // Swiped right, go to previous image
+                previousImage();
             }
         }
 
-
-        function topFunction() {
-            document.body.scrollTop = 0; // safari
-            document.documentElement.scrollTop = 0; // everything else
-        }
+        // Attach touch event listeners to the main image container
+        var enlargedImage = document.getElementById('enlargedImage');
+        enlargedImage.addEventListener('touchstart', handleTouchStart, false);
+        enlargedImage.addEventListener('touchend', handleTouchEnd, false);
     </script>
-</footer>
 
 
-
-    </main>
 </body>
 
 </html>
-
-
