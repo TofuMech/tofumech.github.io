@@ -1,78 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>TofuMech</title>
     <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="description" content="Artist and Tech Guy">
-    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+    <title>TOFUMECH</title>
     <link rel="icon" href="tofuicon.png">
+    <meta name="description" content="Artist and Tech Guy">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <script>
+        function displayRandomText() {
+            var quotes = [
+                "[TAKE YOUR TIME]",
+                "[LOADING..]",
+                "[DRINK WATER]",
+                "[CLEAN YOUR SCREEN]",
+                "[DESTROY THE INTERNET]",
+                "[I GET NO KICK FROM CHAMPAGNE]"
+            ];
+            var randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById("randomText").innerHTML = quotes[randomIndex];
+        }
+    </script>
+    <style>
+        .homeTitle {
+            background-color: rgba(0, 17, 255, 0);
+            width: 100px;
+            height: 120px;
+            position: absolute;
+            left: 50%;
+            top: 30px;
+            transform: translate(-50%, -50%);
+        }
+
+        h1 {
+            position: relative;
+            color: rgb(241, 59, 89);
+            text-align: center;
+            font-size: 120px;
+            font-family: "Bebas Neue", sans-serif;
+            font-style: normal;
+            right: 140px;
+        }
+
+        #randomText {
+            color: rgb(241, 59, 89);
+            position: relative;
+            font-size: 30px;
+            text-align: center;
+            top: 185px;
+            font-size: 35px;
+            font-family: "Bebas Neue", sans-serif;
+            font-style: normal;
+            left: 6px;
+        }
+
+
+        @media screen and (max-width: 1200px) {
+            #randomText {
+                color: rgb(241, 59, 89);
+                position: relative;
+                font-size: 30px;
+                text-align: center;
+                top: 130px;
+                font-size: 35px;
+                font-family: "Bebas Neue", sans-serif;
+                font-style: normal;
+            }
+        }
+    </style>
 </head>
-<header>
 
-    <nav>
-        <script src="script.js"></script>
-        <img id="moon" src="images/navImages/moon.png">
-        <img id="sun" src="images/navImages/sun.png">
-        <div class="navBar">
-            <!--For Mobile, the three lines on the top that animate when interacted with-->
-            <button id="DropDownMenu">
-                <div class="bar1"></div>
-                <div class="bar2" id="bar2"></div>
-                <div class="bar3" id="bar3"></div>
-            </button>
-
-            <!--Desktop button navigation-->
-            <div class="aboutButton" tabindex="5" onclick="location.href='about.html'">
-                <div class="aboutText">ABOUT</div>
-            </div>
-            <div class="wordButton" tabindex="4" onclick="location.href='words.html'">
-                <div class="wordText"></div>
-            </div>
-
-            <div class="artworkButton" tabindex="2" onclick="location.href='portfolio.html'">
-                <div class="artText">ARTWORK</div>
-            </div>
-            <div class="homeButton" tabindex="1" onclick="location.href='index.html'">
-                <div class="homeText">HOME</div>
-            </div>
-        </div>
-
-        <!--The Container for the Drop Down Menu on Mobile-->
-        <div class="box" id="box">
-            <button id="DropHomeButton" onclick="location.href='index.html'">HOME</button><br>
-            <button id="DropHomeButton" onclick="location.href='portfolio.html'">ARTWORK</button><br>
-            <button id="DropHomeButton" onclick="location.href='about.html'">ABOUT</button><br>
-            <!--<button id="DropHomeButton" onclick="location.href='words.html'"></button><br>-->
-            <script src="script.js"></script>
-        </div>
-        <div class="colormodeHolder"></div>
-    </nav>
-    <div class="homeTitle">
-        <h1>TOFUMECH</h1>
-        <div class="hometitleTagline" id="hometitleTagline">
-
-            <body onload="displayRandomText()"></body>
-        </div>
-
-        <div class="socialmediaLinks">
-            <p>
-                <a href="https://bsky.app/profile/tofumech.bsky.social">BLUESKY</a>
-                <a href="https://www.artstation.com/tofumech">ARTSTATION</a>
-                <a href="https://github.com/TofuMech">GITHUB</a>
-                <style>
-                    a {
-                        position: relative;
-                        padding-right: 10px;
-                        text-decoration: none;
-                        color: inherit;
-                    }
-                </style>
-            </p>
-</header>
-<body>
+<body onload="displayRandomText()">
             <div class="halftone"></div>
+
+    <header>
+        <nav>
+            <script src="script.js"></script>
+            <img id="moon" src="images/navImages/moon.png">
+            <img id="sun" src="images/navImages/sun.png">
+            <div class="navBar">
+                <button id="DropDownMenu">
+                    <div class="bar1"></div>
+                    <div class="bar2" id="bar2"></div>
+                    <div class="bar3" id="bar3"></div>
+                </button>
+                <div class="artstationButton" tabindex="6" onclick="location.href='https://www.artstation.com/tofumech'">
+                    <div class="buttonText">ARTSTATION</div>
+                </div>
+                <div class="githubButton" tabindex="5" onclick="location.href='https://github.com/TofuMech'">
+                    <div class="buttonText">GITHUB</div>
+                </div>
+                <div class="blueskyButton" tabindex="4" onclick="location.href='https://bsky.app/profile/tofumech.bsky.social'">
+                    <div class="buttonText">BLUESKY</div>
+                </div>
+                <div class="aboutButton" tabindex="3" onclick="location.href='about.html'">
+                    <div class="buttonText">ABOUT</div>
+                </div>
+                <div class="artworkButton" tabindex="2" onclick="location.href='portfolio.html'">
+                    <div class="buttonText">ARTWORK</div>
+                </div>
+                <div class="homeButton" tabindex="1" onclick="location.href='index.html'">
+                    <div class="buttonText">HOME</div>
+                </div>
+            </div>
+            <div class="box" id="box">
+                <button id="DropHomeButton" onclick="location.href='index.html'">HOME</button><br>
+                <button id="DropHomeButton" onclick="location.href='portfolio.html'">ARTWORK</button><br>
+                <button id="DropHomeButton" onclick="location.href='about.html'">ABOUT</button><br>
+                <button id="DropHomeButton"
+                    onclick="location.href='https://bsky.app/profile/tofumech.bsky.social'">BLUESKY</button><br>
+                <button id="DropHomeButton"
+                    onclick="location.href='https://www.artstation.com/tofumech'">ARTSTATION</button><br>
+                <button id="DropHomeButton" onclick="location.href='https://github.com/TofuMech'">GITHUB</button><br>
+                <script src="script.js"></script>
+            </div>
+            <div class="colormodeHolder"></div>
+        </nav>
+
+        <!-- section for the socialmedialinks, and top header-->
+        <section>
+            <div class="homeTitle">
+                <h1>TOFUMECH</h1>
+            </div>
+            <div id="randomText"></div>
+        </section>
+    </header>
+    <div class="halftone"></div>
 
     <main>
 
@@ -84,7 +142,7 @@
                 with Youtube, Twitch, and Kickstarter creators to design and make art assets for multiple use-cases. While specializing
                 in art, I also program. I’m currently working on my game Crimson Breaker, a 3D action-RPG that I’m very excited to show
                 more of in the future. If you’d like to connect, feel free to reach out to my business e-mail at tony.w.wiles@gmail.com,
-                or find me on any of the sites above.</p>
+                or find me on any of the sites to the side.</p>
             </div>
 
             <style>
@@ -99,14 +157,14 @@
                     right: 10%;
                     border-radius: 5px;
                     color: rgb(255, 255, 255);
-                    font-family: 'Big Shoulders Display', cursive;
-                    font-family: 'Lilita One', cursive;
-                    font-size: medium;
                     text-align: center;
                     z-index: 3;
                     filter: drop-shadow(0 20px 10px #131736d3);
                     background-color: rgb(211, 162, 162);
                     display: block;
+                    font-family: "Bebas Neue", sans-serif;
+                    font-style: normal;
+                    font-size: 20px;
                 }
 
 
@@ -124,24 +182,6 @@
                 
             </style>
         </div>
-        <style>
-            a {
-                text-decoration: none;
-
-
-            }
-
-            a,
-            a :visited {
-                color: inherit;
-            }
-
-            a:hover {
-                color: rgb(255, 253, 106);
-            }
-        </style>
-
-
         </div>
 
     </main>

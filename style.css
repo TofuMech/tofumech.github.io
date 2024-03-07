@@ -1,150 +1,110 @@
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300&family=Lilita+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 :root {
     /*These are defaults, javascript overrides the colors. These are a failsave if JS is disabled on browser*/
     --text-color: #1c3253;
     --button-text: #5a5a5a;
     --button-colorOne: #abcad1;
-    --button-colorTwo: #131736;
+    --button-colorTwo: #2e1717;
     --navbar-color: #81a0bd;
-    --background-color: #636363;
+    --background-color: #472424;
     --drop-menu-color: #ffffff;
-    transition: .8s;
 }
 
 body {
-    margin: 1px;
-    padding: 0;
+    margin: 5px;
     background-color: var(--background-color);
+    background-image:
+            linear-gradient(to right, #ffffff33 1px, transparent 1px),
+            linear-gradient(to bottom, #ffffff33 1px, transparent 1px);
+        background-size: 20px 20px;
+        /* Adjust the size of the lines */
     }
-    
-.halftone {
-    --dotSize: 1.6px;
+ 
 
-}
 
-.halftone::after {
-    z-index: -5;
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: radial-gradient(circle at center,
-            rgb(255, 255, 255) var(--dotSize),
-            transparent 0);
-    background-size: 80px 70px;
-    background-position: 0 0, 0.65em 0.65em;
-    mask-image: linear-gradient(rgb(0 0 0), var(--background-color));
-    -webkit-mask-image: linear-gradient(rgb(0 0 0), rgba(0, 0, 0, 0)); ;
-}
+
 
 .navBar {
     position: fixed;
-    background: linear-gradient(rgba(255, 255, 255, 0), var(--navbar-color),var(--navbar-color),rgba(255, 255, 255, 0));
+    background: linear-gradient(rgba(255, 255, 255, 0), var(--navbar-color), var(--navbar-color), rgba(255, 255, 255, 0));
     width: 120px;
     height: 100%;
+    left: 0px;
     overflow: hidden;
     z-index: 0;
 }
+
+/*this is the upper left box that opens the menus for the different sections of the site on mobile*/ 
 #box {
-    background-color: rgba(255, 0, 0, 0);
+display: none;
+}
+
+.homeButton,
+.artworkButton,
+.aboutButton,
+.artstationButton,
+.githubButton,
+.blueskyButton {
+    width: 120px;
+    height: 100px;
     position: absolute;
-    top: -999px;
-    z-index: -1;
+    cursor: pointer;
+    z-index: 1;
 }
 
 .homeButton {
-    width: 120px;
-    height: 100px;
     background: var(--button-colorOne);
-    position: absolute;
     left: 0px;
-    top: 280px;
-    cursor: pointer;
-    z-index: 1;
-}
-.homeText {
-    color: var(--button-text);
-    position: absolute;
-    left: 30px;
-    top: 35px;
-    display: block;
-    font-family: 'Big Shoulders Display', cursive;
-        font-family: 'Lilita One', cursive;
-    font-size: larger;
-    
+    top: 200px;
 }
 
 .artworkButton {
-    width: 120px;
-    height: 100px;
     background: linear-gradient(to top, var(--button-colorOne) 90%, var(--button-colorTwo) 100%);
-    position: absolute;
     left: 0px;
-    top: 380px;
-    cursor: pointer;
-    z-index: 1;
+    top: 300px;
 }
-.artText {
-    color: var(--button-text);
-    position: absolute;
-    top: 45px;
-    left: 15px;
-    display: block;
-    font-family: 'Big Shoulders Display', cursive;
-        font-family: 'Lilita One', cursive;
-    font-size: larger;
-}
-
-
-/*
-.wordButton {
-    width: 120px;
-    height: 100px;
-    background: linear-gradient(to top, var(--button-colorOne) 90%, var(--button-colorTwo) 100%);
-    position: absolute;
-    left: 0px;
-    top: 480px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.wordText {
-    color: var(--button-text);
-    position: absolute;
-    top: 40px;
-    left: 25px;
-    display: block;
-    font-family: 'Big Shoulders Display', cursive;
-    font-family: 'Lilita One', cursive;
-    font-size: larger;
-}
-*/
 
 .aboutButton {
-    width: 120px;
-    height: 100px;
-    background: linear-gradient(to top, var(--button-colorOne) 90%, var(--button-colorTwo) 100%);    position: absolute;
+    background: linear-gradient(to top, var(--button-colorOne) 90%, var(--button-colorTwo) 100%);
     left: 0px;
-    top: 480px;
-    cursor: pointer;
-    z-index: 1;
-    filter: drop-shadow(0 2px 10px  #131736d3);
+    top: 400px;
 }
-.aboutText {
-    color: var(--button-text);
-    position: absolute;
-    top: 40px;
-    left: 30px;
-    display: block;
-    font-family: 'Big Shoulders Display', cursive;
-        font-family: 'Lilita One', cursive;
-    font-size: larger;
+.artstationButton {
+    background: linear-gradient(to top, var(--button-colorOne) 90%, var(--button-colorTwo) 100%);
+    left: 0px;
+    top: 500px;
 }
 
+.githubButton {
+    background: linear-gradient(to top, var(--button-colorOne) 90%, var(--button-colorTwo) 100%);
+    left: 0px;
+    top: 600px;
+}
+
+.blueskyButton {
+    background: linear-gradient(to top, var(--button-colorOne) 90%, var(--button-colorTwo) 100%);
+    left: 0px;
+    top: 700px;
+}
+
+.buttonText {
+    color: var(--button-text);
+        position: absolute;
+        display: block;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 35px;
+        font-size: 20px;
+        font-family: "Bebas Neue", sans-serif;
+        font-style: normal;
+}
 
 #home-button {
     display: none;
 }
+
 .colormodeHolder {
     position: fixed;
     background-color: var(--navbar-color);
@@ -154,113 +114,59 @@ body {
     border-radius: 30px;
     top: 10px;
     z-index: 1;
-        filter: drop-shadow(0 3px 2px #272c4e7a);
+    filter: drop-shadow(0 3px 2px #272c4e7a);
 }
 
-#sun {
+#sun,
+#moon {
     position: fixed;
     top: 15px;
     left: 20px;
     cursor: pointer;
-    transition: transform 0.5s ease;
     z-index: 2;
 }
 
-#moon {
-    position: fixed;
-        top: 15px;
-        left: 20px;
-        cursor: pointer;
-        transition: transform 0.5s ease;
-        z-index: 2;
-}
-
-#moon.active {
-    display: none;    
-    opacity: 0;
-    transition: .5s;
-
-}
-
+#moon.active,
 #sun.active {
     display: none;
     opacity: 0;
-    transition: .5s;
+    transition: 5s;
 }
 
-.homeTitle {
-    position: relative;
-    color: rgb(241, 59, 89);
-    height: auto;
-    text-align: center;
-    padding-left: 2.5em;
-    top: 5px;
-    font-family: 'Big Shoulders Display', cursive;
-    font-family: 'Lilita One', cursive;
-    font-size: x-large;
+.homeButton:hover,
+.artworkButton:hover,
+.aboutButton:hover,
+.artstationButton:hover,
+.githubButton:hover,
+.blueskyButton:hover,
+.homeButton:active,
+.artworkButton:active,
+.aboutButton:active,
+.artstationButton:active,
+.githubButton:active,
+.blueskyButton:active {
+    filter: brightness(190%);
 }
-#hometitleTagline {
-    position: relative;
-    color: rgb(241, 59, 89);
-    bottom: 40px;
-    font-family: 'Big Shoulders Display', cursive;
-    font-family: 'Lilita One', cursive;
-    font-size:medium;
-}
-
-
-
-
-.socialmediaLinks {
-    position: relative;
-        color: rgb(241, 59, 89);
-        height: auto;
-        bottom: 30px;
-        left: 5px;
-        text-align: center;
-        font-family: 'Big Shoulders Display', cursive;
-        font-family: 'Lilita One', cursive;
-        font-size: large;
-        filter: drop-shadow(0 2px 1px #1317362a);
-        word-spacing: 800%;
-    
-
-}
-
 
 @media screen and (max-width: 1200px) {
 
 
+    body {
+            margin: 0px;
+            background-color: var(--background-color);
+        }
+
 
     .navBar {
         position: relative;
-        /*background: linear-gradient(rgba(255, 255, 255, 0), var(--navbar-color), var(--navbar-color), rgba(255, 255, 255, 0));*/
         background: linear-gradient(to right, var(--navbar-color), #33333300 50%, #eeeeee00 75%);
         width: 100%;
         overflow: hidden;
         height: 50px;
-        z-index: 3;
+        z-index: 3;    
     }
-         .homeTitle {
-             position: relative;
-             color: rgb(241, 59, 89);
-             height: auto;
-             text-align: center;
-             padding-left: 0.5em;
-             top: 10px;
-             font-family: 'Big Shoulders Display', cursive;
-             font-family: 'Lilita One', cursive;
-             font-size: x-large;
-         }
+
     
-         #hometitleTagline {
-             position: relative;
-             color: rgb(241, 59, 89);
-             bottom: 40px;
-             font-family: 'Big Shoulders Display', cursive;
-             font-family: 'Lilita One', cursive;
-             font-size: medium;
-         }
 
     #box {
         position: absolute;
@@ -268,11 +174,11 @@ body {
         height: 150px;
         top: 50px;
         left: -1000px;
-        transition: transform 0.5s ease-in-out;
+        transition: transform .7s ease;
         z-index: 5;
+        display: block;
     }
 
-    /*These are the hrefs attributes*/
     #DropHomeButton {
         background: linear-gradient(to right, var(--navbar-color), #33333300 50%, #eeeeee00 75%);
         color: rgb(255, 255, 255);
@@ -280,10 +186,10 @@ body {
         height: 80px;
         width: 50%;
         cursor: pointer;
-        font-family: 'Barlow Condensed', sans-serif;
-        font-size: larger;
-        text-align:start;
-        
+        text-align: start;
+        font-size: 24px;
+        font-family: "Bebas Neue", sans-serif;
+        font-style: normal;
     }
 
     .bar1 {
@@ -318,9 +224,7 @@ body {
         transition: transform 0.5s ease-in-out;
     }
 
-    #DropHomeButton:hover {
-        background: linear-gradient(to right, var(--button-colorOne), #33333300 50%, #eeeeee00 75%);
-    }
+
 
     #DropDownMenu {
         width: 150px;
@@ -333,63 +237,36 @@ body {
         cursor: pointer;
         border-color: rgb(101, 186, 255);
         z-index: -3;
-
     }
 
-    .homeButton {
-        display: none;
-
-    }
-        .colormodeHolder {
-            display: none;
-        }
-
-    .artworkButton {
-
-        display: none;
-    }
-
-    .aboutButton {
-
-        display: none;
-    }
-
-    .crimsonbreakersButton {
-        display: none
-    }
-
+    .homeButton,
+    .artworkButton,
+    .aboutButton,
+    .crimsonbreakersButton,
     .shopButton {
         display: none;
     }
 
-    .crimsonbreakersText {
-        display: none
+    .colormodeHolder {
+        display: none;
     }
 
-        #moon,
-        #sun {
-            position: absolute;
-            top: 0;
-            left: 100px;
-            cursor: pointer;
-            transition: transform 0.5s ease;
-            z-index: 9;
-        }
-    
-        #moon.active {
-            transform: translateY(-50px);
-            opacity: 0;
-            transition: .5s;
-    
-        }
-    
-        #sun.active {
-            transform: translateY(-50px);
-            opacity: 0;
-            transition: .5s;
-        }
+    #moon,
+    #sun {
+        position: absolute;
+        top: 0;
+        left: 100px;
+        cursor: pointer;
+        z-index: 9;
+    }
 
-  
+    #moon.active {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
 
-
+    #sun.active {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
 }
