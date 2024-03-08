@@ -20,9 +20,7 @@ button.addEventListener('click', function () {
   }
 });
 
-// Check if a theme preference has already been set
 if (localStorage.getItem('theme')) {
-  // Set the active icon and apply the stored theme preference
   if (localStorage.getItem('theme') === 'light') {
     sunIcon.classList.add('active');
     applyTheme('light');
@@ -31,17 +29,13 @@ if (localStorage.getItem('theme')) {
     applyTheme('dark');
   }
 } else {
-  // Set a default theme preference of 'light' and apply it
   localStorage.setItem('theme', 'light');
   sunIcon.classList.add('active');
   applyTheme('light');
 }
 
-// Add event listeners to the moon and sun icons
 moonIcon.addEventListener('click', () => {
-  // Store the selected theme preference in local storage
   localStorage.setItem('theme', 'dark');
-  // Animate the icons and apply the selected theme
   moonIcon.classList.add('active');
   sunIcon.classList.remove('active');
   setTimeout(() => {
@@ -49,9 +43,7 @@ moonIcon.addEventListener('click', () => {
   }, 100);
 });
 sunIcon.addEventListener('click', () => {
-  // Store the selected theme preference in local storage
   localStorage.setItem('theme', 'light');
-  // Animate the icons and apply the selected theme
   sunIcon.classList.add('active');
   moonIcon.classList.remove('active');
   setTimeout(() => {
@@ -59,7 +51,6 @@ sunIcon.addEventListener('click', () => {
   }, 100);
 });
 
-// Function to apply the selected theme
 function applyTheme(theme) {
   if (theme === 'light') {
     // Light theme color attributes
@@ -74,8 +65,8 @@ function applyTheme(theme) {
     // Dark theme color attributes
     document.body.style.transition = 'all .1s';
     document.body.style.backgroundColor = '#363747';
-    document.documentElement.style.setProperty('--text-color', '#4591EE');
-    document.documentElement.style.setProperty('--button-text', '#07192C');
+    document.documentElement.style.setProperty('--text-color', '#dfe3eb');
+    document.documentElement.style.setProperty('--button-text', '#dfe3eb');
     document.documentElement.style.setProperty('--button-colorOne', '#3a5f7c');
     document.documentElement.style.setProperty('--button-colorTwo', '#2E293A');
     document.documentElement.style.setProperty('--navbar-color', '#284059');

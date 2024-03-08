@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
     <title>TOFUMECH</title>
-    <link rel="icon" href="tofuicon.png">
+    <link rel="icon" href="images/navImages/tofuicon.png">
     <meta name="description" content="Artist and Tech Guy">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,8 @@
                 "[DRINK WATER]",
                 "[CLEAN YOUR SCREEN]",
                 "[DESTROY THE INTERNET]",
-                "[I GET NO KICK FROM CHAMPAGNE]"
+                "[I GET NO KICK FROM CHAMPAGNE]",
+                "[ADULT SWIM]"
             ];
             var randomIndex = Math.floor(Math.random() * quotes.length);
             document.getElementById("randomText").innerHTML = quotes[randomIndex];
@@ -28,12 +29,9 @@
     </script>
 
     <style>
-  
-   
-        
         .homeTitle {
             background-color: rgba(0, 17, 255, 0);
-            width: 100px;
+            width: 50%;
             height: 120px;
             position: absolute;
             left: 50%;
@@ -48,60 +46,68 @@
             font-size: 120px;
             font-family: "Bebas Neue", sans-serif;
             font-style: normal;
-            right: 140px;
         }
 
         #randomText {
             color: rgb(241, 59, 89);
             position: relative;
-            font-size: 30px;
-            text-align: center;
-            top: 185px;
             font-size: 35px;
+            text-align: center;
             font-family: "Bebas Neue", sans-serif;
             font-style: normal;
             left: 6px;
+            bottom: 90px;
+            animation: pulsate 10s infinite;
         }
 
-        
+        @keyframes pulsate {
+            0% {
+                color: rgb(241, 59, 89);
+            }
+
+            50% {
+                color: rgb(88, 23, 34);
+            }
+
+            100% {
+                color: rgb(241, 59, 89);
+            }
+        }
+
         @media screen and (max-width: 1200px) {
+            .homeTitle {
+                background-color: rgba(0, 17, 255, 0);
+                width: 100%;
+                height: 120px;
+                position: absolute;
+                left: 50%;
+                top: 30px;
+                transform: translate(-50%, -50%);
+            }
+
+            h1 {
+                position: relative;
+                color: rgb(241, 59, 89);
+                justify-content: center;
+                font-size: 120px;
+                font-family: "Bebas Neue", sans-serif;
+                font-style: normal;
+            }
+
             #randomText {
                 color: rgb(241, 59, 89);
                 position: relative;
-                font-size: 30px;
-                text-align: center;
-                top: 130px;
                 font-size: 35px;
+                text-align: center;
                 font-family: "Bebas Neue", sans-serif;
                 font-style: normal;
+                left: 6px;
             }
         }
     </style>
 </head>
 
 <body onload="displayRandomText()">
-        <div class="halftone"></div>
-
-        <style>
-            .halftone {
-            width: 1%;
-            height: 1%;
-            background:
-                radial-gradient(circle at 16.67% 16.67%, #000 0%, rgba(0, 0, 0, 0) 16.68%),
-                radial-gradient(circle at 50% 16.67%, #000 0%, rgba(0, 0, 0, 0) 16.68%),
-                radial-gradient(circle at 83.33% 16.67%, #000 0%, rgba(0, 0, 0, 0) 16.68%),
-                radial-gradient(circle at 16.67% 50%, #000 0%, rgba(0, 0, 0, 0) 16.68%),
-                radial-gradient(circle at 50% 50%, #000 0%, rgba(0, 0, 0, 0) 16.68%),
-                radial-gradient(circle at 83.33% 50%, #000 0%, rgba(0, 0, 0, 0) 16.68%),
-                radial-gradient(circle at 16.67% 83.33%, #000 0%, rgba(0, 0, 0, 0) 16.68%),
-                radial-gradient(circle at 50% 83.33%, #000 0%, rgba(0, 0, 0, 0) 16.68%),
-                radial-gradient(circle at 83.33% 83.33%, #000 0%, rgba(0, 0, 0, 0) 16.68%);
-            background-size: 3px 3px;
-            background-repeat: repeat;
-        }
-        </style>
-
-
     <header>
         <nav>
             <script src="script.js"></script>
@@ -119,7 +125,8 @@
                 <div class="githubButton" tabindex="5" onclick="location.href='https://github.com/TofuMech'">
                     <div class="buttonText">GITHUB</div>
                 </div>
-                <div class="blueskyButton" tabindex="4" onclick="location.href='https://bsky.app/profile/tofumech.bsky.social'">
+                <div class="blueskyButton" tabindex="4"
+                    onclick="location.href='https://bsky.app/profile/tofumech.bsky.social'">
                     <div class="buttonText">BLUESKY</div>
                 </div>
                 <div class="aboutButton" tabindex="3" onclick="location.href='about.html'">
@@ -145,13 +152,13 @@
             </div>
             <div class="colormodeHolder"></div>
         </nav>
-
-        <!-- section for the socialmedialinks, and top header-->
+    
         <section>
             <div class="homeTitle">
                 <h1>TOFUMECH</h1>
+                <div id="randomText"></div>
             </div>
-            <div id="randomText"></div>
+    
         </section>
     </header>
     <main>
