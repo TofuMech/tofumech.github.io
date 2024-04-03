@@ -20,8 +20,8 @@
                 "[DRINK WATER]",
                 "[CLEAN YOUR SCREEN]",
                 "[DESTROY THE INTERNET]",
-                "[I GET NO KICK FROM CHAMPAGNE]",
-                "[ADULT SWIM]"
+                "[I GET NO KICK FROM CHAMPAGNE]"
+                
             ];
             var randomIndex = Math.floor(Math.random() * quotes.length);
             document.getElementById("randomText").innerHTML = quotes[randomIndex];
@@ -57,22 +57,9 @@
             font-style: normal;
             left: 6px;
             bottom: 90px;
-            animation: pulsate 10s infinite;
         }
 
-        @keyframes pulsate {
-            0% {
-                color: rgb(241, 59, 89);
-            }
-
-            50% {
-                color: rgb(88, 23, 34);
-            }
-
-            100% {
-                color: rgb(241, 59, 89);
-            }
-        }
+      
 
         @media screen and (max-width: 1200px) {
             .homeTitle {
@@ -81,7 +68,7 @@
                 height: 120px;
                 position: absolute;
                 left: 50%;
-                top: 30px;
+                top: 100px;
                 transform: translate(-50%, -50%);
             }
 
@@ -89,7 +76,7 @@
                 position: relative;
                 color: rgb(241, 59, 89);
                 justify-content: center;
-                font-size: 120px;
+                font-size: 80px;
                 font-family: "Bebas Neue", sans-serif;
                 font-style: normal;
             }
